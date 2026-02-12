@@ -72,7 +72,7 @@
                 </a>
 
                 {{-- Monsters --}}
-                <a href="/monsters"
+                <a href="/databases/monsters"
                    class="group rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:bg-slate-900">
                     <div class="flex items-start justify-between gap-4">
                         <div>
