@@ -1,0 +1,256 @@
+{
+    "classes" : [
+        {
+            "class_name" : "Barbarian",
+            "class_startingHP" : 12,
+            "class_hitDice" : "1-d12",
+            "class_primaryAbility" : "str",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor-Medium Armor-Shield",
+                    "weapons" : "Simple Weapon-Martial Weapon",
+                    "tools" : "",
+                    "savingThrows" : "str-con",
+                    "skills" : "AnimalHandling-Athletics-Intimidation-Nature-Perception-Survival",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : false
+                }
+            ]
+        },
+        {
+            "class_name" : "Bard",
+            "class_startingHP" : 8,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "cha",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor",
+                    "weapons" : "Simple Weapon-Hand Crossbow-Longsword-Rapier-Shortsword",
+                    "tools" : "Musical insturments(3)",
+                    "savingThrows" : "dex-cha",
+                    "skills" : "Any",
+                    "numberOfSkills" : 3
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Cleric",
+            "class_startingHP" : 8,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "wis",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor-Medium Armor-Shield",
+                    "weapons" : "Simple Weapon",
+                    "tools" : "",
+                    "savingThrows" : "wis-cha",
+                    "skills" : "History-Insight-Medicine-Persuasion-Religion",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Druid",
+            "class_startingHP" : 8,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "wis",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor-Medium Armor-Shield",
+                    "weapons" : "Club-Dagger-Dart-Javelin-Mace-Quarterstaff-Scimitar-Sickle-Sling-Spear",
+                    "tools" : "Herbalism Kit",
+                    "savingThrows" : "int-wis",
+                    "skills" : "Arcana-AnimalHandling-Inisght-Medicide-Nature-Perception-Religion-Survival",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Fighter",
+            "class_startingHP" : 10,
+            "class_hitDice" : "1-d10",
+            "class_primaryAbility" : "str(50)-dex(50)",
+            "class_proficiencies" : [
+                {
+                    "armor" : "All",
+                    "weapons" : "Simple Weapon-Martial Weapon",
+                    "tools" : "",
+                    "savingThrows" : "str-con",
+                    "skills" : "Acrobatics-AnimalHandling-Athletics-History-Insight-Intimidation-Perception-Survival",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : false
+                }
+            ]
+        },
+        {
+            "class_name" : "Monk",
+            "class_startingHP" : 8,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "dex-wis",
+            "class_proficiencies" : [
+                {
+                    "armor" : "",
+                    "weapons" : "Simple Weapon-Shortsword",
+                    "tools" : "Artisan Tool or Musical Insturment(1)",
+                    "savingThrows" : "str-dex",
+                    "skills" : "Acrobatics-Athletics-History-Insight-Religion-Stealth",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : false
+                }
+            ]
+        },
+        {
+            "class_name" : "Paladin",
+            "class_startingHP" : 10,
+            "class_hitDice" : "1-d10",
+            "class_primaryAbility" : "str-cha",
+            "class_proficiencies" : [
+                {
+                    "armor" : "All",
+                    "weapons" : "Simple Weapon-Martial Weapon",
+                    "tools" : "",
+                    "savingThrows" : "wis-cha",
+                    "skills" : "Athletics-Insight-Indimidation-Medicine-Persuasion-Religion",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Ranger",
+            "class_startingHP" : 10,
+            "class_hitDice" : "1-d10",
+            "class_primaryAbility" : "dex-wis",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor-Medium Armor-Shield",
+                    "weapons" : "Simple Weapon-Martial Weapon",
+                    "tools" : "",
+                    "savingThrows" : "str-dex",
+                    "skills" : "AnimalHandling-Athletics-Insight-Investigation-Nature-Perception-Stealth-Survival",
+                    "numberOfSkills" : 3
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : false
+                }
+            ]
+        },
+        {
+            "class_name" : "Rogue",
+            "class_startingHP" : 18,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "dex",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor",
+                    "weapons" : "Simple Weapon-Hand Crossbow-Longsword-Rapier-Shortsword",
+                    "tools" : "Theives Tools",
+                    "savingThrows" : "dex-int",
+                    "skills" : "Acrobatics-Athletics-Deception-Insight-Intimidation-Investigation-Perception-Performance-Persuasion-SleightOfHand-Stealth",
+                    "numberOfSkills" : 4
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : false
+                }
+            ]
+        },
+        {
+            "class_name" : "Sorcerer",
+            "class_startingHP" : 6,
+            "class_hitDice" : "1-d6",
+            "class_primaryAbility" : "cha",
+            "class_proficiencies" : [
+                {
+                    "armor" : "",
+                    "weapons" : "Dagger-Dart-Sling-Quarterstaff-Light Crossbow",
+                    "tools" : "",
+                    "savingThrows" : "con-cha",
+                    "skills" : "Arcana-Deception-Insight-Intimidation-Persuasion-Religion",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Warlock",
+            "class_startingHP" : 8,
+            "class_hitDice" : "1-d8",
+            "class_primaryAbility" : "cha",
+            "class_proficiencies" : [
+                {
+                    "armor" : "Light Armor",
+                    "weapons" : "Simple Weapon",
+                    "tools" : "",
+                    "savingThrows" : "wis-cha",
+                    "skills" : "Arcana-Deception-History-Intimidation-Investigation-Nature-Religion",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        },
+        {
+            "class_name" : "Wizard",
+            "class_startingHP" : 6,
+            "class_hitDice" : "1-d6",
+            "class_primaryAbility" : "int",
+            "class_proficiencies" : [
+                {
+                    "armor" : "",
+                    "weapons" : "Dagger-Dart-Sling-Quarterstaff-Light Crossbow",
+                    "tools" : "",
+                    "savingThrows" : "int-wis",
+                    "skills" : "Arcana-History-Insight-Investigation-Medicine-Religion",
+                    "numberOfSkills" : 2
+                }
+            ],
+            "class_magic" : [
+                {
+                    "isMagic" : true
+                }
+            ]
+        }
+    ]
+}

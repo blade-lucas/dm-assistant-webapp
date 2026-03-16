@@ -1,4 +1,5 @@
 <x-layouts.app :title="'DM Assistant'">
+
     <div class="grid gap-8">
         {{-- Hero --}}
         <section class="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-8">
@@ -12,11 +13,11 @@
                     </p>
 
                     <div class="mt-6 flex flex-wrap gap-3">
-                        <a href="/characters/create"
+                        <a href="{{ route('characters.create') }}"
                            class="rounded-xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white">
                             Create a Character
                         </a>
-                        <a href="/maps"
+                        <a href="{{ route('maps.index') }}"
                            class="rounded-xl border border-slate-700 px-4 py-2 text-sm font-medium hover:bg-slate-900">
                             Generate a Map
                         </a>
@@ -27,7 +28,7 @@
                 <div class="w-full md:w-[360px]">
                     <div class="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
                         <p class="text-sm font-medium">Quick search</p>
-                        <p class="mt-1 text-xs text-slate-400">Jump to a monster or rule by name.</p>
+                        <p class="mt-1 text-xs text-slate-400">Jump to a monster or item by name.</p>
                         <form class="mt-3 flex gap-2" action="/search" method="GET">
                             <input
                                 name="q"
@@ -56,15 +57,15 @@
             </div>
 
             <div class="grid gap-4 md:grid-cols-2">
-                {{-- Rules --}}
-                <a href="/rules"
+                {{-- Items --}}
+                <a href="#"
                    class="group rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:bg-slate-900">
                     <div class="flex items-start justify-between gap-4">
                         <div>
-                            <p class="text-sm text-slate-400">Rules Library</p>
-                            <h3 class="mt-1 text-xl font-semibold">DMG • PHB • MM</h3>
+                            <p class="text-sm text-slate-400">Item Library</p>
+                            <h3 class="mt-1 text-xl font-semibold">Weapons • Items • Loot</h3>
                             <p class="mt-2 text-sm text-slate-300">
-                                Browse the catalog and find answers fast.
+                                Browse the catalog and find items fast.
                             </p>
                         </div>
                         <span class="rounded-xl bg-slate-800 px-3 py-2 text-sm group-hover:bg-slate-700">Open</span>
@@ -72,7 +73,7 @@
                 </a>
 
                 {{-- Monsters --}}
-                <a href="/databases/monsters"
+                <a href="{{ route('monsters.index') }}"
                    class="group rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:bg-slate-900">
                     <div class="flex items-start justify-between gap-4">
                         <div>
@@ -102,7 +103,7 @@
                 </a>
 
                 {{-- Encounters --}}
-                <a href="/encounters"
+                <a href="{{ route('encounters.index') }}"
                    class="group rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:bg-slate-900">
                     <div class="flex items-start justify-between gap-4">
                         <div>
@@ -119,8 +120,12 @@
         </section>
 
         {{-- “Coming soon” row --}}
-        <section class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
-            <h2 class="text-lg font-semibold">Dynamic Map Generation</h2>
+        <a href="{{ route('dungeons.generate') }}"
+           class="group rounded-2xl border border-slate-800 bg-slate-950 p-6 hover:bg-slate-900">
+            <div class="flex items-start justify-between gap-4">
+                <h2 class="text-lg font-semibold">Dynamic Map Generation</h2>
+                <span class="rounded-xl bg-slate-800 px-3 py-2 text-sm group-hover:bg-slate-700">Generate</span>
+            </div>
             <p class="mt-1 text-sm text-slate-400">
                 Generate maps for your campaign with our AI Powered Procedural Generation
             </p>
@@ -130,6 +135,6 @@
                 <span class="rounded-full border border-slate-800 bg-slate-950 px-3 py-1 text-slate-300">Lore</span>
                 <span class="rounded-full border border-slate-800 bg-slate-950 px-3 py-1 text-slate-300">Export Maps</span>
             </div>
-        </section>
+        </a>
     </div>
 </x-layouts.app>

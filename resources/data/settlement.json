@@ -1,0 +1,966 @@
+{
+    "RaceRelations" : [
+        {
+            "Relation_id" : 1,
+            "Relation" : "Harmony",
+            "minRoll" : 1,
+            "maxRoll" : 10
+        },
+        {
+            "Relation_id" : 2,
+            "Relation" : "Tension or rivalry",
+            "minRoll" : 11,
+            "maxRoll" : 14
+        },
+        {
+            "Relation_id" : 3,
+            "Relation" : "Racial majority are conquerors",
+            "minRoll" : 15,
+            "maxRoll" : 16
+        },
+        {
+            "Relation_id" : 4,
+            "Relation" : "Racial minority are rulers",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "Relation_id" : 5,
+            "Relation" : "Racial minority are refugees",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "Relation_id" : 6,
+            "Relation" : "Racial majority oppresses the minority",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "Relation_id" : 7,
+            "Relation" : "Racial minority oppresses the majority",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "RulersStatus" : [
+        {
+            "Status_id" : 1,
+            "RulerStatus" : "Respected, fair and just",
+            "minRoll" : 1,
+            "maxRoll" : 5
+        },
+        {
+            "Status_id" : 2,
+            "RulerStatus" : "Feared tyrant",
+            "minRoll" : 6,
+            "maxRoll" : 8
+        },
+        {
+            "Status_id" : 3,
+            "RulerStatus" : "Weakling manipulated by others",
+            "minRoll" : 9,
+            "maxRoll" : 9
+        },
+        {
+            "Status_id" : 4,
+            "RulerStatus" : "Illegitimate ruler, simmering civil war",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "Status_id" : 5,
+            "RulerStatus" : "Ruled or controlled by a powerful monster",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "Status_id" : 6,
+            "RulerStatus" : "Mysterious anonymous cabal",
+            "minRoll" : 12,
+            "maxRoll" : 12
+        },
+        {
+            "Status_id" : 7,
+            "RulerStatus" : "Contested leadersship, open fighting",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "Status_id" : 8,
+            "RulerStatus" : "Cabal seized power openly",
+            "minRoll" : 14,
+            "maxRoll" : 14
+        },
+        {
+            "Status_id" : 9,
+            "RulerStatus" : "Doltish lout",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "Status_id" : 10,
+            "RulerStatus" : "On deathbed, claimants compete for power",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "Status_id" : 11,
+            "RulerStatus" : "Iron willed but respected",
+            "minRoll" : 17,
+            "maxRoll" : 18
+        },
+        {
+            "Status_id" : 12,
+            "RulerStatus" : "Religious leader",
+            "minRoll" : 19,
+            "maxRoll" : 20
+        }
+    ],
+    "NotableTraits" : [
+        {
+            "Trait_id" : 1,
+            "Trait" : "Canals in place of streets",
+            "roll" : 1
+        },
+        {
+            "Trait_id" : 2,
+            "Trait" : "Massive statue or monument",
+            "roll" : 2
+        },
+        {
+            "Trait_id" : 3,
+            "Trait" : "Grand Temple",
+            "roll" : 3
+        },
+        {
+            "Trait_id" : 4,
+            "Trait" : "Large Fortress",
+            "roll" : 4
+        },
+        {
+            "Trait_id" : 5,
+            "Trait" : "Verdant parks and orchards",
+            "roll" : 5
+        },
+        {
+            "Trait_id" : 6,
+            "Trait" : "River divides town",
+            "roll" : 6
+        },
+        {
+            "Trait_id" : 7,
+            "Trait" : "Major trade center",
+            "roll" : 7
+        },
+        {
+            "Trait_id" : 8,
+            "Trait" : "Headquarters of a powerful family or guild",
+            "roll" : 8
+        },
+        {
+            "Trait_id" : 9,
+            "Trait" : "Population mostly wealthy",
+            "roll" : 9
+        },
+        {
+            "Trait_id" : 10,
+            "Trait" : "Destitute, rundown",
+            "roll" : 10
+        },
+        {
+            "Trait_id" : 11,
+            "Trait" : "Awful smell",
+            "roll" : 11
+        },
+        {
+            "Trait_id" : 12,
+            "Trait" : "Center of trade for one specific good",
+            "roll" : 12
+        },
+        {
+            "Trait_id" : 13,
+            "Trait" : "Site of many battles",
+            "roll" : 13
+        },
+        {
+            "Trait_id" : 14,
+            "Trait" : "Site of a mythic or magical event",
+            "roll" : 14
+        },
+        {
+            "Trait_id" : 15,
+            "Trait" : "Important library or archive",
+            "roll" : 15
+        },
+        {
+            "Trait_id" : 16,
+            "Trait" : "Worship of all gods banned",
+            "roll" : 16
+        },
+        {
+            "Trait_id" : 17,
+            "Trait" : "Sinister reputation",
+            "roll" : 17
+        },
+        {
+            "Trait_id" : 18,
+            "Trait" : "Notable library or acadamy",
+            "roll" : 18
+        },
+        {
+            "Trait_id" : 19,
+            "Trait" : "Site of important tomb or graveyard",
+            "roll" : 19
+        },
+        {
+            "Trait_id" : 20,
+            "Trait" : "Built atop ancient ruins",
+            "roll" : 20
+        }
+    ],
+    "KnownFor" : [
+        {
+            "KnownFor_id" : 1,
+            "KnownFor" : "Delicious Cusine",
+            "roll" : 1
+        },
+        {
+            "KnownFor_id" : 2,
+            "KnownFor" : "Rude people",
+            "roll" : 2
+        },
+        {
+            "KnownFor_id" : 3,
+            "KnownFor" : "Greedy merchants",
+            "roll" : 3
+        },
+        {
+            "KnownFor_id" : 4,
+            "KnownFor" : "Artists and writers",
+            "roll" : 4
+        },
+        {
+            "KnownFor_id" : 5,
+            "KnownFor" : "Great Hero or savior",
+            "roll" : 5
+        },
+        {
+            "KnownFor_id" : 6,
+            "KnownFor" : "Flowers",
+            "roll" : 6
+        },
+        {
+            "KnownFor_id" : 7,
+            "KnownFor" : "Hordes of beggars",
+            "roll" : 7
+        },
+        {
+            "KnownFor_id" : 8,
+            "KnownFor" : "Tough warriors",
+            "roll" : 8
+        },
+        {
+            "KnownFor_id" : 9,
+            "KnownFor" : "Dark magic",
+            "roll" : 9
+        },
+        {
+            "KnownFor_id" : 10,
+            "KnownFor" : "Decadance",
+            "roll" : 10
+        },
+        {
+            "KnownFor_id" : 11,
+            "KnownFor" : "Piety",
+            "roll" : 11
+        },
+        {
+            "KnownFor_id" : 12,
+            "KnownFor" : "Gambling",
+            "roll" : 12
+        },
+        {
+            "KnownFor_id" : 13,
+            "KnownFor" : "Godlessness",
+            "roll" : 13
+        },
+        {
+            "KnownFor_id" : 14,
+            "KnownFor" : "Education",
+            "roll" : 14
+        },
+        {
+            "KnownFor_id" : 15,
+            "KnownFor" : "Wines",
+            "roll" : 15
+        },
+        {
+            "KnownFor_id" : 16,
+            "KnownFor" : "High Fashion",
+            "roll" : 16
+        },
+        {
+            "KnownFor_id" : 17,
+            "KnownFor" : "Political intrigue",
+            "roll" : 17
+        },
+        {
+            "KnownFor_id" : 18,
+            "KnownFor" : "Powerful guilds",
+            "roll" : 18
+        },
+        {
+            "KnownFor_id" : 19,
+            "KnownFor" : "Strong drink",
+            "roll" : 19
+        },
+        {
+            "KnownFor_id" : 20,
+            "KnownFor" : "Patriotism",
+            "roll" : 20
+        }
+    ],
+    "CurrentCalamity" : [
+        {
+            "Calamity_id" : 1,
+            "Calamity" : "Suspected vampire invasion",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "Calamity_id" : 2,
+            "Calamity" : "New cult seeks converts",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "Calamity_id" : 3,
+            "Calamity" : "Important figure died, murder suspected",
+            "minRoll" : 3,
+            "maxRoll" : 3
+        },
+        {
+            "Calamity_id" : 4,
+            "Calamity" : "War between rival thieves guild",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "Calamity_id" : 5,
+            "Calamity" : "Plague or famine sparks riots",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "Calamity_id" : 6,
+            "Calamity" : "Corrupt officials",
+            "minRoll" : 7,
+            "maxRoll" : 7
+        },
+        {
+            "Calamity_id" : 7,
+            "Calamity" : "Marauding monsters",
+            "minRoll" : 8,
+            "maxRoll" : 9
+        },
+        {
+            "Calamity_id" : 8,
+            "Calamity" : "Powwerful wizard has moved into town",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "Calamity_id" : 9,
+            "Calamity" : "Economic depression, trade distrupted",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "Calamity_id" : 10,
+            "Calamity" : "Flooding",
+            "minRoll" : 12,
+            "maxRoll" : 12
+        },
+        {
+            "Calamity_id" : 11,
+            "Calamity" : "Undead stirring in cemetaries",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "Calamity_id" : 12,
+            "Calamity" : "Prophecy of doom",
+            "minRoll" : 14,
+            "maxRoll" : 14
+        },
+        {
+            "Calamity_id" : 13,
+            "Calamity" : "Brink of war",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "Calamity_id" : 14,
+            "Calamity" : "Internal strife",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "Calamity_id" : 15,
+            "Calamity" : "Beseiged by enemies",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "Calamity_id" : 16,
+            "Calamity" : "Scaandal threatens powerful families",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "Calamity_id" : 17,
+            "Calamity" : "Dungeon discovered",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "Calamity_id" : 18,
+            "Calamity" : "Religious sects struggle for power",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "BuildingType" : [
+        {
+            "BuildingType_id" : 1,
+            "BuildingType" : "Residence",
+            "minRoll" : 1,
+            "maxRoll" : 10
+        },
+        {
+            "BuildingType_id" : 2,
+            "BuildingType" : "Religious",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "BuildingType_id" : 3,
+            "BuildingType" : "Tavern",
+            "minRoll" : 13,
+            "maxRoll" : 15
+        },
+        {
+            "BuildingType_id" : 4,
+            "BuildingType" : "Warehouse",
+            "minRoll" : 16,
+            "maxRoll" : 17
+        },
+        {
+            "BuildingType_id" : 5,
+            "BuildingType" : "Shop",
+            "minRoll" : 18,
+            "maxRoll" : 20
+        }
+    ],
+    "ResidenceBuilding" : [
+        {
+            "ResidenceBuilding_id" : 1,
+            "ResidenceBuilding" : "Abandoned squat",
+            "minRoll" : 1,
+            "maxRoll" : 2
+        },
+        {
+            "ResidenceBuilding_id" : 2,
+            "ResidenceBuilding" : "Middle class home",
+            "minRoll" : 3,
+            "maxRoll" : 8
+        },
+        {
+            "ResidenceBuilding_id" : 3,
+            "ResidenceBuilding" : "Upper class home",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "ResidenceBuilding_id" : 4,
+            "ResidenceBuilding" : "Crowded tenement",
+            "minRoll" : 11,
+            "maxRoll" : 15
+        },
+        {
+            "ResidenceBuilding_id" : 5,
+            "ResidenceBuilding" : "Orphanage",
+            "minRoll" : 16,
+            "maxRoll" : 17
+        },
+        {
+            "ResidenceBuilding_id" : 6,
+            "ResidenceBuilding" : "Hidden slavers den",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "ResidenceBuilding_id" : 7,
+            "ResidenceBuilding" : "Front for secret cult",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "ResidenceBuilding_id" : 8,
+            "ResidenceBuilding" : "Lavish guarded mansion",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "ReligiousBuilding" : [
+        {
+            "ReligiousBuilding_id" : 1,
+            "ReligiousBuilding" : "Temple to a good or neutral deity",
+            "minRoll" : 1,
+            "maxRoll" : 10
+        },
+        {
+            "ReligiousBuilding_id" : 2,
+            "ReligiousBuilding" : "Temple to a false deity",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "ReligiousBuilding_id" : 3,
+            "ReligiousBuilding" : "House of ascetics",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "ReligiousBuilding_id" : 4,
+            "ReligiousBuilding" : "Abandoned shrine",
+            "minRoll" : 14,
+            "maxRoll" : 15
+        },
+        {
+            "ReligiousBuilding_id" : 5,
+            "ReligiousBuilding" : "Library dedicated to religious study",
+            "minRoll" : 16,
+            "maxRoll" : 17
+        },
+        {
+            "ReligiousBuilding_id" : 6,
+            "ReligiousBuilding" : "Hidden shrine to fiend or evil deity",
+            "minRoll" : 18,
+            "maxRoll" : 20
+        }
+    ],
+    "TavernBuilding" : [
+        {
+            "TavernBuilding_id" : 1,
+            "TavernBuilding" : "QQuiet, low key bar",
+            "minRoll" : 1,
+            "maxRoll" : 5
+        },
+        {
+            "TavernBuilding_id" : 2,
+            "TavernBuilding" : "Raucous Dive",
+            "minRoll" : 6,
+            "maxRoll" : 9
+        },
+        {
+            "TavernBuilding_id" : 3,
+            "TavernBuilding" : "Theives guild hangout",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "TavernBuilding_id" : 4,
+            "TavernBuilding" : "Gatheering place for secret society",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "TavernBuilding_id" : 5,
+            "TavernBuilding" : "Upper class dining club",
+            "minRoll" : 12,
+            "maxRoll" : 13
+        },
+        {
+            "TavernBuilding_id" : 6,
+            "TavernBuilding" : "Gambling den",
+            "minRoll" : 14,
+            "maxRoll" : 15
+        },
+        {
+            "TavernBuilding_id" : 7,
+            "TavernBuilding" : "Caters to a specific race or guild",
+            "minRoll" : 16,
+            "maxRoll" : 17
+        },
+        {
+            "TavernBuilding_id" : 8,
+            "TavernBuilding" : "Members only club",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "TavernBuilding_id" : 9,
+            "TavernBuilding" : "Brothel",
+            "minRoll" : 19,
+            "maxRoll" : 20
+        }
+    ],
+    "TavernNameGenP1" : [
+        {
+            "NameGenP1_id" : 1,
+            "Name" : "The Silver",
+            "roll" : 1
+        },
+        {
+            "NameGenP1_id" : 2,
+            "Name" : "The Golden",
+            "roll" : 2
+        },
+        {
+            "NameGenP1_id" : 3,
+            "Name" : "The Staggering",
+            "roll" : 3
+        },
+        {
+            "NameGenP1_id" : 4,
+            "Name" : "The Laughing",
+            "roll" : 4
+        },
+        {
+            "NameGenP1_id" : 5,
+            "Name" : "The Prancing",
+            "roll" : 5
+        },
+        {
+            "NameGenP1_id" : 6,
+            "Name" : "The Gilded",
+            "roll" : 6
+        },
+        {
+            "NameGenP1_id" : 7,
+            "Name" : "The Running",
+            "roll" : 7
+        },
+        {
+            "NameGenP1_id" : 8,
+            "Name" : "The Howling",
+            "roll" : 8
+        },
+        {
+            "NameGenP1_id" : 9,
+            "Name" : "The Slaughtered",
+            "roll" : 9
+        },
+        {
+            "NameGenP1_id" : 10,
+            "Name" : "The Leering",
+            "roll" : 10
+        },
+        {
+            "NameGenP1_id" : 11,
+            "Name" : "The Drunken",
+            "roll" : 11
+        },
+        {
+            "NameGenP1_id" : 12,
+            "Name" : "The Leaping",
+            "roll" : 12
+        },
+        {
+            "NameGenP1_id" : 13,
+            "Name" : "The Roaring",
+            "roll" : 13
+        },
+        {
+            "NameGenP1_id" : 14,
+            "Name" : "The Frowning",
+            "roll" : 14
+        },
+        {
+            "NameGenP1_id" : 15,
+            "Name" : "The Lonely",
+            "roll" : 15
+        },
+        {
+            "NameGenP1_id" : 16,
+            "Name" : "The Wandering",
+            "roll" : 16
+        },
+        {
+            "NameGenP1_id" : 17,
+            "Name" : "The Mysterious",
+            "roll" : 17
+        },
+        {
+            "NameGenP1_id" : 18,
+            "Name" : "The Barking",
+            "roll" : 18
+        },
+        {
+            "NameGenP1_id" : 19,
+            "Name" : "The Black",
+            "roll" : 19
+        },
+        {
+            "NameGenP1_id" : 20,
+            "Name" : "The Gleaming",
+            "roll" : 20
+        }
+    ],
+    "TavernNameGenP2" : [
+        {
+            "NameGenP2_id" : 1,
+            "Name" : "Eel",
+            "roll" : 1
+        },
+        {
+            "NameGenP2_id" : 2,
+            "Name" : "Dolphin",
+            "roll" : 2
+        },
+        {
+            "NameGenP2_id" : 3,
+            "Name" : "Dwarf",
+            "roll" : 3
+        },
+        {
+            "NameGenP2_id" : 4,
+            "Name" : "Pegasus",
+            "roll" : 4
+        },
+        {
+            "NameGenP2_id" : 5,
+            "Name" : "Pony",
+            "roll" : 5
+        },
+        {
+            "NameGenP2_id" : 6,
+            "Name" : "Rose",
+            "roll" : 6
+        },
+        {
+            "NameGenP2_id" : 7,
+            "Name" : "Stag",
+            "roll" : 7
+        },
+        {
+            "NameGenP2_id" : 8,
+            "Name" : "Wolf",
+            "roll" : 8
+        },
+        {
+            "NameGenP2_id" : 9,
+            "Name" : "Lamb",
+            "roll" : 9
+        },
+        {
+            "NameGenP2_id" : 10,
+            "Name" : "Demon",
+            "roll" : 10
+        },
+        {
+            "NameGenP2_id" : 11,
+            "Name" : "Goat",
+            "roll" : 11
+        },
+        {
+            "NameGenP2_id" : 12,
+            "Name" : "Spirit",
+            "roll" : 12
+        },
+        {
+            "NameGenP2_id" : 13,
+            "Name" : "Horde",
+            "roll" : 13
+        },
+        {
+            "NameGenP2_id" : 14,
+            "Name" : "Jester",
+            "roll" : 14
+        },
+        {
+            "NameGenP2_id" : 15,
+            "Name" : "Mountain",
+            "roll" : 15
+        },
+        {
+            "NameGenP2_id" : 16,
+            "Name" : "Eagle",
+            "roll" : 16
+        },
+        {
+            "NameGenP2_id" : 17,
+            "Name" : "Satyr",
+            "roll" : 17
+        },
+        {
+            "NameGenP2_id" : 18,
+            "Name" : "Dog",
+            "roll" : 18
+        },
+        {
+            "NameGenP2_id" : 19,
+            "Name" : "Spider",
+            "roll" : 19
+        },
+        {
+            "NameGenP2_id" : 20,
+            "Name" : "Star",
+            "roll" : 20
+        }
+    ],
+    "WarehouseBuilding" : [
+        {
+            "WarehouseBuilding_id" : 1,
+            "WarehouseBuilding" : "Empty or abandoned",
+            "minRoll" : 1,
+            "maxRoll" : 4 
+        },
+        {
+            "WarehouseBuilding_id" : 2,
+            "WarehouseBuilding" : "Heavily Guarded, expensive goods",
+            "minRoll" : 5,
+            "maxRoll" : 6 
+        },
+        {
+            "WarehouseBuilding_id" : 3,
+            "WarehouseBuilding" : "Cheap Goods",
+            "minRoll" : 7,
+            "maxRoll" : 10 
+        },
+        {
+            "WarehouseBuilding_id" : 4,
+            "WarehouseBuilding" : "Bulk Goods",
+            "minRoll" : 11,
+            "maxRoll" : 14 
+        },
+        {
+            "WarehouseBuilding_id" : 5,
+            "WarehouseBuilding" : "Live Animals",
+            "minRoll" : 15,
+            "maxRoll" : 15 
+        },
+        {
+            "WarehouseBuilding_id" : 6,
+            "WarehouseBuilding" : "Weapons/Armor",
+            "minRoll" : 16,
+            "maxRoll" : 17 
+        },
+        {
+            "WarehouseBuilding_id" : 7,
+            "WarehouseBuilding" : "Goods from a distant land",
+            "minRoll" : 18,
+            "maxRoll" : 19 
+        },
+        {
+            "WarehouseBuilding_id" : 8,
+            "WarehouseBuilding" : "Secrett smugglers den",
+            "minRoll" : 20,
+            "maxRoll" : 20 
+        }
+    ],
+    "ShopBuilding" : [
+        {
+            "ShopBuilding_id" : 1,
+            "ShopBuilding" : "Pawnshop",
+            "roll" : 1
+        },
+        {
+            "ShopBuilding_id" : 2,
+            "ShopBuilding" : "Herbs/Incense",
+            "roll" : 2
+        },
+        {
+            "ShopBuilding_id" : 3,
+            "ShopBuilding" : "Fruits/Vegetables",
+            "roll" : 3
+        },
+        {
+            "ShopBuilding_id" : 4,
+            "ShopBuilding" : "Dried Meats",
+            "roll" : 4
+        },
+        {
+            "ShopBuilding_id" : 5,
+            "ShopBuilding" : "Pottery",
+            "roll" : 5
+        },
+        {
+            "ShopBuilding_id" : 6,
+            "ShopBuilding" : "Undertaker",
+            "roll" : 6
+        },
+        {
+            "ShopBuilding_id" : 7,
+            "ShopBuilding" : "Books",
+            "roll" : 7
+        },
+        {
+            "ShopBuilding_id" : 8,
+            "ShopBuilding" : "Moneylender",
+            "roll" : 8
+        },
+        {
+            "ShopBuilding_id" : 9,
+            "ShopBuilding" : "Weapons/Armor",
+            "roll" : 9
+        },
+        {
+            "ShopBuilding_id" : 10,
+            "ShopBuilding" : "Chandler",
+            "roll" : 10
+        },
+        {
+            "ShopBuilding_id" : 11,
+            "ShopBuilding" : "Smithy",
+            "roll" : 11
+        },
+        {
+            "ShopBuilding_id" : 12,
+            "ShopBuilding" : "Carpenter",
+            "roll" : 12
+        },
+        {
+            "ShopBuilding_id" : 13,
+            "ShopBuilding" : "Weaver",
+            "roll" : 13
+        },
+        {
+            "ShopBuilding_id" : 14,
+            "ShopBuilding" : "Jewler",
+            "roll" : 14
+        },
+        {
+            "ShopBuilding_id" : 15,
+            "ShopBuilding" : "Baker",
+            "roll" : 15
+        },
+        {
+            "ShopBuilding_id" : 16,
+            "ShopBuilding" : "Mapmaker",
+            "roll" : 16
+        },
+        {
+            "ShopBuilding_id" : 17,
+            "ShopBuilding" : "Tailor",
+            "roll" : 17
+        },
+        {
+            "ShopBuilding_id" : 18,
+            "ShopBuilding" : "Ropemaker",
+            "roll" : 18
+        },
+        {
+            "ShopBuilding_id" : 19,
+            "ShopBuilding" : "Mason",
+            "roll" : 19
+        },
+        {
+            "ShopBuilding_id" : 20,
+            "ShopBuilding" : "Scribe",
+            "roll" : 20
+        }
+    ]
+}

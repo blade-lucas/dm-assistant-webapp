@@ -1,0 +1,95 @@
+{
+    "AriborneWaterborneVehicles" : [
+        {
+            "AWVehicle_id" : 1,
+            "AWVehicle_Name" : "Airship",
+            "AWVehicle_Mode" : "Airborne",
+            "AWVehicle_Cost" : 20000,
+            "AWVehicle_Speed" : 8,
+            "AWVehicle_Crew" : 10,
+            "AWVehicle_Passangers" : 20,
+            "AWVehicle_Cargo" : 1,
+            "AWVehicle_AC" : 13,
+            "AWVehicle_HP" : 300,
+            "AWVehicle_DamageThreshold" : -1
+        },
+        {
+            "AWVehicle_id" : 2,
+            "AWVehicle_Name" : "Galley",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 30000,
+            "AWVehicle_Speed" : 4,
+            "AWVehicle_Crew" : 80,
+            "AWVehicle_Passangers" : -1,
+            "AWVehicle_Cargo" : 150,
+            "AWVehicle_AC" : 15,
+            "AWVehicle_HP" : 500,
+            "AWVehicle_DamageThreshold" : 20
+        },
+        {
+            "AWVehicle_id" : 3,
+            "AWVehicle_Name" : "Keelboat",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 3000,
+            "AWVehicle_Speed" : 1,
+            "AWVehicle_Crew" : 1,
+            "AWVehicle_Passangers" : 6,
+            "AWVehicle_Cargo" : 0.5,
+            "AWVehicle_AC" : 15,
+            "AWVehicle_HP" : 100,
+            "AWVehicle_DamageThreshold" : 10
+        },
+        {
+            "AWVehicle_id" : 4,
+            "AWVehicle_Name" : "Longship",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 10000,
+            "AWVehicle_Speed" : 3,
+            "AWVehicle_Crew" : 40,
+            "AWVehicle_Passangers" : 150,
+            "AWVehicle_Cargo" : 10,
+            "AWVehicle_AC" : 15,
+            "AWVehicle_HP" : 300,
+            "AWVehicle_DamageThreshold" : 15
+        },
+        {
+            "AWVehicle_id" : 4,
+            "AWVehicle_Name" : "Rowboat",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 50,
+            "AWVehicle_Speed" : 1.5,
+            "AWVehicle_Crew" : 1,
+            "AWVehicle_Passangers" : 3,
+            "AWVehicle_Cargo" : -1,
+            "AWVehicle_AC" : 11,
+            "AWVehicle_HP" : 50,
+            "AWVehicle_DamageThreshold" : -1
+        },
+        {
+            "AWVehicle_id" : 5,
+            "AWVehicle_Name" : "Sailing Ship",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 10000,
+            "AWVehicle_Speed" : 2,
+            "AWVehicle_Crew" : 20,
+            "AWVehicle_Passangers" : 20,
+            "AWVehicle_Cargo" : 100,
+            "AWVehicle_AC" : 15,
+            "AWVehicle_HP" : 300,
+            "AWVehicle_DamageThreshold" : 15
+        },
+        {
+            "AWVehicle_id" : 6,
+            "AWVehicle_Name" : "Warship",
+            "AWVehicle_Mode" : "Waterborne",
+            "AWVehicle_Cost" : 25000,
+            "AWVehicle_Speed" : 2.5,
+            "AWVehicle_Crew" : 60,
+            "AWVehicle_Passangers" : 60,
+            "AWVehicle_Cargo" : 200,
+            "AWVehicle_AC" : 15,
+            "AWVehicle_HP" : 500,
+            "AWVehicle_DamageThreshold" : 20
+        }
+    ]
+}

@@ -1,0 +1,640 @@
+{
+    "DungeonLocation" : [
+        {
+            "DungeonLocation_id" : 1,
+            "DungeonLocation" : "A building in a city",
+            "minRoll" : 1,
+            "maxRoll" : 4
+        },
+        {
+            "DungeonLocation_id" : 2,
+            "DungeonLocation" : "Catacombs or sewers beneath a city",
+            "minRoll" : 5,
+            "maxRoll" : 8
+        },
+        {
+            "DungeonLocation_id" : 3,
+            "DungeonLocation" : "Beneath a farmhouse",
+            "minRoll" : 9,
+            "maxRoll" : 12
+        },
+        {
+            "DungeonLocation_id" : 4,
+            "DungeonLocation" : "Beneath a graveyard",
+            "minRoll" : 13,
+            "maxRoll" : 16
+        },
+        {
+            "DungeonLocation_id" : 5,
+            "DungeonLocation" : "Beneath a ruined castle",
+            "minRoll" : 17,
+            "maxRoll" : 22
+        },
+        {
+            "DungeonLocation_id" : 6,
+            "DungeonLocation" : "Beneath a runined city",
+            "minRoll" : 23,
+            "maxRoll" : 26
+        },
+        {
+            "DungeonLocation_id" : 7,
+            "DungeonLocation" : "Beneath a temple",
+            "minRoll" : 27,
+            "maxRoll" : 30
+        },
+        {
+            "DungeonLocation_id" : 8,
+            "DungeonLocation" : "In a chasm",
+            "minRoll" : 31,
+            "maxRoll" : 34
+        },
+        {
+            "DungeonLocation_id" : 9,
+            "DungeonLocation" : "In a cliff face",
+            "minRoll" : 35,
+            "maxRoll" : 38
+        },
+        {
+            "DungeonLocation_id" : 10,
+            "DungeonLocation" : "In a desert",
+            "minRoll" : 39,
+            "maxRoll" : 42
+        },
+        {
+            "DungeonLocation_id" : 11,
+            "DungeonLocation" : "In a forest",
+            "minRoll" : 43,
+            "maxRoll" : 46
+        },
+        {
+            "DungeonLocation_id" : 12,
+            "DungeonLocation" : "In a glacier",
+            "minRoll" : 47,
+            "maxRoll" : 50
+        },
+        {
+            "DungeonLocation_id" : 13,
+            "DungeonLocation" : "In a gorge",
+            "minRoll" : 51,
+            "maxRoll" : 54
+        },
+        {
+            "DungeonLocation_id" : 14,
+            "DungeonLocation" : "In a jungle",
+            "minRoll" : 55,
+            "maxRoll" : 58
+        },
+        {
+            "DungeonLocation_id" : 15,
+            "DungeonLocation" : "In a mountain pass",
+            "minRoll" : 59,
+            "maxRoll" : 62
+        },
+        {
+            "DungeonLocation_id" : 16,
+            "DungeonLocation" : "In a swamp",
+            "minRoll" : 63,
+            "maxRoll" : 66
+        },
+        {
+            "DungeonLocation_id" : 17,
+            "DungeonLocation" : "Beneath or on top of a mesa",
+            "minRoll" : 67,
+            "maxRoll" : 70
+        },
+        {
+            "DungeonLocation_id" : 18,
+            "DungeonLocation" : "In sea caves",
+            "minRoll" : 71,
+            "maxRoll" : 74
+        },
+        {
+            "DungeonLocation_id" : 19,
+            "DungeonLocation" : "In several connected mesas",
+            "minRoll" : 75,
+            "maxRoll" : 78
+        },
+        {
+            "DungeonLocation_id" : 20,
+            "DungeonLocation" : "On a mountain peak",
+            "minRoll" : 79,
+            "maxRoll" : 82
+        },
+        {
+            "DungeonLocation_id" : 21,
+            "DungeonLocation" : "On a promontory",
+            "minRoll" : 83,
+            "maxRoll" : 86
+        },
+        {
+            "DungeonLocation_id" : 22,
+            "DungeonLocation" : "On an island",
+            "minRoll" : 87,
+            "maxRoll" : 90
+        },
+        {
+            "DungeonLocation_id" : 23,
+            "DungeonLocation" : "Underwater",
+            "minRoll" : 91,
+            "maxRoll" : 95
+        },
+        {
+            "DungeonLocation_id" : 24,
+            "DungeonLocation" : "Roll on exotic location table",
+            "minRoll" : 96,
+            "maxRoll" : 100
+        }
+    ],
+    "ExoticLocations" : [
+        {
+            "ExoticLocation_id" : 1,
+            "ExoticLocation" : "Among the branches of a tree",
+            "roll" : 1
+        },
+        {
+            "ExoticLocation_id" : 2,
+            "ExoticLocation" : "Around a geyser",
+            "roll" : 2
+        },
+        {
+            "ExoticLocation_id" : 3,
+            "ExoticLocation" : "Behind a waterfall",
+            "roll" : 3
+        },
+        {
+            "ExoticLocation_id" : 4,
+            "ExoticLocation" : "Burried in an avalanche",
+            "roll" : 4
+        },
+        {
+            "ExoticLocation_id" : 5,
+            "ExoticLocation" : "Burried in a sandstorm",
+            "roll" : 5
+        },
+        {
+            "ExoticLocation_id" : 6,
+            "ExoticLocation" : "Burried in volcanic ash",
+            "roll" : 6
+        },
+        {
+            "ExoticLocation_id" : 7,
+            "ExoticLocation" : "Castle or structure sunken in a swamp",
+            "roll" : 7
+        },
+        {
+            "ExoticLocation_id" : 8,
+            "ExoticLocation" : "Castle or structure at the bottom of a sink hole",
+            "roll" : 8
+        },
+        {
+            "ExoticLocation_id" : 9,
+            "ExoticLocation" : "Floating on the sea",
+            "roll" : 9
+        },
+        {
+            "ExoticLocation_id" : 10,
+            "ExoticLocation" : "In a meteorite",
+            "roll" : 10
+        },
+        {
+            "ExoticLocation_id" : 11,
+            "ExoticLocation" : "In a demiplane or in a pocket dimension",
+            "roll" : 11
+        },
+        {
+            "ExoticLocation_id" : 12,
+            "ExoticLocation" : "In an area devistated by a magical catastrophe",
+            "roll" : 12
+        },
+        {
+            "ExoticLocation_id" : 13,
+            "ExoticLocation" : "On a cloud",
+            "roll" : 13
+        },
+        {
+            "ExoticLocation_id" : 14,
+            "ExoticLocation" : "In the feywild",
+            "roll" : 14
+        },
+        {
+            "ExoticLocation_id" : 15,
+            "ExoticLocation" : "In the shadowfell",
+            "roll" : 15
+        },
+        {
+            "ExoticLocation_id" : 16,
+            "ExoticLocation" : "On an island in an underground sea",
+            "roll" : 16
+        },
+        {
+            "ExoticLocation_id" : 17,
+            "ExoticLocation" : "In a volcano",
+            "roll" : 17
+        },
+        {
+            "ExoticLocation_id" : 18,
+            "ExoticLocation" : "On the back of a gargantuan living creature",
+            "roll" : 18
+        },
+        {
+            "ExoticLocation_id" : 19,
+            "ExoticLocation" : "Sealed inside a magical dome of force",
+            "roll" : 19
+        },
+        {
+            "ExoticLocation_id" : 20,
+            "ExoticLocation" : "Inside a Mordenkainens magnificent mansion",
+            "roll" : 20
+        }
+    ],
+    "DungeonCreator" : [
+        {
+            "Creator_id" : 1,
+            "Creator" : "Beholder",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "Creator_id" : 2,
+            "Creator" : "Cult or religious group",
+            "minRoll" : 2,
+            "maxRoll" : 4
+        },
+        {
+            "Creator_id" : 3,
+            "Creator" : "Dwarves",
+            "minRoll" : 5,
+            "maxRoll" : 8
+        },
+        {
+            "Creator_id" : 4,
+            "Creator" : "Elves",
+            "minRoll" : 9,
+            "maxRoll" : 9
+        },
+        {
+            "Creator_id" : 5,
+            "Creator" : "Giants",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "Creator_id" : 6,
+            "Creator" : "Hobgoblins",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "Creator_id" : 7,
+            "Creator" : "Humans",
+            "minRoll" : 12,
+            "maxRoll" : 15
+        },
+        {
+            "Creator_id" : 8,
+            "Creator" : "Kuo-toa",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "Creator_id" : 9,
+            "Creator" : "Lich",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "Creator_id" : 10,
+            "Creator" : "Mind Flayers",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "Creator_id" : 11,
+            "Creator" : "Yuan-Ti",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "Creator_id" : 12,
+            "Creator" : "No creator/Natural",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "CultsAndReligiousGroups" : [
+        {
+            "CultReligious_id" : 1,
+            "CultReligious" : "Demon Worshipping Cult",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "CultReligious_id" : 2,
+            "CultReligious" : "Devil Worshipping Cult",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "CultReligious_id" : 3,
+            "CultReligious" : "Elemental Air Cult",
+            "minRoll" : 3,
+            "maxRoll" : 4
+        },
+        {
+            "CultReligious_id" : 4,
+            "CultReligious" : "Elemental Earth Cult",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "CultReligious_id" : 5,
+            "CultReligious" : "Elemental Fire Cult",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "CultReligious_id" : 6,
+            "CultReligious" : "Elemental Water Cult",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "CultReligious_id" : 7,
+            "CultReligious" : "Worshippers of an evil deity",
+            "minRoll" : 11,
+            "maxRoll" : 15
+        },
+        {
+            "CultReligious_id" : 8,
+            "CultReligious" : "Worshippers of a good deity",
+            "minRoll" : 16,
+            "maxRoll" : 17
+        },
+        {
+            "CultReligious_id" : 9,
+            "CultReligious" : "Worshippers of a neutral deity",
+            "minRoll" : 18,
+            "maxRoll" : 20
+        }
+    ],
+    "NPCAlignment" : [
+        {
+            "Alignment_id" : 1,
+            "Alignment" : "Lawful Good",
+            "minRoll" : 1,
+            "maxRoll" : 2
+        },
+        {
+            "Alignment_id" : 2,
+            "Alignment" : "Neutral Good",
+            "minRoll" : 3,
+            "maxRoll" : 4
+        },
+        {
+            "Alignment_id" : 3,
+            "Alignment" : "Chaotic Good",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "Alignment_id" : 4,
+            "Alignment" : "Lawful Neutral",
+            "minRoll" : 7,
+            "maxRoll" : 9
+        },
+        {
+            "Alignment_id" : 5,
+            "Alignment" : "Neutral",
+            "minRoll" : 10,
+            "maxRoll" : 11
+        },
+        {
+            "Alignment_id" : 6,
+            "Alignment" : "Chaotic Neutral",
+            "minRoll" : 12,
+            "maxRoll" : 12
+        },
+        {
+            "Alignment_id" : 7,
+            "Alignment" : "Lawful Evil",
+            "minRoll" : 13,
+            "maxRoll" : 15
+        },
+        {
+            "Alignment_id" : 8,
+            "Alignment" : "Neutral Evil",
+            "minRoll" : 16,
+            "maxRoll" : 18
+        },
+        {
+            "Alignment_id" : 9,
+            "Alignment" : "Chaotic Evil",
+            "minRoll" : 19,
+            "maxRoll" : 20
+        }
+    ],
+    "NPCClass" : [
+        {
+            "Class_id" : 1,
+            "Class" : "Barbarian",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "Class_id" : 2,
+            "Class" : "Bard",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "Class_id" : 3,
+            "Class" : "Cleric",
+            "minRoll" : 3,
+            "maxRoll" : 4
+        },
+        {
+            "Class_id" : 4,
+            "Class" : "Druid",
+            "minRoll" : 5,
+            "maxRoll" : 5
+        },
+        {
+            "Class_id" : 5,
+            "Class" : "Fighter",
+            "minRoll" : 6,
+            "maxRoll" : 7
+        },
+        {
+            "Class_id" : 6,
+            "Class" : "Monk",
+            "minRoll" : 8,
+            "maxRoll" : 8
+        },
+        {
+            "Class_id" : 7,
+            "Class" : "Paladin",
+            "minRoll" : 9,
+            "maxRoll" : 9
+        },
+        {
+            "Class_id" : 8,
+            "Class" : "Ranger",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "Class_id" : 9,
+            "Class" : "Rogue",
+            "minRoll" : 11,
+            "maxRoll" : 14
+        },
+        {
+            "Class_id" : 10,
+            "Class" : "Sorcerer",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "Class_id" : 11,
+            "Class" : "Warlock",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "Class_id" : 12,
+            "Class" : "Wizard",
+            "minRoll" : 17,
+            "maxRoll" : 20
+        }
+    ],
+    "DungeonPurpose" : [
+        {
+            "Purpose_id" : 1,
+            "Purpose" : "Death Trap",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "Purpose_id" : 2,
+            "Purpose" : "Lair",
+            "minRoll" : 2,
+            "maxRoll" : 5
+        },
+        {
+            "Purpose_id" : 3,
+            "Purpose" : "Maze",
+            "minRoll" : 6,
+            "maxRoll" : 6
+        },
+        {
+            "Purpose_id" : 4,
+            "Purpose" : "Mine",
+            "minRoll" : 7,
+            "maxRoll" : 9
+        },
+        {
+            "Purpose_id" : 5,
+            "Purpose" : "Planar Gate",
+            "minRoll" : 10,
+            "maxRoll" : 10
+        },
+        {
+            "Purpose_id" : 6,
+            "Purpose" : "Stronghold",
+            "minRoll" : 11,
+            "maxRoll" : 14
+        },
+        {
+            "Purpose_id" : 7,
+            "Purpose" : "Temple or shrine",
+            "minRoll" : 15,
+            "maxRoll" : 17
+        },
+        {
+            "Purpose_id" : 8,
+            "Purpose" : "Tomb",
+            "minRoll" : 18,
+            "maxRoll" : 19
+        },
+        {
+            "Purpose_id" : 9,
+            "Purpose" : "Treasure vault",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "DungeonHistory" : [
+        {
+            "History_id" : 1,
+            "History" : "Abandoned by creators",
+            "minRoll" : 1,
+            "maxRoll" : 3
+        },
+        {
+            "History_id" : 2,
+            "History" : "Abandoned due to plague",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "History_id" : 3,
+            "History" : "Conquered by invaders",
+            "minRoll" : 5,
+            "maxRoll" : 8
+        },
+        {
+            "History_id" : 4,
+            "History" : "Creators destroyed by attacking invaders",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "History_id" : 5,
+            "History" : "Creators destroyed by discovery made in the site",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "History_id" : 6,
+            "History" : "Creators destroyed by internal conflict",
+            "minRoll" : 12,
+            "maxRoll" : 12
+        },
+        {
+            "History_id" : 7,
+            "History" : "Creators destroyed by magical catastrophe",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "History_id" : 8,
+            "History" : "Creators destroyed by natural disaster",
+            "minRoll" : 14,
+            "maxRoll" : 15
+        },
+        {
+            "History_id" : 9,
+            "History" : "Location cursed by gods and shunned",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "History_id" : 10,
+            "History" : "Original creator still in control",
+            "minRoll" : 17,
+            "maxRoll" : 18
+        },
+        {
+            "History_id" : 11,
+            "History" : "Overrun by planar creatures",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "History_id" : 12,
+            "History" : "Site of great miracle",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ]
+}

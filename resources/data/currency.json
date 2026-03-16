@@ -1,0 +1,64 @@
+{
+    "startingWealth" : [
+        {
+            "character_class" : "Barbarian",
+            "roll" : "2-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Bard",
+            "roll" : "5-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Cleric",
+            "roll" : "5-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Druid",
+            "roll" : "2-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Fighter",
+            "roll" : "5-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Monk",
+            "roll" : "5-d4",
+            "multiplier" : 1
+        },
+        {
+            "character_class" : "Paladin",
+            "roll" : "5-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Ranger",
+            "roll" : "5-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Rogue",
+            "roll" : "4-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Sorcerer",
+            "roll" : "3-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Warlock",
+            "roll" : "4-d4",
+            "multiplier" : 10
+        },
+        {
+            "character_class" : "Wizard",
+            "roll" : "4-d4",
+            "multiplier" : 10
+        }
+    ]
+}
