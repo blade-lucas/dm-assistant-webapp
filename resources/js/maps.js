@@ -3,12 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const loading = document.getElementById('loading');
     const img = document.getElementById('mapImage');
 
-    btn.addEventListener('click', async () => {
-        loading.classList.remove('hidden');
-        img.src="";
-        img.style.display = 'none';
+    document.getElementById('mapForm').addEventListener('submit', e => {
+    e.preventDefault();
+    });
 
-        const response = await fetch('/maps/generate-map', {
+    btn.addEventListener('click', async () => {
+        // Hide placeholder immediately
+        placeholder.style.display = 'none';
+        loading.classList.remove('hidden');
+        img.style.display = 'none';
+        img.src="";
+
+        const response = await fetch('/dungeons/generate-map', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -21,9 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loading.classList.add('hidden');
 
         if (data.image) {
+            placeholder.style.display = 'none';   // hide the "No dungeon generated yet"
             img.src = "data:image/png;base64," + data.image;
             img.style.display = 'block';
-        } else {
+        }
+        else {
             alert("Error generating map.");
         }
     });
