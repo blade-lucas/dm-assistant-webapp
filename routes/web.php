@@ -25,6 +25,7 @@ Route::view('/encounters/generate', 'encounters.generate');
 
 Route::view('/maps', 'maps.index');
 Route::view('/maps/create', 'maps.create');
+Route::post('/maps/generate-map', [MapGenerationController::class, 'generate']);
 
 Route::get('/characters/{character}/basic', [CharacterController::class, 'edit'])
     ->name('characters.basic.edit');
@@ -138,3 +139,4 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 Route::get('/dungeons/generate', [DungeonGeneratorController::class, 'index'])->name('dungeons.generate');
 Route::post('/dungeons/generate', [DungeonGeneratorController::class, 'generate'])->name('dungeons.generate.run');
+Route::post('/dungeons/generate-map', [MapGenerationController::class, 'generate'])->name('dungeons.generate.map');
