@@ -1,0 +1,84 @@
+{
+    "statModifiers": [
+        {
+            "minStat": 1,
+            "maxStat": 1,
+            "modifier": -5
+        },
+        {
+            "minStat": 2,
+            "maxStat": 3,
+            "modifier": -4
+        },
+        {
+            "minStat": 4,
+            "maxStat": 5,
+            "modifier": -3
+        },
+        {
+            "minStat": 6,
+            "maxStat": 7,
+            "modifier": -2
+        },
+        {
+            "minStat": 8,
+            "maxStat": 9,
+            "modifier": -1
+        },
+        {
+            "minStat": 10,
+            "maxStat": 11,
+            "modifier": 0
+        },
+        {
+            "minStat": 12,
+            "maxStat": 13,
+            "modifier": 1
+        },
+        {
+            "minStat": 14,
+            "maxStat": 15,
+            "modifier": 2
+        },
+        {
+            "minStat": 16,
+            "maxStat": 17,
+            "modifier": 3
+        },
+        {
+            "minStat": 18,
+            "maxStat": 19,
+            "modifier": 4
+        },
+        {
+            "minStat": 20,
+            "maxStat": 21,
+            "modifier": 5
+        },
+        {
+            "minStat": 22,
+            "maxStat": 23,
+            "modifier": 6
+        },
+        {
+            "minStat": 24,
+            "maxStat": 25,
+            "modifier": 7
+        },
+        {
+            "minStat": 26,
+            "maxStat": 27,
+            "modifier": 8
+        },
+        {
+            "minStat": 28,
+            "maxStat": 29,
+            "modifier": 9
+        },
+        {
+            "minStat": 30,
+            "maxStat": 30,
+            "modifier": 10
+        }
+    ]
+}

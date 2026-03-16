@@ -1,0 +1,204 @@
+{
+    "encounter" : [
+        {
+            "encounterID" : 1,
+            "encounterDetails" : "Nothing",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Friendly",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 2,
+            "encounterDetails" : "1 [MONSTER]",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 3,
+            "encounterDetails" : "1 [MONSTER] and 2d4 [MONSTER] 's",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 4,
+            "encounterDetails" : "1d4 [MONSTER] 's and 2d4 [MONSTER] 's",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 5,
+            "encounterDetails" : "A grove of burned trees. Characters searching the area and succeeding on a DC 10 Wisdom (Survival) check find [MONSTER] tracks. Following the tracks for 1d4 hours leads to an encounter with [MONSTER] 's, or the discovery of dead [MONSTER] 's with elven arrows sticking out of their flea-ridden corpses.",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction-Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 6,
+            "encounterDetails" : "1 [MONSTER]",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 7,
+            "encounterDetails" : "An ivy-covered statue of an Elven deity or hero",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 8,
+            "encounterDetails" : "1 [MONSTER] (50%) or 1d4 [MONSTER] 's (50%)",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 9,
+            "encounterDetails" : "1d4 [MONSTER] 's",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 10,
+            "encounterDetails" : "2d4 scouts (elves). One scout carries a horn and can use its action to blow it. If the horn is blown within the forest, roll on this table again. If the result indicates a monster encounter, the indicated monster or monsters arrive in 1d4 minutes. New arrivals other than gnolls, hyenas, owlbears, and displacer beasts are friendly toward the scouts.",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 11,
+            "encounterDetails" : "2d4 [MONSTER] 's (50%) or 2d4 [MONSTER] 's (50%)",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 12,
+            "encounterDetails" : "1 [MONSTER]",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 13,
+            "encounterDetails" : "1d4 [MONSTER] 's (75%) or 1 [MONSTER] (25%)",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 14,
+            "encounterDetails" : "1d4 [MONSTER] 's",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 15,
+            "encounterDetails" : "A magical plant with 2d4 glowing berries. A creature that ingests a berry becomes invisible for 1 hour, or until it attacks or casts a spell. Once picked, a berry loses its magic after 12 hours. Berries regrow at midnight, but if all its berries are picked, the plant becomes nonmagical and grows no more berries.",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 16,
+            "encounterDetails" : "An Elven tunne carried on a gentle breeze",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Friendly",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 17,
+            "encounterDetails" : "1d4 [COLOUR] (75%) or [COLOUR] (25%) Faerie Dragons",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 18,
+            "encounterDetails" : "1 druid (elf). The druid is initially indifferent toward the party but becomes friendly if the characters agree to rid the forest of its [MONSTER] infestation.",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 19,
+            "encounterDetails" : "1 treant. The treant is friendly if the party includes one or more elves or is accompanied by a visible fey creature. The treant is hostile if the characters are carrying open flames. Otherwise, it is indifferent and doesn’t announce its presence as the characters pass by.",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Interaction-Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        },
+        {
+            "encounterID" : 20,
+            "encounterDetails" : "1 [MONSTER]",
+            "encounterLocationType" : "Surface",
+            "encounterLocationSubtype" : "Forest",
+            "encounterTypes" : "Combat",
+            "encounterWeight" : 1,
+            "encounterMinRoll" : 1,
+            "encounterMaxRoll" : 1
+        }
+    ]
+}

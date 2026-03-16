@@ -1,0 +1,1152 @@
+{
+    "DungeonGoals" : [
+        {
+            "DungeonGoal_id" : 1,
+            "DungeonGoal" : "Stop the dungeon's monsterous inhabitants from raiding the surface world",
+            "roll" : 1
+        },
+        {
+            "DungeonGoal_id" : 2,
+            "DungeonGoal" : "Foil a villan's evil scheme",
+            "roll" : 2
+        },
+        {
+            "DungeonGoal_id" : 3,
+            "DungeonGoal" : "Destroy a magicla threat inside the dungeon",
+            "roll" : 3
+        },
+        {
+            "DungeonGoal_id" : 4,
+            "DungeonGoal" : "Acquire Treasure",
+            "roll" : 4
+        },
+        {
+            "DungeonGoal_id" : 5,
+            "DungeonGoal" : "Find a particular item for a specific purpose",
+            "roll" : 5
+        },
+        {
+            "DungeonGoal_id" : 6,
+            "DungeonGoal" : "Retrieve a stolen item for a specific purpose",
+            "roll" : 6
+        },
+        {
+            "DungeonGoal_id" : 7,
+            "DungeonGoal" : "Find information needed for a specific purpose",
+            "roll" : 7
+        },
+        {
+            "DungeonGoal_id" : 8,
+            "DungeonGoal" : "Resscue a captive",
+            "roll" : 8
+        },
+        {
+            "DungeonGoal_id" : 9,
+            "DungeonGoal" : "Discover the fate of a previous adventuring party",
+            "roll" : 9
+        },
+        {
+            "DungeonGoal_id" : 10,
+            "DungeonGoal" : "Find an NPC who disappeared in the area",
+            "roll" : 10
+        },
+        {
+            "DungeonGoal_id" : 11,
+            "DungeonGoal" : "Slay a challenging monster",
+            "roll" : 11
+        },
+        {
+            "DungeonGoal_id" : 12,
+            "DungeonGoal" : "Discover the nature and origin of a strange location or phenomenon",
+            "roll" : 12
+        },
+        {
+            "DungeonGoal_id" : 13,
+            "DungeonGoal" : "Pursue fleeing foes taking refuge in the dungeon",
+            "roll" : 13
+        },
+        {
+            "DungeonGoal_id" : 14,
+            "DungeonGoal" : "Escape from captivity of the dungeon",
+            "roll" : 14
+        },
+        {
+            "DungeonGoal_id" : 15,
+            "DungeonGoal" : "Clear a ruin so it can be rebuild and reoccupied",
+            "roll" : 15
+        },
+        {
+            "DungeonGoal_id" : 16,
+            "DungeonGoal" : "Discover why a villan is interested in a dungeon",
+            "roll" : 16
+        },
+        {
+            "DungeonGoal_id" : 17,
+            "DungeonGoal" : "Win a bet or complete a rite of passage by surviving in the dungeon for a certain amount of time",
+            "roll" : 17
+        },
+        {
+            "DungeonGoal_id" : 18,
+            "DungeonGoal" : "Parley with a villan in the dungeon",
+            "roll" : 18
+        },
+        {
+            "DungeonGoal_id" : 19,
+            "DungeonGoal" : "Hide from a threat outside the dungeon",
+            "roll" : 19
+        },
+        {
+            "DungeonGoal_id" : 20,
+            "DungeonGoal" : "Roll again",
+            "roll" : 20
+        }
+    ],
+    "WildernessGoals" : [
+        {
+            "WildernessGoal_id" : 1,
+            "WildernessGoal" : "Locate a dungeon or other site of interest",
+            "roll" : 1
+        },
+        {
+            "WildernessGoal_id" : 2,
+            "WildernessGoal" : "Assess the scope of a natural or unnatural disaster",
+            "roll" : 2
+        },
+        {
+            "WildernessGoal_id" : 3,
+            "WildernessGoal" : "Escort an NPC to a destination",
+            "roll" : 3
+        },
+        {
+            "WildernessGoal_id" : 4,
+            "WildernessGoal" : "Arrive at a destination without being seen by enemy forces",
+            "roll" : 4
+        },
+        {
+            "WildernessGoal_id" : 5,
+            "WildernessGoal" : "Stop monsters from invading caravans or farms",
+            "roll" : 5
+        },
+        {
+            "WildernessGoal_id" : 6,
+            "WildernessGoal" : "Establish trade with a distant town",
+            "roll" : 6
+        },
+        {
+            "WildernessGoal_id" : 7,
+            "WildernessGoal" : "Protect a caravan traveling to a distant town",
+            "roll" : 7
+        },
+        {
+            "WildernessGoal_id" : 8,
+            "WildernessGoal" : "Map a new land",
+            "roll" : 8
+        },
+        {
+            "WildernessGoal_id" : 9,
+            "WildernessGoal" : "Find a place to establish a colony",
+            "roll" : 9
+        },
+        {
+            "WildernessGoal_id" : 10,
+            "WildernessGoal" : "Find a natural resource",
+            "roll" : 10
+        },
+        {
+            "WildernessGoal_id" : 11,
+            "WildernessGoal" : "Hunt a specific monster",
+            "roll" : 11
+        },
+        {
+            "WildernessGoal_id" : 12,
+            "WildernessGoal" : "Return home from a distant place",
+            "roll" : 12
+        },
+        {
+            "WildernessGoal_id" : 13,
+            "WildernessGoal" : "Obtain information from a reclusive hermit",
+            "roll" : 13
+        },
+        {
+            "WildernessGoal_id" : 14,
+            "WildernessGoal" : "Find an object that was lost in the wilds",
+            "roll" : 14
+        },
+        {
+            "WildernessGoal_id" : 15,
+            "WildernessGoal" : "Discover the fate of a missing group of explorers",
+            "roll" : 15
+        },
+        {
+            "WildernessGoal_id" : 16,
+            "WildernessGoal" : "Pursue fleeing foes",
+            "roll" : 16
+        },
+        {
+            "WildernessGoal_id" : 17,
+            "WildernessGoal" : "Assess the size of an approaching army",
+            "roll" : 17
+        },
+        {
+            "WildernessGoal_id" : 18,
+            "WildernessGoal" : "Escape the reign of a tyrant",
+            "roll" : 18
+        },
+        {
+            "WildernessGoal_id" : 19,
+            "WildernessGoal" : "Protect a wilderness site from attackers",
+            "roll" : 19
+        },
+        {
+            "WildernessGoal_id" : 20,
+            "WildernessGoal" : "Roll again",
+            "roll" : 20
+        }
+    ],
+    "OtherGoals" : [
+        {
+            "OtherGoals_id" : 1,
+            "OtherGoals" : "Seize control of a fortefied location",
+            "roll" : 1
+        },
+        {
+            "OtherGoals_id" : 2,
+            "OtherGoals" : "Defend a location from attackers",
+            "roll" : 2
+        },
+        {
+            "OtherGoals_id" : 3,
+            "OtherGoals" : "Retrieve an object from inside a secure area in a settlement",
+            "roll" : 3
+        },
+        {
+            "OtherGoals_id" : 4,
+            "OtherGoals" : "Retrieve an object from a caravan",
+            "roll" : 4
+        },
+        {
+            "OtherGoals_id" : 5,
+            "OtherGoals" : "Salvage an object from a lost vessel or caravan",
+            "roll" : 5
+        },
+        {
+            "OtherGoals_id" : 6,
+            "OtherGoals" : "Break a prisioner out of a jail or prision camp",
+            "roll" : 6
+        },
+        {
+            "OtherGoals_id" : 7,
+            "OtherGoals" : "Escape from a jail or prision camp",
+            "roll" : 7
+        },
+        {
+            "OtherGoals_id" : 8,
+            "OtherGoals" : "Successfully travel through an obsticle course to gain recognition or reward",
+            "roll" : 8
+        },
+        {
+            "OtherGoals_id" : 9,
+            "OtherGoals" : "Infiltrate a fortefied location",
+            "roll" : 9
+        },
+        {
+            "OtherGoals_id" : 10,
+            "OtherGoals" : "Find the source of strange occurances in a location",
+            "roll" : 10
+        },
+        {
+            "OtherGoals_id" : 11,
+            "OtherGoals" : "Interfere with the operation of a business",
+            "roll" : 11
+        },
+        {
+            "OtherGoals_id" : 12,
+            "OtherGoals" : "Rescue a character, monster or object from a natural or unnatural disaster",
+            "roll" : 12
+        }
+    ],
+    "AdventureVillans" : [
+        {
+            "AdventureVillan_id" : 1,
+            "AdventureVillan" : "Beast or monstrosity with no particular agenda",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "AdventureVillan_id" : 2,
+            "AdventureVillan" : "Aberration bent on corruption or domination",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "AdventureVillan_id" : 3,
+            "AdventureVillan" : "Fiend bent on corruption or destruction",
+            "minRoll" : 3,
+            "maxRoll" : 3
+        },
+        {
+            "AdventureVillan_id" : 4,
+            "AdventureVillan" : "Dragon bent on domination or plunder",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "AdventureVillan_id" : 5,
+            "AdventureVillan" : "Giant bent on plunder",
+            "minRoll" : 5,
+            "maxRoll" : 5
+        },
+        {
+            "AdventureVillan_id" : 6,
+            "AdventureVillan" : "Undead with an agenda",
+            "minRoll" : 6,
+            "maxRoll" : 7
+        },
+        {
+            "AdventureVillan_id" : 7,
+            "AdventureVillan" : "Fey with a mysterious goal",
+            "minRoll" : 8,
+            "maxRoll" : 8
+        },
+        {
+            "AdventureVillan_id" : 8,
+            "AdventureVillan" : "Humanoid Cultist",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "AdventureVillan_id" : 9,
+            "AdventureVillan" : "Humanoid Conqueror",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "AdventureVillan_id" : 10,
+            "AdventureVillan" : "Humanoid seeking revenge",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "AdventureVillan_id" : 11,
+            "AdventureVillan" : "Humanoid schemer seeking to rule",
+            "minRoll" : 14,
+            "maxRoll" : 15
+        },
+        {
+            "AdventureVillan_id" : 12,
+            "AdventureVillan" : "Humanoid criminal mastermind",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "AdventureVillan_id" : 13,
+            "AdventureVillan" : "Humanoid raider or ravager",
+            "minRoll" : 17,
+            "maxRoll" : 18
+        },
+        {
+            "AdventureVillan_id" : 14,
+            "AdventureVillan" : "Humanoid under a curse",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "AdventureVillan_id" : 15,
+            "AdventureVillan" : "Misguided Humanoid Zealot",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "AdventurePatrons" : [
+        {
+            "AdventurePatron_id" : 1,
+            "AdventurePatron" : "Retired Adventurer",
+            "minRoll" : 1,
+            "maxRoll" : 2
+        },
+        {
+            "AdventurePatron_id" : 2,
+            "AdventurePatron" : "Local Ruler",
+            "minRoll" : 3,
+            "maxRoll" : 4
+        },
+        {
+            "AdventurePatron_id" : 3,
+            "AdventurePatron" : "Military Officer",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "AdventurePatron_id" : 4,
+            "AdventurePatron" : "Temple Officer",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "AdventurePatron_id" : 5,
+            "AdventurePatron" : "Sage",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "AdventurePatron_id" : 6,
+            "AdventurePatron" : "Respected Elder",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "AdventurePatron_id" : 7,
+            "AdventurePatron" : "Deity or Celestial",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "AdventurePatron_id" : 8,
+            "AdventurePatron" : "Mysterious Fey",
+            "minRoll" : 14,
+            "maxRoll" : 14
+        },
+        {
+            "AdventurePatron_id" : 9,
+            "AdventurePatron" : "Old Friend",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "AdventurePatron_id" : 10,
+            "AdventurePatron" : "Former Teacher",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "AdventurePatron_id" : 11,
+            "AdventurePatron" : "Family Member",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "AdventurePatron_id" : 12,
+            "AdventurePatron" : "Desperate Commoner",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "AdventurePatron_id" : 13,
+            "AdventurePatron" : "Embattled Merchant",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "AdventurePatron_id" : 14,
+            "AdventurePatron" : "Villan posing as a patron",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "AdventureIntroduction" : [
+        {
+            "AdventureIntroduction_id" : 1,
+            "AdventureIntroduction" : "While traveling in the wilderness, a character falls into a sinkhole that opens beneath their feed, dropping them into the adventure location",
+            "roll" : 1
+        },
+        {
+            "AdventureIntroduction_id" : 2,
+            "AdventureIntroduction" : "While traveling in the wilderness, the characters notice the enterance to their adventure location",
+            "roll" : 2
+        },
+        {
+            "AdventureIntroduction_id" : 3,
+            "AdventureIntroduction" : "While traveling on the road, the characters are attacked by monsters who flee into the adventure location",
+            "roll" : 3
+        },
+        {
+            "AdventureIntroduction_id" : 4,
+            "AdventureIntroduction" : "The adventurers find a map on a dead body, in addition to the map setting up the adventure, the adventurers villan also wants the map",
+            "roll" : 4
+        },
+        {
+            "AdventureIntroduction_id" : 5,
+            "AdventureIntroduction" : "A mysterious magical object or cruel villan teleports the adventurers to the adventure location",
+            "roll" : 5
+        },
+        {
+            "AdventureIntroduction_id" : 6,
+            "AdventureIntroduction" : "A stranger approaches the adventurere in a tavern and urges them towards the adventure location",
+            "roll" : 6
+        },
+        {
+            "AdventureIntroduction_id" : 7,
+            "AdventureIntroduction" : "A town or village needs volunteers to go to an adventure location",
+            "roll" : 7
+        },
+        {
+            "AdventureIntroduction_id" : 8,
+            "AdventureIntroduction" : "An NPC the characters care about needs them to go to the adventure location",
+            "roll" : 8
+        },
+        {
+            "AdventureIntroduction_id" : 9,
+            "AdventureIntroduction" : "An NPC the characters must obey orders them to go to the adventure location",
+            "roll" : 9
+        },
+        {
+            "AdventureIntroduction_id" : 10,
+            "AdventureIntroduction" : "An NPC the characters respect ask them to go to the adventure location",
+            "roll" : 10
+        },
+        {
+            "AdventureIntroduction_id" : 11,
+            "AdventureIntroduction" : "One night the characters all dream about entering the adventure location",
+            "roll" : 11
+        },
+        {
+            "AdventureIntroduction_id" : 12,
+            "AdventureIntroduction" : "A ghost appears and terrorizes the village. Research reveals that it can be put to rest by entering the adventure location",
+            "roll" : 12
+        }
+    ],
+    "AdventureClimaxes" : [
+        {
+            "AdventureClimax_id" : 1,
+            "AdventureClimax" : "The adventurers confront the main villan and a group of minions in a bloody battle to the finish",
+            "roll" : 1
+        },
+        {
+            "AdventureClimax_id" : 2,
+            "AdventureClimax" : "The adventurers chase the main villan while dodging obstacles designed to thwart them, leading to the final confrentation in or outside the villans refuge",
+            "roll" : 2
+        },
+        {
+            "AdventureClimax_id" : 3,
+            "AdventureClimax" : "The actions of the adventurers or villan result in a cataclysmic event the adventurers must escape",
+            "roll" : 3
+        },
+        {
+            "AdventureClimax_id" : 4,
+            "AdventureClimax" : "The adventurers race to the site where the villan is bringing their master plan to its conclusion, arriving just as the plan is about to be completed",
+            "roll" : 4
+        },
+        {
+            "AdventureClimax_id" : 5,
+            "AdventureClimax" : "The villan and a couple lieutenants perform seperate rites in a large room, the adventurers must distrupt all the rites at the same time",
+            "roll" : 5
+        },
+        {
+            "AdventureClimax_id" : 6,
+            "AdventureClimax" : "An ally betrays the adventurers as they are about to achieve their goals",
+            "roll" : 6
+        },
+        {
+            "AdventureClimax_id" : 7,
+            "AdventureClimax" : "A portal opens to another plane of existence, creatures on the other side spill out, forcing the adventurers to close the portal and deal with the villan at the same time",
+            "roll" : 7
+        },
+        {
+            "AdventureClimax_id" : 8,
+            "AdventureClimax" : "Traps, hazards or animated objects turn against the adventurers while the main villans attack",
+            "roll" : 8
+        },
+        {
+            "AdventureClimax_id" : 9,
+            "AdventureClimax" : "The dungeon begins to collapse while the adventurers face the main villan, who attempts to escape in the chaos",
+            "roll" : 9
+        },
+        {
+            "AdventureClimax_id" : 10,
+            "AdventureClimax" : "A threat more powerful than the adventurers appears, destroys the main villan, and then turns its attenton to the adventurers",
+            "roll" : 10
+        },
+        {
+            "AdventureClimax_id" : 11,
+            "AdventureClimax" : "The adventurers must choose whether to pursue the fleeing main villan or save an NPC they care about or a group of innocents",
+            "roll" : 11
+        },
+        {
+            "AdventureClimax_id" : 12,
+            "AdventureClimax" : "The adventurers must discover the main villans secret weakness before they can hope to defeat the villan",
+            "roll" : 12
+        }
+    ],
+    "EventBasedVillanActions" : [
+        {
+            "EventBasedVillanAction_id" : 1,
+            "EventBasedVillanAction" : "Big Event",
+            "roll" : 1
+        },
+        {
+            "EventBasedVillanAction_id" : 2,
+            "EventBasedVillanAction" : "Crime Spree",
+            "roll" : 2
+        },
+        {
+            "EventBasedVillanAction_id" : 3,
+            "EventBasedVillanAction" : "Growing Corruption",
+            "roll" : 3
+        },
+        {
+            "EventBasedVillanAction_id" : 4,
+            "EventBasedVillanAction" : "One and Done",
+            "roll" : 4
+        },
+        {
+            "EventBasedVillanAction_id" : 5,
+            "EventBasedVillanAction" : "Serial Crimes",
+            "roll" : 5
+        },
+        {
+            "EventBasedVillanAction_id" : 6,
+            "EventBasedVillanAction" : "Step by step",
+            "roll" : 6
+        }
+    ],
+    "EventBasedGoals" : [
+        {
+            "EventBasedGoal_id" : 1,
+            "EventBasedGoal" : "Bring the villan to justice",
+            "roll" : 1
+        },
+        {
+            "EventBasedGoal_id" : 2,
+            "EventBasedGoal" : "Clear the name of an innocent NPC",
+            "roll" : 2
+        },
+        {
+            "EventBasedGoal_id" : 3,
+            "EventBasedGoal" : "Protect or hide an NPC",
+            "roll" : 3
+        },
+        {
+            "EventBasedGoal_id" : 4,
+            "EventBasedGoal" : "Protect an Object",
+            "roll" : 4
+        },
+        {
+            "EventBasedGoal_id" : 5,
+            "EventBasedGoal" : "Discover the nature and origin of a strange phenomenon that might be the villans doing",
+            "roll" : 5
+        },
+        {
+            "EventBasedGoal_id" : 6,
+            "EventBasedGoal" : "Find a wanted fugitive",
+            "roll" : 6
+        },
+        {
+            "EventBasedGoal_id" : 7,
+            "EventBasedGoal" : "Overthrow a tyrant",
+            "roll" : 7
+        },
+        {
+            "EventBasedGoal_id" : 8,
+            "EventBasedGoal" : "Uncover a consperacy to overthrow a ruler",
+            "roll" : 8
+        },
+        {
+            "EventBasedGoal_id" : 9,
+            "EventBasedGoal" : "Negotiate peace between enemy nations or feuding families",
+            "roll" : 9
+        },
+        {
+            "EventBasedGoal_id" : 10,
+            "EventBasedGoal" : "Secure aid from a ruler or council",
+            "roll" : 10
+        },
+        {
+            "EventBasedGoal_id" : 11,
+            "EventBasedGoal" : "Help a villan find redemption",
+            "roll" : 11
+        },
+        {
+            "EventBasedGoal_id" : 12,
+            "EventBasedGoal" : "Parlay with a villan",
+            "roll" : 12
+        },
+        {
+            "EventBasedGoal_id" : 13,
+            "EventBasedGoal" : "Smuggle weapons to rebel forces",
+            "roll" : 13
+        },
+        {
+            "EventBasedGoal_id" : 14,
+            "EventBasedGoal" : "Stop a band of smugglers",
+            "roll" : 14
+        },
+        {
+            "EventBasedGoal_id" : 15,
+            "EventBasedGoal" : "Gather intelligence on an enemy force",
+            "roll" : 15
+        },
+        {
+            "EventBasedGoal_id" : 16,
+            "EventBasedGoal" : "Win a tournament",
+            "roll" : 16
+        },
+        {
+            "EventBasedGoal_id" : 17,
+            "EventBasedGoal" : "Determine the villans identity",
+            "roll" : 17
+        },
+        {
+            "EventBasedGoal_id" : 18,
+            "EventBasedGoal" : "Locate a stolen Item",
+            "roll" : 18
+        },
+        {
+            "EventBasedGoal_id" : 19,
+            "EventBasedGoal" : "Make sure a wedding goes off without a hitch",
+            "roll" : 19
+        },
+        {
+            "EventBasedGoal_id" : 20,
+            "EventBasedGoal" : "Roll Again",
+            "roll" : 20
+        }
+    ],
+    "FramingEvents" : [
+        {
+            "FramingEvent_id" : 1,
+            "FramingEvent" : "Anniversary of a monarchs reign",
+            "minRoll" : 1,
+            "maxRoll" : 2
+        },
+        {
+            "FramingEvent_id" : 2,
+            "FramingEvent" : "Anniversary of an important event",
+            "minRoll" : 3,
+            "maxRoll" : 4
+        },
+        {
+            "FramingEvent_id" : 3,
+            "FramingEvent" : "Arena Event",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "FramingEvent_id" : 4,
+            "FramingEvent" : "Arrival of a caravan or ship",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "FramingEvent_id" : 5,
+            "FramingEvent" : "Arrival of a circus",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "FramingEvent_id" : 6,
+            "FramingEvent" : "Arrival of an important NPC",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "FramingEvent_id" : 7,
+            "FramingEvent" : "Arrival of marching modrons",
+            "minRoll" : 13,
+            "maxRoll" : 14
+        },
+        {
+            "FramingEvent_id" : 8,
+            "FramingEvent" : "Artistic performance",
+            "minRoll" : 15,
+            "maxRoll" : 16
+        },
+        {
+            "FramingEvent_id" : 9,
+            "FramingEvent" : "Athletic event",
+            "minRoll" : 17,
+            "maxRoll" : 18
+        },
+        {
+            "FramingEvent_id" : 10,
+            "FramingEvent" : "Birth of a child",
+            "minRoll" : 19,
+            "maxRoll" : 20
+        },
+        {
+            "FramingEvent_id" : 11,
+            "FramingEvent" : "Birthday of an important NPC",
+            "minRoll" : 21,
+            "maxRoll" : 22
+        },
+        {
+            "FramingEvent_id" : 12,
+            "FramingEvent" : "Civic festival",
+            "minRoll" : 23,
+            "maxRoll" : 24
+        },
+        {
+            "FramingEvent_id" : 13,
+            "FramingEvent" : "Comet appearance",
+            "minRoll" : 25,
+            "maxRoll" : 26
+        },
+        {
+            "FramingEvent_id" : 14,
+            "FramingEvent" : "Commemeration of a past tragedy",
+            "minRoll" : 27,
+            "maxRoll" : 28
+        },
+        {
+            "FramingEvent_id" : 15,
+            "FramingEvent" : "Consecration of a new temple",
+            "minRoll" : 29,
+            "maxRoll" : 30
+        },
+        {
+            "FramingEvent_id" : 16,
+            "FramingEvent" : "Coronation",
+            "minRoll" : 31,
+            "maxRoll" : 32
+        },
+        {
+            "FramingEvent_id" : 17,
+            "FramingEvent" : "Council meeting",
+            "minRoll" : 33,
+            "maxRoll" : 34
+        },
+        {
+            "FramingEvent_id" : 18,
+            "FramingEvent" : "Equinox or solstice",
+            "minRoll" : 35,
+            "maxRoll" : 36
+        },
+        {
+            "FramingEvent_id" : 19,
+            "FramingEvent" : "Execution",
+            "minRoll" : 37,
+            "maxRoll" : 38
+        },
+        {
+            "FramingEvent_id" : 20,
+            "FramingEvent" : "Fertility festival",
+            "minRoll" : 39,
+            "maxRoll" : 40
+        },
+        {
+            "FramingEvent_id" : 21,
+            "FramingEvent" : "Full moon",
+            "minRoll" : 41,
+            "maxRoll" : 42
+        },
+        {
+            "FramingEvent_id" : 22,
+            "FramingEvent" : "Funeral",
+            "minRoll" : 43,
+            "maxRoll" : 44
+        },
+        {
+            "FramingEvent_id" : 23,
+            "FramingEvent" : "Graduation of cadets or wizards",
+            "minRoll" : 45,
+            "maxRoll" : 46
+        },
+        {
+            "FramingEvent_id" : 24,
+            "FramingEvent" : "Harvest festival",
+            "minRoll" : 47,
+            "maxRoll" : 48
+        },
+        {
+            "FramingEvent_id" : 25,
+            "FramingEvent" : "Holy day",
+            "minRoll" : 49,
+            "maxRoll" : 50
+        },
+        {
+            "FramingEvent_id" : 26,
+            "FramingEvent" : "Investiture of a knight or other noble",
+            "minRoll" : 51,
+            "maxRoll" : 52
+        },
+        {
+            "FramingEvent_id" : 27,
+            "FramingEvent" : "Lunar eclipse",
+            "minRoll" : 53,
+            "maxRoll" : 54
+        },
+        {
+            "FramingEvent_id" : 28,
+            "FramingEvent" : "Midsummer festival",
+            "minRoll" : 55,
+            "maxRoll" : 58
+        },
+        {
+            "FramingEvent_id" : 29,
+            "FramingEvent" : "Midwinter festival",
+            "minRoll" : 59,
+            "maxRoll" : 60
+        },
+        {
+            "FramingEvent_id" : 30,
+            "FramingEvent" : "Migration of monsters",
+            "minRoll" : 61,
+            "maxRoll" : 62
+        },
+        {
+            "FramingEvent_id" : 31,
+            "FramingEvent" : "Monarch's ball",
+            "minRoll" : 63,
+            "maxRoll" : 64
+        },
+        {
+            "FramingEvent_id" : 32,
+            "FramingEvent" : "New moon",
+            "minRoll" : 65,
+            "maxRoll" : 66
+        },
+        {
+            "FramingEvent_id" : 33,
+            "FramingEvent" : "New year",
+            "minRoll" : 67,
+            "maxRoll" : 68
+        },
+        {
+            "FramingEvent_id" : 34,
+            "FramingEvent" : "Pardoning of a prisioner",
+            "minRoll" : 69,
+            "maxRoll" : 70
+        },
+        {
+            "FramingEvent_id" : 35,
+            "FramingEvent" : "Planar Conjunction",
+            "minRoll" : 71,
+            "maxRoll" : 72
+        },
+        {
+            "FramingEvent_id" : 36,
+            "FramingEvent" : "Planetary Alignment",
+            "minRoll" : 73,
+            "maxRoll" : 74
+        },
+        {
+            "FramingEvent_id" : 37,
+            "FramingEvent" : "Priestly investiture",
+            "minRoll" : 75,
+            "maxRoll" : 76
+        },
+        {
+            "FramingEvent_id" : 38,
+            "FramingEvent" : "Procession of ghosts",
+            "minRoll" : 77,
+            "maxRoll" : 78
+        },
+        {
+            "FramingEvent_id" : 39,
+            "FramingEvent" : "Rememberance for soliders lost in war",
+            "minRoll" : 79,
+            "maxRoll" : 80
+        },
+        {
+            "FramingEvent_id" : 40,
+            "FramingEvent" : "Royal address or proclamation",
+            "minRoll" : 81,
+            "maxRoll" : 82
+        },
+        {
+            "FramingEvent_id" : 41,
+            "FramingEvent" : "Royal audience day",
+            "minRoll" : 83,
+            "maxRoll" : 84
+        },
+        {
+            "FramingEvent_id" : 42,
+            "FramingEvent" : "Signing of a treaty",
+            "minRoll" : 85,
+            "maxRoll" : 86
+        },
+        {
+            "FramingEvent_id" : 43,
+            "FramingEvent" : "Solar eclipse",
+            "minRoll" : 87,
+            "maxRoll" : 88
+        },
+        {
+            "FramingEvent_id" : 44,
+            "FramingEvent" : "Tournament",
+            "minRoll" : 89,
+            "maxRoll" : 91
+        },
+        {
+            "FramingEvent_id" : 45,
+            "FramingEvent" : "Trial",
+            "minRoll" : 92,
+            "maxRoll" : 94
+        },
+        {
+            "FramingEvent_id" : 46,
+            "FramingEvent" : "Violent Uprising",
+            "minRoll" : 95,
+            "maxRoll" : 96
+        },
+        {
+            "FramingEvent_id" : 47,
+            "FramingEvent" : "Wedding or wedding anniversary",
+            "minRoll" : 97,
+            "maxRoll" : 98
+        },
+        {
+            "FramingEvent_id" : 48,
+            "FramingEvent" : "Two events at once",
+            "minRoll" : 99,
+            "maxRoll" : 100
+        }
+    ],
+    "MoralQuandaries" : [
+        {
+            "MoralQuandary_id" : 1,
+            "MoralQuandary" : "Ally Quandary",
+            "minRoll" : 1,
+            "maxRoll" : 3
+        },
+        {
+            "MoralQuandary_id" : 2,
+            "MoralQuandary" : "Friend Quandary",
+            "minRoll" : 4,
+            "maxRoll" : 6
+        },
+        {
+            "MoralQuandary_id" : 3,
+            "MoralQuandary" : "Honor Quandary",
+            "minRoll" : 7,
+            "maxRoll" : 12
+        },
+        {
+            "MoralQuandary_id" : 4,
+            "MoralQuandary" : "Rescue Quandary",
+            "minRoll" : 13,
+            "maxRoll" : 16
+        },
+        {
+            "MoralQuandary_id" : 5,
+            "MoralQuandary" : "Respect Quandary",
+            "minRoll" : 17,
+            "maxRoll" : 20
+        }
+    ],
+    "Twists" : [
+        {
+            "Twist_id" : 1,
+            "Twist" : "The adventurers are racing against other creatures with the same goal",
+            "roll" : 1
+        },
+        {
+            "Twist_id" : 2,
+            "Twist" : "The adventurers become responsible for the safety of a noncombatant NPC",
+            "roll" : 2
+        },
+        {
+            "Twist_id" : 3,
+            "Twist" : "The adventurers are prohibited from killing the villan, but the villan has no problem with killing them",
+            "roll" : 3
+        },
+        {
+            "Twist_id" : 4,
+            "Twist" : "The adventurers have a time limit",
+            "roll" : 4
+        },
+        {
+            "Twist_id" : 5,
+            "Twist" : "The adventurers have received false or extraneous information",
+            "roll" : 5
+        },
+        {
+            "Twist_id" : 6,
+            "Twist" : "Completing an adventure goal fulfills a prophecy or prevents the completion of a prophecy",
+            "roll" : 6
+        },
+        {
+            "Twist_id" : 7,
+            "Twist" : "The adventurers have 2 different goals, but can only complete one",
+            "roll" : 7
+        },
+        {
+            "Twist_id" : 8,
+            "Twist" : "Completing the goal secretly helps the villan",
+            "roll" : 8
+        },
+        {
+            "Twist_id" : 9,
+            "Twist" : "The adventurers must cooperate with a known enemy to complete the goal",
+            "roll" : 9
+        },
+        {
+            "Twist_id" : 10,
+            "Twist" : "The adventurers are under a magical compulsion to complete thir task",
+            "roll" : 10
+        }
+    ],
+    "SideQuests" : [
+        {
+            "SideQuest_id" : 1,
+            "SideQuest" : "Find a specific item roumered to be in the area",
+            "roll" : 1
+        },
+        {
+            "SideQuest_id" : 2,
+            "SideQuest" : "Retrieve a stolen item in the villans posession",
+            "roll" : 2
+        },
+        {
+            "SideQuest_id" : 3,
+            "SideQuest" : "Receive information from an NPC in the area",
+            "roll" : 3
+        },
+        {
+            "SideQuest_id" : 4,
+            "SideQuest" : "Rescue a captive",
+            "roll" : 4
+        },
+        {
+            "SideQuest_id" : 5,
+            "SideQuest" : "Discover the fate of a missing NPC",
+            "roll" : 5
+        },
+        {
+            "SideQuest_id" : 6,
+            "SideQuest" : "Slay a specific monster",
+            "roll" : 6
+        },
+        {
+            "SideQuest_id" : 7,
+            "SideQuest" : "Discover the nature and origin of a strange phenomenon in the area",
+            "roll" : 7
+        },
+        {
+            "SideQuest_id" : 8,
+            "SideQuest" : "Secure the aid of a character or creature in the area",
+            "roll" : 8
+        }
+    ],
+    "EncounterMultiplier" : [
+        {
+            "NumberOfMonstersMin" : 1,
+            "NumberOfMonstersMax" : 1,
+            "Multiplier" : 1
+        },
+        {
+            "NumberOfMonstersMin" : 2,
+            "NumberOfMonstersMax" : 2,
+            "Multiplier" : 1.5
+        },
+        {
+            "NumberOfMonstersMin" : 3,
+            "NumberOfMonstersMax" : 6,
+            "Multiplier" : 2
+        },
+        {
+            "NumberOfMonstersMin" : 7,
+            "NumberOfMonstersMax" : 10,
+            "Multiplier" : 2.5
+        },
+        {
+            "NumberOfMonstersMin" : 11,
+            "NumberOfMonstersMax" : 14,
+            "Multiplier" : 3
+        },
+        {
+            "NumberOfMonstersMin" : 15,
+            "NumberOfMonstersMax" : 10000,
+            "Multiplier" : 4
+        }
+    ]
+}

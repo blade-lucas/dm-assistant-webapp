@@ -1,0 +1,448 @@
+{
+    "Governments" : [
+        {
+            "gov_id" : 1,
+            "gov_name" : "Autocracy",
+            "roll_min" : 1,
+            "roll_max" : 8
+        },
+        {
+            "gov_id" : 2,
+            "gov_name" : "Bureaucracy",
+            "roll_min" : 9,
+            "roll_max" : 13
+        },
+        {
+            "gov_id" : 3,
+            "gov_name" : "Confederacy",
+            "roll_min" : 14,
+            "roll_max" : 19
+        },
+        {
+            "gov_id" : 4,
+            "gov_name" : "Democracy",
+            "roll_min" : 20,
+            "roll_max" : 22
+        },
+        {
+            "gov_id" : 5,
+            "gov_name" : "Dictatorship",
+            "roll_min" : 23,
+            "roll_max" : 27
+        },
+        {
+            "gov_id" : 6,
+            "gov_name" : "Feudalism",
+            "roll_min" : 28,
+            "roll_max" : 42
+        },
+        {
+            "gov_id" : 7,
+            "gov_name" : "Gerontocracy",
+            "roll_min" : 43,
+            "roll_max" : 44
+        },
+        {
+            "gov_id" : 8,
+            "gov_name" : "Hierarchy",
+            "roll_min" : 45,
+            "roll_max" : 53
+        },
+        {
+            "gov_id" : 9,
+            "gov_name" : "Magocracy",
+            "roll_min" : 54,
+            "roll_max" : 56
+        },
+        {
+            "gov_id" : 10,
+            "gov_name" : "Matriarchy",
+            "roll_min" : 57,
+            "roll_max" : 58
+        },
+        {
+            "gov_id" : 11,
+            "gov_name" : "Militocracy",
+            "roll_min" : 59,
+            "roll_max" : 64
+        },
+        {
+            "gov_id" : 12,
+            "gov_name" : "Monarchy",
+            "roll_min" : 65,
+            "roll_max" : 74
+        },
+        {
+            "gov_id" : 13,
+            "gov_name" : "Oligarchy",
+            "roll_min" : 75,
+            "roll_max" : 78
+        },
+        {
+            "gov_id" : 14,
+            "gov_name" : "Patriarchy",
+            "roll_min" : 79,
+            "roll_max" : 80
+        },
+        {
+            "gov_id" : 15,
+            "gov_name" : "Meritocracy",
+            "roll_min" : 81,
+            "roll_max" : 83
+        },
+        {
+            "gov_id" : 16,
+            "gov_name" : "Plutocracy",
+            "roll_min" : 84,
+            "roll_max" : 85
+        },
+        {
+            "gov_id" : 17,
+            "gov_name" : "Republic",
+            "roll_min" : 86,
+            "roll_max" : 92
+        },
+        {
+            "gov_id" : 18,
+            "gov_name" : "Satrapy",
+            "roll_min" : 93,
+            "roll_max" : 94
+        },
+        {
+            "gov_id" : 19,
+            "gov_name" : "Kleptocracy",
+            "roll_min" : 95,
+            "roll_max" : 95
+        },
+        {
+            "gov_id" : 20,
+            "gov_name" : "Theocracy",
+            "roll_min" : 96,
+            "roll_max" : 100
+        }
+    ],
+    "WorldShakingEvents" : [
+        {
+            "event_id" : 1,
+            "event" : "Rise of a leader or era",
+            "roll" : 1
+        },
+        {
+            "event_id" : 2,
+            "event" : "Fall of a leader or era",
+            "roll" : 2
+        },
+        {
+            "event_id" : 3,
+            "event" : "Cataclysmic Disaster",
+            "roll" : 3
+        },
+        {
+            "event_id" : 4,
+            "event" : "Assult or invasion",
+            "roll" : 4
+        },
+        {
+            "event_id" : 5,
+            "event" : "Rebelion, Revolution or Overthrow",
+            "roll" : 5
+        },
+        {
+            "event_id" : 6,
+            "event" : "Extinction or Depletion",
+            "roll" : 6
+        },
+        {
+            "event_id" : 7,
+            "event" : "New Organization",
+            "roll" : 7
+        },
+        {
+            "event_id" : 8,
+            "event" : "Discovery, Expansion or Invention",
+            "roll" : 8
+        },
+        {
+            "event_id" : 9,
+            "event" : "Prediction, Omen or Prophecy",
+            "roll" : 9
+        },
+        {
+            "event_id" : 10,
+            "event" : "Myth or Legend",
+            "roll" : 10
+        }
+    ],
+    "LeaderTypes" : [
+        {
+            "leader_id" : 1,
+            "leaderType" : "Political",
+            "roll" : 1
+        },
+        {
+            "leader_id" : 2,
+            "leaderType" : "Religious",
+            "roll" : 2
+        },
+        {
+            "leader_id" : 3,
+            "leaderType" : "Military",
+            "roll" : 3
+        },
+        {
+            "leader_id" : 4,
+            "leaderType" : "Crime-Underworld",
+            "roll" : 4
+        },
+        {
+            "leader_id" : 5,
+            "leaderType" : "Art-Culture",
+            "roll" : 5
+        },
+        {
+            "leader_id" : 6,
+            "leaderType" : "Philosophy-Learning-Magic",
+            "roll" : 6
+        }
+    ],
+    "CataclysmicDisasters" : [
+        {
+            "cataclysm_id" : 1,
+            "cataclysm" : "Earthquake",
+            "roll" : 1
+        },
+        {
+            "cataclysm_id" : 2,
+            "cataclysm" : "Famine-Drought",
+            "roll" : 2
+        },
+        {
+            "cataclysm_id" : 3,
+            "cataclysm" : "Fire",
+            "roll" : 3
+        },
+        {
+            "cataclysm_id" : 4,
+            "cataclysm" : "Flood",
+            "roll" : 4
+        },
+        {
+            "cataclysm_id" : 5,
+            "cataclysm" : "Plague-Disease",
+            "roll" : 5
+        },
+        {
+            "cataclysm_id" : 6,
+            "cataclysm" : "Rain of Fire-Meteor",
+            "roll" : 6
+        },
+        {
+            "cataclysm_id" : 7,
+            "cataclysm" : "Storm-Hurricane-Tornado-Tsunami",
+            "roll" : 7
+        },
+        {
+            "cataclysm_id" : 8,
+            "cataclysm" : "Volcanic Eruption",
+            "roll" : 8
+        },
+        {
+            "cataclysm_id" : 9,
+            "cataclysm" : "Magic gone awry-Plaanr warp",
+            "roll" : 9
+        },
+        {
+            "cataclysm_id" : 10,
+            "cataclysm" : "Divine Judgement",
+            "roll" : 10
+        }
+    ],
+    "InvadingForce" : [
+        {
+            "invasion_id" : 1,
+            "invasion" : "Criminal Enterprise",
+            "roll" : 1
+        },
+        {
+            "invasion_id" : 2,
+            "invasion" : "Monsters-Unique Monster",
+            "roll" : 2
+        },
+        {
+            "invasion_id" : 3,
+            "invasion" : "Planar Threat",
+            "roll" : 3
+        },
+        {
+            "invasion_id" : 4,
+            "invasion" : "Past Adversary Reawakened-Past Adversary Reborn-Past Adversary Resurgence",
+            "roll" : 4
+        },
+        {
+            "invasion_id" : 5,
+            "invasion" : "Splinter Faction",
+            "roll" : 5
+        },
+        {
+            "invasion_id" : 6,
+            "invasion" : "Savage Tribe",
+            "roll" : 6
+        },
+        {
+            "invasion_id" : 7,
+            "invasion" : "Secret Society",
+            "roll" : 7
+        },
+        {
+            "invasion_id" : 8,
+            "invasion" : "Traitorus Ally",
+            "roll" : 8
+        }
+    ],
+    "ExtinctionDepletion" : [
+        {
+            "extinctionDepletion_id" : 1,
+            "extinctionDepletion" : "Animal-Insect-Bird-Fish-Livestock",
+            "roll" : 1
+        },
+        {
+            "extinctionDepletion_id" : 2,
+            "extinctionDepletion" : "Habitable Land",
+            "roll" : 2
+        },
+        {
+            "extinctionDepletion_id" : 3,
+            "extinctionDepletion" : "Magic-Magic Users-School of Magic",
+            "roll" : 3
+        },
+        {
+            "extinctionDepletion_id" : 4,
+            "extinctionDepletion" : "Resource",
+            "roll" : 4
+        },
+        {
+            "extinctionDepletion_id" : 5,
+            "extinctionDepletion" : "Monster",
+            "roll" : 5
+        },
+        {
+            "extinctionDepletion_id" : 6,
+            "extinctionDepletion" : "People",
+            "roll" : 6
+        },
+        {
+            "extinctionDepletion_id" : 7,
+            "extinctionDepletion" : "Plant",
+            "roll" : 7
+        },
+        {
+            "extinctionDepletion_id" : 8,
+            "extinctionDepletion" : "Waterway",
+            "roll" : 8
+        }
+    ],
+    "NewOrganization" : [
+        {
+            "organization_id" : 1,
+            "organization" : "Crime Syndicate-Bandit Confederacy",
+            "roll" : 1
+        },
+        {
+            "organization_id" : 2,
+            "organization" : "Guild",
+            "roll" : 2
+        },
+        {
+            "organization_id" : 3,
+            "organization" : "Magical Circle-Magical Society",
+            "roll" : 3
+        },
+        {
+            "organization_id" : 4,
+            "organization" : "Military",
+            "roll" : 4
+        },
+        {
+            "organization_id" : 5,
+            "organization" : "Family Dynasty-Tribe-Clan",
+            "roll" : 5
+        },
+        {
+            "organization_id" : 6,
+            "organization" : "Philosiphy",
+            "roll" : 6
+        },
+        {
+            "organization_id" : 7,
+            "organization" : "Realm",
+            "roll" : 7
+        },
+        {
+            "organization_id" : 8,
+            "organization" : "Religion",
+            "roll" : 8
+        },
+        {
+            "organization_id" : 9,
+            "organization" : "School",
+            "roll" : 9
+        },
+        {
+            "organization_id" : 10,
+            "organization" : "Secret Society-Cult",
+            "roll" : 10
+        }
+    ],
+    "Discoveries" : [
+        {
+            "discovery_id" : 1,
+            "discovery" : "Ancient City-Lost City-Legendary Race",
+            "roll" : 1
+        },
+        {
+            "discovery_id" : 2,
+            "discovery" : "Animal-Monster-Magical Mutation",
+            "roll" : 2
+        },
+        {
+            "discovery_id" : 3,
+            "discovery" : "Invention-Technology-Magic",
+            "roll" : 3
+        },
+        {
+            "discovery_id" : 4,
+            "discovery" : "New/Forgotten God-New/Forgotten Planar Entity",
+            "roll" : 4
+        },
+        {
+            "discovery_id" : 5,
+            "discovery" : "New/Forgotten Artifact-New/Forgotten Religious Relic",
+            "roll" : 5
+        },
+        {
+            "discovery_id" : 6,
+            "discovery" : "New Land",
+            "roll" : 6
+        },
+        {
+            "discovery_id" : 7,
+            "discovery" : "Otherworldly Object",
+            "roll" : 7
+        },
+        {
+            "discovery_id" : 8,
+            "discovery" : "People",
+            "roll" : 8
+        },
+        {
+            "discovery_id" : 9,
+            "discovery" : "Plant",
+            "roll" : 9
+        },
+        {
+            "discovery_id" : 10,
+            "discovery" : "Resource-Wealth",
+            "roll" : 10
+        }
+    ]
+}

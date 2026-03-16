@@ -1,0 +1,373 @@
+{
+    "Monuments" : [
+        {
+            "Monument_id" : 1,
+            "Monument" : "Sealed burial mound or pyramid",
+            "minRoll" : 1,
+            "maxRoll" : 1
+        },
+        {
+            "Monument_id" : 2,
+            "Monument" : "Plundered burial mound or pyramid",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "Monument_id" : 3,
+            "Monument" : "Faces carved into mountainside or cliff",
+            "minRoll" : 3,
+            "maxRoll" : 3
+        },
+        {
+            "Monument_id" : 4,
+            "Monument" : "Giant statues carvedout of a mountainside or cliff",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "Monument_id" : 5,
+            "Monument" : "Intact obelisk etched with a warning, historical lore, dedication, or religious iconography",
+            "minRoll" : 5,
+            "maxRoll" : 6
+        },
+        {
+            "Monument_id" : 6,
+            "Monument" : "Ruined or toppled obelisk",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "Monument_id" : 7,
+            "Monument" : "Intact statue of a person or deity",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "Monument_id" : 8,
+            "Monument" : "Ruined or toppled statue of a person or deity",
+            "minRoll" : 11,
+            "maxRoll" : 13
+        },
+        {
+            "Monument_id" : 9,
+            "Monument" : "Great stone wall, intact, with tower fortifications spaced at one mile intervals",
+            "minRoll" : 14,
+            "maxRoll" : 14
+        },
+        {
+            "Monument_id" : 10,
+            "Monument" : "Great stone wall in ruins",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "Monument_id" : 11,
+            "Monument" : "Great stone arch",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "Monument_id" : 12,
+            "Monument" : "Fountain",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "Monument_id" : 13,
+            "Monument" : "Intact circle of standing stones",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "Monument_id" : 14,
+            "Monument" : "Ruined or toppled circle of standing stones",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "Monument_id" : 15,
+            "Monument" : "Totem pole",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "WeirdLocales" : [
+        {
+            "WeirdLocale_id" : 1,
+            "WeirdLocale" : "Dead Magic zone",
+            "minRoll" : 1,
+            "maxRoll" : 2
+        },
+        {
+            "WeirdLocale_id" : 2,
+            "WeirdLocale" : "Wild magic zone",
+            "minRoll" : 3,
+            "maxRoll" : 3
+        },
+        {
+            "WeirdLocale_id" : 3,
+            "WeirdLocale" : "Boulder carved with talking faces",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "WeirdLocale_id" : 4,
+            "WeirdLocale" : "Crystal caves that mystically answer questions",
+            "minRoll" : 5,
+            "maxRoll" : 5
+        },
+        {
+            "WeirdLocale_id" : 5,
+            "WeirdLocale" : "Ancient tree containing a trapped spirit",
+            "minRoll" : 6,
+            "maxRoll" : 6
+        },
+        {
+            "WeirdLocale_id" : 6,
+            "WeirdLocale" : "Battlefield where lingering fog sometimes takes human form",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "WeirdLocale_id" : 7,
+            "WeirdLocale" : "Permanant portal to another plane of existance",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "WeirdLocale_id" : 8,
+            "WeirdLocale" : "Wishing well",
+            "minRoll" : 11,
+            "maxRoll" : 11
+        },
+        {
+            "WeirdLocale_id" : 9,
+            "WeirdLocale" : "Giant crystal shard protruding from the ground",
+            "minRoll" : 12,
+            "maxRoll" : 12
+        },
+        {
+            "WeirdLocale_id" : 10,
+            "WeirdLocale" : "Wrecked ship, which may be nowhere near water",
+            "minRoll" : 13,
+            "maxRoll" : 13
+        },
+        {
+            "WeirdLocale_id" : 11,
+            "WeirdLocale" : "Haunted hill or barrow mound",
+            "minRoll" : 14,
+            "maxRoll" : 15
+        },
+        {
+            "WeirdLocale_id" : 12,
+            "WeirdLocale" : "River ferry guided by a skeletal captain",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "WeirdLocale_id" : 13,
+            "WeirdLocale" : "Field of petrified soldiers or other creatures",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "WeirdLocale_id" : 14,
+            "WeirdLocale" : "Forest of petrified or awakended trees",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "WeirdLocale_id" : 15,
+            "WeirdLocale" : "Canyon containing a dragons graveyard",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "WeirdLocale_id" : 16,
+            "WeirdLocale" : "Floating earth mote with a tower on it",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ],
+    "Weather" : [
+        {
+            "Temperature" : [
+                {
+                    "Temperature_id" : 1,
+                    "Temperature" : "Normal for the season",
+                    "minRoll" : 1,
+                    "maxRoll" : 14
+                },
+                {
+                    "Temperature_id" : 2,
+                    "Temperature" : "x degrees Fahrenheit colder than normal",
+                    "minRoll" : 15,
+                    "maxRoll" : 17
+                },
+                {
+                    "Temperature_id" : 3,
+                    "Temperature" : "x degrees Fehrenheit hotter than normal",
+                    "minRoll" : 18,
+                    "maxRoll" : 20
+                }
+            ],
+            "Wind" : [
+                {
+                    "Wind_id" : 1,
+                    "Wind" : "None",
+                    "minRoll" : 1,
+                    "maxRoll" : 12
+                },
+                {
+                    "Wind_id" : 2,
+                    "Wind" : "Light",
+                    "minRoll" : 13,
+                    "maxRoll" : 17
+                },
+                {
+                    "Wind_id" : 3,
+                    "Wind" : "Strong",
+                    "minRoll" : 18,
+                    "maxRoll" : 20
+                }
+            ],
+            "Precipitation" : [
+                {
+                    "Precipitation_id" : 1,
+                    "Precipitation" : "None",
+                    "minRoll" : 1,
+                    "maxRoll" : 12
+                },
+                {
+                    "Precipitation_id" : 2,
+                    "Precipitation" : "Light rain or light snowfall",
+                    "minRoll" : 13,
+                    "maxRoll" : 17
+                },
+                {
+                    "Precipitation_id" : 3,
+                    "Precipitation" : "Heavy rain or heavy snowfall",
+                    "minRoll" : 18,
+                    "maxRoll" : 20
+                }
+            ]
+        }
+    ],
+    "Foraging" : [
+        {
+            "Foraging_id" : 1,
+            "Availability" : "Abundant Food and Water resources",
+            "DC" : 10
+        },
+        {
+            "Foraging_id" : 2,
+            "Availability" : "Limited Food and Water resources",
+            "DC" : 15
+        },
+        {
+            "Foraging_id" : 3,
+            "Availability" : "Very Little, if any, Food and Water resources",
+            "DC" : 20
+        }
+    ],
+    "FoodWaterNeeds" : [
+        {
+            "Needs_id" : 1,
+            "Size" : "Tiny",
+            "FoodPerDay" : 0.25,
+            "WaterPerDay" : 0.25
+        },
+        {
+            "Needs_id" : 2,
+            "Size" : "Small",
+            "FoodPerDay" : 1,
+            "WaterPerDay" : 1
+        },
+        {
+            "Needs_id" : 3,
+            "Size" : "Medium",
+            "FoodPerDay" : 1,
+            "WaterPerDay" : 1
+        },
+        {
+            "Needs_id" : 4,
+            "Size" : "Large",
+            "FoodPerDay" : 4,
+            "WaterPerDay" : 4
+        },
+        {
+            "Needs_id" : 5,
+            "Size" : "Huge",
+            "FoodPerDay" : 16,
+            "WaterPerDay" : 16
+        },
+        {
+            "Needs_id" : 6,
+            "Size" : "Gargantuan",
+            "FoodPerDay" : 64,
+            "WaterPerDay" : 64
+        }
+    ],
+    "Navigation" : [
+        {
+            "Navigation_id" : 1,
+            "Terrain" : "Forest",
+            "DC" : 15
+        },
+        {
+            "Navigation_id" : 2,
+            "Terrain" : "Jungle",
+            "DC" : 15
+        },
+        {
+            "Navigation_id" : 3,
+            "Terrain" : "Swamp",
+            "DC" : 15
+        },
+        {
+            "Navigation_id" : 4,
+            "Terrain" : "Mountain",
+            "DC" : 15
+        },
+        {
+            "Navigation_id" : 5,
+            "Terrain" : "Open Sea with overcast skies and no land in sight",
+            "DC" : 15
+        },
+        {
+            "Navigation_id" : 6,
+            "Terrain" : "Arctic",
+            "DC" : 10
+        },
+        {
+            "Navigation_id" : 7,
+            "Terrain" : "Desert",
+            "DC" : 10
+        },
+        {
+            "Navigation_id" : 8,
+            "Terrain" : "Hills",
+            "DC" : 10
+        },
+        {
+            "Navigation_id" : 9,
+            "Terrain" : "Open sea with clear skies and no land in sight",
+            "DC" : 10
+        },
+        {
+            "Navigation_id" : 10,
+            "Terrain" : "Grassland",
+            "DC" : 5
+        },
+        {
+            "Navigation_id" : 11,
+            "Terrain" : "Medows",
+            "DC" : 5
+        },
+        {
+            "Navigation_id" : 12,
+            "Terrain" : "Farmland",
+            "DC" : 5
+        }
+    ]
+}

@@ -1,0 +1,977 @@
+{
+    "startingArea" : [
+        {
+            "startingRoomID" : 1,
+            "roll" : 1,
+            "type" : "room",
+            "shape" : "square",
+            "dimensions" : "20-20",
+            "doors" : [
+                {
+                    "type" : "passage",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 3
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 2,
+            "roll" : 2,
+            "type" : "room",
+            "shape" : "square",
+            "dimensions" : "20-20",
+            "doors" : [
+                {
+                    "type" : "door",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 2
+                },
+                {
+                    "type" : "passage",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 1
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 3,
+            "roll" : 3,
+            "type" : "room",
+            "shape" : "square",
+            "dimensions" : "40-40",
+            "doors" : [
+                {
+                    "type" : "door",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 3
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 4,
+            "roll" : 4,
+            "type" : "room",
+            "shape" : "rectangle",
+            "dimensions" : "80-20",
+            "doors" : [
+                {
+                    "type" : "passage",
+                    "random" : "F",
+                    "wall" : "LongWall1",
+                    "number" : 2
+                },
+                {
+                    "type" : "passage",
+                    "random" : "F",
+                    "wall" : "LongWall2",
+                    "number" : 2
+                },
+                {
+                    "type" : "door",
+                    "random" : "F",
+                    "wall" : "ShortWall1",
+                    "number" : 1
+                },
+                {
+                    "type" : "door",
+                    "random" : "F",
+                    "wall" : "ShortWall2",
+                    "number" : 1
+                }
+            ],
+            "details" : "Row of pillars down the middle"
+        },
+        {
+            "startingRoomID" : 5,
+            "roll" : 5,
+            "type" : "room",
+            "shape" : "rectangle",
+            "dimensions" : "20-40",
+            "doors" : [
+                {
+                    "type" : "passage",
+                    "random" : "F",
+                    "wall" : "All",
+                    "number" : 4
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 6,
+            "roll" : 6,
+            "type" : "room",
+            "shape" : "circle",
+            "dimensions" : "40",
+            "doors" : [
+                {
+                    "type" : "passage",
+                    "random" : "F",
+                    "wall" : "All",
+                    "number" : 4
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 7,
+            "roll" : 7,
+            "type" : "room",
+            "shape" : "circle",
+            "dimensions" : "40",
+            "doors" : [
+                {
+                    "type" : "passage",
+                    "random" : "F",
+                    "wall" : "All",
+                    "number" : 4
+                }
+            ],
+            "details" : "Well in the middle of the room"
+        },
+        {
+            "startingRoomID" : 8,
+            "roll" : 8,
+            "type" : "room",
+            "shape" : "square",
+            "dimensions" : "20-20",
+            "doors" : [
+                {
+                    "type" : "door",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 2
+                },
+                {
+                    "type" : "passage",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 1
+                },
+                {
+                    "type" : "secret",
+                    "random" : "T",
+                    "wall" : "Random",
+                    "number" : 1
+                }
+            ],
+            "details" : ""
+        },
+        {
+            "startingRoomID" : 9,
+            "roll" : 9,
+            "type" : "passage",
+            "shape" : "passage",
+            "dimensions" : "10",
+            "doors" : [
+                {
+                    "type" : "Random",
+                    "random" : "F",
+                    "wall" : "TIntersection",
+                    "number" : 2
+                }
+            ],
+            "details" : "T intersection"
+        },
+        {
+            "startingRoomID" : 10,
+            "roll" : 10,
+            "type" : "passage",
+            "shape" : "passage",
+            "dimensions" : "10",
+            "doors" : [
+                {
+                    "type" : "Random",
+                    "random" : "T",
+                    "wall" : "4WayIntersection",
+                    "number" : 3
+                }
+            ],
+            "details" : "4 Way Intersection"
+        }
+    ],
+    "passages" : [
+        {
+            "passagesID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 2,
+            "doors" : [{
+                "exists" : false,
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "30",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 2,
+            "minRoll" : 3,
+            "maxRoll" : 3,
+            "doors" : [{
+                "exists" : true,
+                "type" : "door",
+                "direction" : "R"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20-10",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 3,
+            "minRoll" : 4,
+            "maxRoll" : 4,
+            "doors" : [{
+                "exists" : true,
+                "type" : "door",
+                "direction" : "L"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20-10",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 4,
+            "minRoll" : 5,
+            "maxRoll" : 5,
+            "doors" : [{
+                "exists" : true,
+                "type" : "door",
+                "direction" : "E"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 5,
+            "minRoll" : 6,
+            "maxRoll" : 7,
+            "doors" : [{
+                "exists" : true,
+                "type" : "sidePassage",
+                "direction" : "R"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20-10",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 6,
+            "minRoll" : 8,
+            "maxRoll" : 9,
+            "doors" : [{
+                "exists" : true,
+                "type" : "sidePassage",
+                "direction" : "L"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20-10",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 7,
+            "minRoll" : 10,
+            "maxRoll" : 10,
+            "doors" : [{
+                "exists" : false,
+                "type" : "NA",
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 10
+        },
+        {
+            "passagesID" : 8,
+            "minRoll" : 11,
+            "maxRoll" : 12,
+            "doors" : [{
+                "exists" : false,
+                "type" : "NA",
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "L",
+                "length" : "20-10",
+                "turnDirection" : "L"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 9,
+            "minRoll" : 13,
+            "maxRoll" : 14,
+            "doors" : [{
+                "exists" : false,
+                "type" : "NA",
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : true,
+                "shape" : "L",
+                "length" : "20-10",
+                "turnDirection" : "R"
+            }],
+            "chamber" : false,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 10,
+            "minRoll" : 15,
+            "maxRoll" : 19,
+            "doors" : [{
+                "exists" : false,
+                "type" : "NA",
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : true,
+            "stairs" : false,
+            "secretDoorPercentage" : 0
+        },
+        {
+            "passagesID" : 11,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "doors" : [{
+                "exists" : false,
+                "type" : "NA",
+                "direction" : "NA"
+            }],
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA",
+                "turnDirection" : "NA"
+            }],
+            "chamber" : false,
+            "stairs" : true,
+            "secretDoorPercentage" : 0
+        }
+    ],
+    "passageWidth" : [
+        {
+            "passageWidthID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 2,
+            "width" : 5,
+            "height" : "NA",
+            "details" : "NA"
+        },
+        {
+            "passageWidthID" : 2,
+            "minRoll" : 3,
+            "maxRoll" : 12,
+            "width" : 10,
+            "height" : "NA",
+            "details" : "NA"
+        },
+        {
+            "passageWidthID" : 3,
+            "minRoll" : 13,
+            "maxRoll" : 14,
+            "width" : 20,
+            "height" : "NA",
+            "details" : "NA"
+        },
+        {
+            "passageWidthID" : 4,
+            "minRoll" : 15,
+            "maxRoll" : 16,
+            "width" : 30,
+            "height" : "NA",
+            "details" : "NA"
+        },
+        {
+            "passageWidthID" : 5,
+            "minRoll" : 17,
+            "maxRoll" : 17,
+            "width" : 40,
+            "height" : "NA",
+            "details" : "Row of pillars down the middle"
+        },
+        {
+            "passageWidthID" : 6,
+            "minRoll" : 18,
+            "maxRoll" : 18,
+            "width" : 40,
+            "height" : "NA",
+            "details" : "Double row of pillars"
+        },
+        {
+            "passageWidthID" : 7,
+            "minRoll" : 19,
+            "maxRoll" : 19,
+            "width" : 40,
+            "height" : "20",
+            "details" : "NA"
+        },
+        {
+            "passageWidthID" : 8,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "width" : 40,
+            "height" : "20",
+            "details" : "Gallary 10ft above floor, allows access to level above"
+        }
+    ],
+    "doorType" : [
+        {
+            "doorTypeID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 10,
+            "type" : "wooden",
+            "status" : "O"
+        },
+        {
+            "doorTypeID" : 2,
+            "minRoll" : 11,
+            "maxRoll" : 12,
+            "type" : "wooden",
+            "status" : "B-L"
+        },
+        {
+            "doorTypeID" : 3,
+            "minRoll" : 13,
+            "maxRoll" : 13,
+            "type" : "stone",
+            "status" : "O"
+        },
+        {
+            "doorTypeID" : 4,
+            "minRoll" : 14,
+            "maxRoll" : 14,
+            "type" : "stone",
+            "status" : "B-L"
+        },
+        {
+            "doorTypeID" : 5,
+            "minRoll" : 15,
+            "maxRoll" : 15,
+            "type" : "iron",
+            "status" : "O"
+        },
+        {
+            "doorTypeID" : 6,
+            "minRoll" : 16,
+            "maxRoll" : 16,
+            "type" : "iron",
+            "status" : "B-L"
+        },
+        {
+            "doorTypeID" : 7,
+            "minRoll" : 17,
+            "maxRoll" : 17,
+            "type" : "portcullis",
+            "status" : "O"
+        },
+        {
+            "doorTypeID" : 8,
+            "minRoll" : 18,
+            "maxRoll" : 18,
+            "type" : "portcullis",
+            "status" : "L"
+        },
+        {
+            "doorTypeID" : 9,
+            "minRoll" : 19,
+            "maxRoll" : 19,
+            "type" : "secretDoor",
+            "status" : "O"
+        },
+        {
+            "doorTypeID" : 10,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "type" : "secretDoor",
+            "status" : "B-L"
+        }
+    ],
+    "beyondTheDoor" : [
+        {
+            "beyondTheDoorID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 2,
+            "type" : "passage",
+            "passage" : [{
+                "exists" : true,
+                "shape" : "T",
+                "length" : "10-10-10"
+            }]
+        },
+        {
+            "beyondTheDoorID" : 2,
+            "minRoll" : 3,
+            "maxRoll" : 8,
+            "type" : "passage",
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "length" : "20"
+            }]
+        },
+        {
+            "beyondTheDoorID" : 3,
+            "minRoll" : 9,
+            "maxRoll" : 18,
+            "type" : "chamber",
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA"
+            }]
+        },
+        {
+            "beyondTheDoorID" : 4,
+            "minRoll" : 19,
+            "maxRoll" : 19,
+            "type" : "stairs",
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA"
+            }]
+        },
+        {
+            "beyondTheDoorID" : 5,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "type" : "trap",
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA"
+            }]
+        }
+    ],
+    "chambers" : [
+        {
+            "chambersID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 2,
+            "shape" : "square",
+            "size" : "20-20"
+        },
+        {
+            "chambersID" : 2,
+            "minRoll" : 3,
+            "maxRoll" : 4,
+            "shape" : "square",
+            "size" : "30-30"
+        },
+        {
+            "chambersID" : 3,
+            "minRoll" : 5,
+            "maxRoll" : 6,
+            "shape" : "square",
+            "size" : "40-40"
+        },
+        {
+            "chambersID" : 4,
+            "minRoll" : 7,
+            "maxRoll" : 9,
+            "shape" : "rectangle",
+            "size" : "20-30"
+        },
+        {
+            "chambersID" : 5,
+            "minRoll" : 10,
+            "maxRoll" : 12,
+            "shape" : "rectangle",
+            "size" : "30-40"
+        },
+        {
+            "chambersID" : 6,
+            "minRoll" : 13,
+            "maxRoll" : 14,
+            "shape" : "rectangle",
+            "size" : "40-50"
+        },
+        {
+            "chambersID" : 7,
+            "minRoll" : 15,
+            "maxRoll" : 15,
+            "shape" : "rectangle",
+            "size" : "50-80"
+        },
+        {
+            "chambersID" : 8,
+            "minRoll" : 16,
+            "maxRoll" : 16,
+            "shape" : "circle",
+            "size" : "30"
+        },
+        {
+            "chambersID" : 9,
+            "minRoll" : 17,
+            "maxRoll" : 17,
+            "shape" : "circle",
+            "size" : "50"
+        },
+        {
+            "chambersID" : 10,
+            "minRoll" : 18,
+            "maxRoll" : 18,
+            "shape" : "octagon",
+            "size" : "40-40"
+        },
+        {
+            "chambersID" : 11,
+            "minRoll" : 19,
+            "maxRoll" : 19,
+            "shape" : "octagon",
+            "size" : "60-60"
+        },
+        {
+            "chambersID" : 12,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "shape" : "trapazoid",
+            "size" : "40-60"
+        }
+    ],
+    "chamberExits" : [
+        {
+            "normal" : [
+                {
+                    "chamberExitsID" : 1,
+                    "minRoll" : 1,
+                    "maxRoll" : 5,
+                    "numberOfExits" : 0
+                },
+                {
+                    "chamberExitsID" : 2,
+                    "minRoll" : 6,
+                    "maxRoll" : 11,
+                    "numberOfExits" : 1
+                },
+                {
+                    "chamberExitsID" : 3,
+                    "minRoll" : 12,
+                    "maxRoll" : 15,
+                    "numberOfExits" : 2
+                },
+                {
+                    "chamberExitsID" : 4,
+                    "minRoll" : 16,
+                    "maxRoll" : 18,
+                    "numberOfExits" : 3
+                },
+                {
+                    "chamberExitsID" : 5,
+                    "minRoll" : 19,
+                    "maxRoll" : 20,
+                    "numberOfExits" : 4
+                }
+            ],
+            "large" : [
+                {
+                    "chamberExitsID" : 1,
+                    "minRoll" : 1,
+                    "maxRoll" : 3,
+                    "numberOfExits" : 0
+                },
+                {
+                    "chamberExitsID" : 2,
+                    "minRoll" : 4,
+                    "maxRoll" : 8,
+                    "numberOfExits" : 1
+                },
+                {
+                    "chamberExitsID" : 3,
+                    "minRoll" : 9,
+                    "maxRoll" : 13,
+                    "numberOfExits" : 2
+                },
+                {
+                    "chamberExitsID" : 4,
+                    "minRoll" : 14,
+                    "maxRoll" : 17,
+                    "numberOfExits" : 3
+                },
+                {
+                    "chamberExitsID" : 5,
+                    "minRoll" : 18,
+                    "maxRoll" : 18,
+                    "numberOfExits" : 4
+                },
+                {
+                    "chamberExitsID" : 6,
+                    "minRoll" : 19,
+                    "maxRoll" : 19,
+                    "numberOfExits" : 5
+                },
+                {
+                    "chamberExitsID" : 7,
+                    "minRoll" : 20,
+                    "maxRoll" : 20,
+                    "numberOfExits" : 6
+                }
+            ]
+        }
+    ],
+    "exitLocation" : [
+        {
+            "exitLocationID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 7,
+            "exitLocation" : "oppositeOfEnterance"
+        },
+        {
+            "exitLocationID" : 2,
+            "minRoll" : 8,
+            "maxRoll" : 12,
+            "exitLocation" : "leftOfEnterance"
+        },
+        {
+            "exitLocationID" : 3,
+            "minRoll" : 13,
+            "maxRoll" : 17,
+            "exitLocation" : "rightOfEnterance"
+        },
+        {
+            "exitLocationID" : 4,
+            "minRoll" : 18,
+            "maxRoll" : 20,
+            "exitLocation" : "sameAsEnterance"
+        }
+    ],
+    "exitType" : [
+        {
+            "exitTypeID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 10,
+            "type" : "door",
+            "passage" : [{
+                "exists" : false,
+                "shape" : "NA",
+                "length" : "NA"
+            }]
+        },
+        {
+            "exitTypeID" : 2,
+            "minRoll" : 11,
+            "maxRoll" : 20,
+            "type" : "passage",
+            "passage" : [{
+                "exists" : true,
+                "shape" : "S",
+                "lenght" : "10"
+            }]
+        }
+    ],
+    "stairs" : [
+        {
+            "stairsID" : 1,
+            "minRoll" : 1,
+            "maxRoll" : 4,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 1,
+                "exitTo" : "chamber"
+            }]
+        },
+        {
+            "stairsID" : 2,
+            "minRoll" : 5,
+            "maxRoll" : 8,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 1,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 3,
+            "minRoll" : 9,
+            "maxRoll" : 9,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 2,
+                "exitTo" : "chamber"
+            }]
+        },
+        {
+            "stairsID" : 3,
+            "minRoll" : 10,
+            "maxRoll" : 10,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 2,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 4,
+            "minRoll" : 11,
+            "maxRoll" : 11,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 3,
+                "exitTo" : "chamber"
+            }]
+        },
+        {
+            "stairsID" : 5,
+            "minRoll" : 12,
+            "maxRoll" : 12,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 3,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 6,
+            "minRoll" : 13,
+            "maxRoll" : 13,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "up",
+                "levels" : 1,
+                "exitTo" : "chamber"
+            }]
+        },
+        {
+            "stairsID" : 7,
+            "minRoll" : 14,
+            "maxRoll" : 14,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "up",
+                "levels" : 1,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 8,
+            "minRoll" : 15,
+            "maxRoll" : 15,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "up",
+                "levels" : 1,
+                "exitTo" : "deadEnd"
+            }]
+        },
+        {
+            "stairsID" : 9,
+            "minRoll" : 16,
+            "maxRoll" : 16,
+            "type" : "stairs",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 1,
+                "exitTo" : "deadEnd"
+            }]
+        },
+        {
+            "stairsID" : 10,
+            "minRoll" : 17,
+            "maxRoll" : 17,
+            "type" : "chimney",
+            "direction" : [{
+                "direction" : "up",
+                "levels" : 1,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 11,
+            "minRoll" : 18,
+            "maxRoll" : 18,
+            "type" : "chimney",
+            "direction" : [{
+                "direction" : "up",
+                "levels" : 2,
+                "exitTo" : "passage-20"
+            }]
+        },
+        {
+            "stairsID" : 12,
+            "minRoll" : 19,
+            "maxRoll" : 19,
+            "type" : "shaft",
+            "direction" : [{
+                "direction" : "down",
+                "levels" : 1,
+                "exitTo" : "chamber"
+            }]
+        },
+        {
+            "stairsID" : 13,
+            "minRoll" : 20,
+            "maxRoll" : 20,
+            "type" : "shaft",
+            "direction" : [{
+                "direction" : "both",
+                "levels" : 1,
+                "exitTo" : "chamber"
+            }]
+        }
+    ]
+}

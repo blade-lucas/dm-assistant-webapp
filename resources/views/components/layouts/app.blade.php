@@ -16,11 +16,11 @@
 
         <nav class="flex items-center gap-2 text-sm">
             <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('home') }}">Home</a>
-            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/rules">Rules</a>
             <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('characters.index') }}">Characters</a>
-            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/monsters">Monsters</a>
-            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/encounters">Encounters</a>
-            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/maps">Maps</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('monsters.index') }}">Monsters</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/rules">Items</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('encounters.index') }}">Encounters</a>
+            <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('maps.index') }}">Maps</a>
         </nav>
     </div>
 </header>

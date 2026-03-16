@@ -1,0 +1,313 @@
+{
+    "MaintenanceCosts" : [
+        {
+            "Maintenance_id" : 1,
+            "Property" : "Abbey",
+            "CostPerDay" : 20,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 5,
+            "UntrainedHirelings" : 25
+        },
+        {
+            "Maintenance_id" : 2,
+            "Property" : "Farm",
+            "CostPerDay" : 5,
+            "CoinType" : "sp",
+            "SkilledHirelings" : 1,
+            "UntrainedHirelings" : 2
+        },
+        {
+            "Maintenance_id" : 3,
+            "Property" : "Guildhall",
+            "CostPerDay" : 5,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 5,
+            "UntrainedHirelings" : 3
+        },
+        {
+            "Maintenance_id" : 4,
+            "Property" : "Inn, rural roadside",
+            "CostPerDay" : 10,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 5,
+            "UntrainedHirelings" : 10
+        },
+        {
+            "Maintenance_id" : 5,
+            "Property" : "Inn, town or city",
+            "CostPerDay" : 5,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 1,
+            "UntrainedHirelings" : 5
+        },
+        {
+            "Maintenance_id" : 6,
+            "Property" : "Keep or small castle",
+            "CostPerDay" : 100,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 50,
+            "UntrainedHirelings" : 50
+        },
+        {
+            "Maintenance_id" : 7,
+            "Property" : "Hunting Lodge",
+            "CostPerDay" : 5,
+            "CoinType" : "sp",
+            "SkilledHirelings" : 1,
+            "UntrainedHirelings" : 0
+        },
+        {
+            "Maintenance_id" : 8,
+            "Property" : "Noble Estate",
+            "CostPerDay" : 10,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 3,
+            "UntrainedHirelings" : 15
+        },
+        {
+            "Maintenance_id" : 9,
+            "Property" : "Outpost or fort",
+            "CostPerDay" : 50,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 20,
+            "UntrainedHirelings" : 40
+        },
+        {
+            "Maintenance_id" : 10,
+            "Property" : "Palace or large castle",
+            "CostPerDay" : 400,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 200,
+            "UntrainedHirelings" : 100
+        },
+        {
+            "Maintenance_id" : 11,
+            "Property" : "Shop",
+            "CostPerDay" : 2,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 1,
+            "UntrainedHirelings" : 0
+        },
+        {
+            "Maintenance_id" : 12,
+            "Property" : "Large Temple",
+            "CostPerDay" : 25,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 10,
+            "UntrainedHirelings" : 10
+        },
+        {
+            "Maintenance_id" : 13,
+            "Property" : "Small Temple",
+            "CostPerDay" : 1,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 2,
+            "UntrainedHirelings" : 0
+        },
+        {
+            "Maintenance_id" : 14,
+            "Property" : "Fortefied Tower",
+            "CostPerDay" : 25,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 10,
+            "UntrainedHirelings" : 0
+        },
+        {
+            "Maintenance_id" : 15,
+            "Property" : "Trading Post",
+            "CostPerDay" : 10,
+            "CoinType" : "gp",
+            "SkilledHirelings" : 4,
+            "UntrainedHirelings" : 2
+        }
+    ],
+    "StrongholdBuilding" : [
+        {
+            "Building_id" : 1,
+            "Building" : "Abbey",
+            "ConstrustionCost" : 50000,
+            "ConstructionTime" : 400
+        },
+        {
+            "Building_id" : 2,
+            "Building" : "Guildhall",
+            "ConstrustionCost" : 5000,
+            "ConstructionTime" : 60
+        },
+        {
+            "Building_id" : 3,
+            "Building" : "Keep or small Castle",
+            "ConstrustionCost" : 50000,
+            "ConstructionTime" : 400
+        },
+        {
+            "Building_id" : 4,
+            "Building" : "Noble Estate with Manor",
+            "ConstrustionCost" : 25000,
+            "ConstructionTime" : 150
+        },
+        {
+            "Building_id" : 5,
+            "Building" : "Outpost or Fort",
+            "ConstrustionCost" : 15000,
+            "ConstructionTime" : 100
+        },
+        {
+            "Building_id" : 6,
+            "Building" : "Palace or Large Castle",
+            "ConstrustionCost" : 500000,
+            "ConstructionTime" : 1200
+        },
+        {
+            "Building_id" : 7,
+            "Building" : "Temple",
+            "ConstrustionCost" : 50000,
+            "ConstructionTime" : 400
+        },
+        {
+            "Building_id" : 8,
+            "Building" : "Fortefied Tower",
+            "ConstrustionCost" : 15000,
+            "ConstructionTime" : 100
+        },
+        {
+            "Building_id" : 9,
+            "Building" : "Trading Post",
+            "ConstrustionCost" : 5000,
+            "ConstructionTime" : 60
+        }
+    ],
+    "Carousing" : [
+
+    ],
+    "MagicItemCrafting" : [
+        {
+            "MagicItemCrafting_id" : 1,
+            "Rarity" : "Common",
+            "Cost" : 100,
+            "MinLevel" : 3
+        },
+        {
+            "MagicItemCrafting_id" : 2,
+            "Rarity" : "Uncommon",
+            "Cost" : 500,
+            "MinLevel" : 3
+        },
+        {
+            "MagicItemCrafting_id" : 3,
+            "Rarity" : "Rare",
+            "Cost" : 5000,
+            "MinLevel" : 6
+        },
+        {
+            "MagicItemCrafting_id" : 4,
+            "Rarity" : "Very Rare",
+            "Cost" : 50000,
+            "MinLevel" : 11
+        },
+        {
+            "MagicItemCrafting_id" : 5,
+            "Rarity" : "Legendary",
+            "Cost" : 500000,
+            "MinLevel" : 17
+        }
+    ],
+    "RunningBusiness" : [
+        {
+            "RunningBusiness_id" : 1,
+            "Result" : "You must pay one and a half times the business's maintanence cost for each of the days",
+            "minRoll" : 1,
+            "maxRoll" : 20,
+            "Profits" : "0"
+        },
+        {
+            "RunningBusiness_id" : 2,
+            "Result" : "You must pay the business's full maintanence cost for each of the days",
+            "minRoll" : 21,
+            "maxRoll" : 30,
+            "Profits" : "0"
+        },
+        {
+            "RunningBusiness_id" : 3,
+            "Result" : "You must pay half the business's maintanence cost for each of the days, profits cover the other half",
+            "minRoll" : 31,
+            "maxRoll" : 40,
+            "Profits" : "0"
+        },
+        {
+            "RunningBusiness_id" : 4,
+            "Result" : "The business covers its own maintanence cost for each of the days",
+            "minRoll" : 41,
+            "maxRoll" : 60,
+            "Profits" : "0"
+        },
+        {
+            "RunningBusiness_id" : 5,
+            "Result" : "The business covers its own maintanence cost for each of the daysand earns a profit of",
+            "minRoll" : 61,
+            "maxRoll" : 80,
+            "Profits" : "1-d6-5"
+        },
+        {
+            "RunningBusiness_id" : 5,
+            "Result" : "The business covers its own maintanence cost for each of the daysand earns a profit of",
+            "minRoll" : 81,
+            "maxRoll" : 90,
+            "Profits" : "2-d8-5"
+        },
+        {
+            "RunningBusiness_id" : 5,
+            "Result" : "The business covers its own maintanence cost for each of the daysand earns a profit of",
+            "minRoll" : 91,
+            "maxRoll" : 10000,
+            "Profits" : "3-d10-5"
+        }
+    ],
+    "SalableMagicItems" : [
+        {
+            "salableMagicItem_id" : 1,
+            "Rarity" : "Common",
+            "BasePrice" : 100,
+            "DaysToFindBuyer" : "1-d4",
+            "Modifier" : 10
+        },
+        {
+            "salableMagicItem_id" : 2,
+            "Rarity" : "Uncommon",
+            "BasePrice" : 500,
+            "DaysToFindBuyer" : "1-d6",
+            "Modifier" : 0
+        },
+        {
+            "salableMagicItem_id" : 3,
+            "Rarity" : "Rare",
+            "BasePrice" : 5000,
+            "DaysToFindBuyer" : "1-d8",
+            "Modifier" : -10
+        },
+        {
+            "salableMagicItem_id" : 4,
+            "Rarity" : "Very Rare",
+            "BasePrice" : 50000,
+            "DaysToFindBuyer" : "1-d10",
+            "Modifier" : -20
+        }
+    ],
+    "SowingRumors" : [
+        {
+            "SowingRumor_id" : 1,
+            "SettlementSize" : "Village",
+            "TimeRequired" : "2-d6"
+        },
+        {
+            "SowingRumor_id" : 2,
+            "SettlementSize" : "Town",
+            "TimeRequired" : "4-d6"
+        },
+        {
+            "SowingRumor_id" : 3,
+            "SettlementSize" : "City",
+            "TimeRequired" : "6-d6"
+        }
+    ]
+}

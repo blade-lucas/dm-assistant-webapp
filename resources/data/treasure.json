@@ -1,0 +1,2085 @@
+{
+    "Gemstone" : [
+        {
+            "GemstonePrice" : "10GP",
+            "DiceType" : 12,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 1,
+                    "GemstoneName" : "Azurite",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Motted Deep Blue",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 2,
+                    "GemstoneName" : "Banded Agate",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Striped brown, blue, red, or white",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 3,
+                    "GemstoneName" : "Blue Quartz",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Pale Blue",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 4,
+                    "GemstoneName" : "Eye Agate",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Circles of gray, white, brown, blue or green",
+                    "roll" : 4
+                },
+                {
+                    "Gemstone_id" : 5,
+                    "GemstoneName" : "Hematite",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Gray Black",
+                    "roll" : 5
+                },
+                {
+                    "Gemstone_id" : 6,
+                    "GemstoneName" : "Lapis Lazuli",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Light and dark blue with yellow flecks",
+                    "roll" : 6
+                },
+                {
+                    "Gemstone_id" : 7,
+                    "GemstoneName" : "Malachite",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Straited light and dark green",
+                    "roll" : 7
+                },
+                {
+                    "Gemstone_id" : 8,
+                    "GemstoneName" : "Moss Agate",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Pink or yellow white with mossy gray or green markings",
+                    "roll" : 8
+                },
+                {
+                    "Gemstone_id" : 9,
+                    "GemstoneName" : "Obsidian",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Black",
+                    "roll" : 9
+                },
+                {
+                    "Gemstone_id" : 10,
+                    "GemstoneName" : "Rhodochrosite",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Light Pink",
+                    "roll" : 10
+                },
+                {
+                    "Gemstone_id" : 11,
+                    "GemstoneName" : "Tiger Eye",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Brown with gold center",
+                    "roll" : 11
+                },
+                {
+                    "Gemstone_id" : 12,
+                    "GemstoneName" : "Turquoise",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Light blue green",
+                    "roll" : 12
+                }
+            ]
+        },
+        {
+            "GemstonePrice" : "50GP",
+            "DiceType" : 12,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 13,
+                    "GemstoneName" : "Bloodstone",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Dark gray with red flecks",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 14,
+                    "GemstoneName" : "Carnelian",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Orange to red brown",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 15,
+                    "GemstoneName" : "Chalcedony",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "White",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 16,
+                    "GemstoneName" : "Chrysoprase",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Green",
+                    "roll" : 4
+                },
+                {
+                    "Gemstone_id" : 17,
+                    "GemstoneName" : "Citrine",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Pale yellow brown",
+                    "roll" : 5
+                },
+                {
+                    "Gemstone_id" : 18,
+                    "GemstoneName" : "Jasper",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Blue, Black or Brown",
+                    "roll" : 6
+                },
+                {
+                    "Gemstone_id" : 19,
+                    "GemstoneName" : "Moonstone",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "White with a pale blue glow",
+                    "roll" : 7
+                },
+                {
+                    "Gemstone_id" : 20,
+                    "GemstoneName" : "Onyx",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Bands of Black and white, or pure black or white",
+                    "roll" : 8
+                },
+                {
+                    "Gemstone_id" : 21,
+                    "GemstoneName" : "Quartz",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "White, Smokey gray, or yellow",
+                    "roll" : 9
+                },
+                {
+                    "Gemstone_id" : 22,
+                    "GemstoneName" : "Sardonyx",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Bands of red and white",
+                    "roll" : 10
+                },
+                {
+                    "Gemstone_id" : 23,
+                    "GemstoneName" : "Star Rose Quartz",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Rosy stone with white star shaped center",
+                    "roll" : 11
+                },
+                {
+                    "Gemstone_id" : 24,
+                    "GemstoneName" : "Zircon",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Pale blue green",
+                    "roll" : 12
+                }
+            ]
+        },
+        {
+            "GemstonePrice" : "100GP",
+            "DiceType" : 10,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 25,
+                    "GemstoneName" : "Amber",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Watery gold or rich gold",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 26,
+                    "GemstoneName" : "Amethyst",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Deep Purple",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 27,
+                    "GemstoneName" : "Chrysberyl",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Yellow green to pale green",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 28,
+                    "GemstoneName" : "Coral",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Crimson",
+                    "roll" : 4
+                },
+                {
+                    "Gemstone_id" : 29,
+                    "GemstoneName" : "Garnet",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Red, Brown green or violet",
+                    "roll" : 5
+                },
+                {
+                    "Gemstone_id" : 30,
+                    "GemstoneName" : "Jade",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Light green, deep green or white",
+                    "roll" : 6
+                },
+                {
+                    "Gemstone_id" : 31,
+                    "GemstoneName" : "Jet",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Deep Black",
+                    "roll" : 7
+                },
+                {
+                    "Gemstone_id" : 32,
+                    "GemstoneName" : "Pearl",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Lustrous white, yellow or pink",
+                    "roll" : 8
+                },
+                {
+                    "Gemstone_id" : 33,
+                    "GemstoneName" : "Spinel",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Red, red brown, or deep green",
+                    "roll" : 9
+                },
+                {
+                    "Gemstone_id" : 34,
+                    "GemstoneName" : "Tourmaline",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Pale green, blue, brown or red",
+                    "roll" : 10
+                }
+            ]
+        },
+        {
+            "GemstonePrice" : "500GP",
+            "DiceType" : 6,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 35,
+                    "GemstoneName" : "Alexandrite",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Dark Green",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 36,
+                    "GemstoneName" : "Aquamarine",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Pale blue green",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 37,
+                    "GemstoneName" : "Black Pearl",
+                    "GemstoneTranslucency" : "Opaque",
+                    "GemstoneColor" : "Pure black",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 38,
+                    "GemstoneName" : "Blue Spinel",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Deep blue",
+                    "roll" : 4
+                },
+                {
+                    "Gemstone_id" : 39,
+                    "GemstoneName" : "Peridot",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Rich Olive Green",
+                    "roll" : 5
+                },
+                {
+                    "Gemstone_id" : 40,
+                    "GemstoneName" : "Topaz",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Golden yellow",
+                    "roll" : 6
+                }
+            ]
+        },
+        {
+            "GemstonePrice" : "1000GP",
+            "DiceType" : 8,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 41,
+                    "GemstoneName" : "Black Opal",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Dark green with black motting and golden flecks",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 42,
+                    "GemstoneName" : "Blue Sapphire",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Blue white to medium blue",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 43,
+                    "GemstoneName" : "Emerald",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Deep Bright Green",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 44,
+                    "GemstoneName" : "Fire Opal",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Firey Red",
+                    "roll" : 4
+                },
+                {
+                    "Gemstone_id" : 45,
+                    "GemstoneName" : "Opal",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Pale blue with green and gold motting",
+                    "roll" : 5
+                },
+                {
+                    "Gemstone_id" : 46,
+                    "GemstoneName" : "Star Ruby",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Ruby with white star shaped center",
+                    "roll" : 6
+                },
+                {
+                    "Gemstone_id" : 47,
+                    "GemstoneName" : "Star Sapphire",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Blue Sapphire with white star shaped center",
+                    "roll" : 7
+                },
+                {
+                    "Gemstone_id" : 48,
+                    "GemstoneName" : "Yellow Sapphire",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Firey yellow or yellow green",
+                    "roll" : 8
+                }
+            ]
+        },
+        {
+            "GemstonePrice" : "5000GP",
+            "DiceType" : 4,
+            "Gemstones" : [
+                {
+                    "Gemstone_id" : 49,
+                    "GemstoneName" : "Black Sapphire",
+                    "GemstoneTranslucency" : "Translucent",
+                    "GemstoneColor" : "Lustrous Black with glowing highlights",
+                    "roll" : 1
+                },
+                {
+                    "Gemstone_id" : 50,
+                    "GemstoneName" : "Diamond",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Blue white, canary, pink, brown, or blue",
+                    "roll" : 2
+                },
+                {
+                    "Gemstone_id" : 51,
+                    "GemstoneName" : "Jacinth",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Firey Orange",
+                    "roll" : 3
+                },
+                {
+                    "Gemstone_id" : 52,
+                    "GemstoneName" : "Ruby",
+                    "GemstoneTranslucency" : "Transparent",
+                    "GemstoneColor" : "Clear Red to deep crimson",
+                    "roll" : 4
+                }
+            ]
+        }
+    ],
+    "ArtObject" : [
+        {
+            "ArtObjectPrice" : "25GP",
+            "DiceType" : 10,
+            "ArtObjects" : [
+                {
+                    "ArtObject_id" : 1,
+                    "Object" : "Silver Ewer",
+                    "roll" : 1
+                },
+                {
+                    "ArtObject_id" : 2,
+                    "Object" : "Carved Bone Statuette",
+                    "roll" : 2
+                },
+                {
+                    "ArtObject_id" : 3,
+                    "Object" : "Small Gold Bracelet",
+                    "roll" : 3
+                },
+                {
+                    "ArtObject_id" : 4,
+                    "Object" : "Cloth of Gold Vestments",
+                    "roll" : 4
+                },
+                {
+                    "ArtObject_id" : 5,
+                    "Object" : "Black Velvet Mask Stitched with Silver Thread",
+                    "roll" : 5
+                },
+                {
+                    "ArtObject_id" : 6,
+                    "Object" : "Copper Chalice with Silver Filgree",
+                    "roll" : 6
+                },
+                {
+                    "ArtObject_id" : 7,
+                    "Object" : "Pair of Engraved Bone Dice",
+                    "roll" : 7
+                },
+                {
+                    "ArtObject_id" : 8,
+                    "Object" : "Small Mirror set in a Painted Wooden Frame",
+                    "roll" : 8
+                },
+                {
+                    "ArtObject_id" : 9,
+                    "Object" : "Embroidered Silk Hankerchief",
+                    "roll" : 9
+                },
+                {
+                    "ArtObject_id" : 10,
+                    "Object" : "Gold Locket with a Painted Portrait Inside",
+                    "roll" : 10
+                }
+            ]
+        },
+        {
+            "ArtObjectPrice" : "250GP",
+            "DiceType" : 10,
+            "ArtObjects" : [
+                {
+                    "ArtObject_id" : 11,
+                    "Object" : "Gold Ring set with Bloodstones",
+                    "roll" : 1
+                },
+                {
+                    "ArtObject_id" : 12,
+                    "Object" : "Carved Ivory Statuette",
+                    "roll" : 2
+                },
+                {
+                    "ArtObject_id" : 13,
+                    "Object" : "Large Gold Bracelet",
+                    "roll" : 3
+                },
+                {
+                    "ArtObject_id" : 14,
+                    "Object" : "Silver Necklace with Gemstone Pendant",
+                    "roll" : 4
+                },
+                {
+                    "ArtObject_id" : 15,
+                    "Object" : "Bronze Crown",
+                    "roll" : 5
+                },
+                {
+                    "ArtObject_id" : 16,
+                    "Object" : "Silk Robe with Gold Embroidery",
+                    "roll" : 6
+                },
+                {
+                    "ArtObject_id" : 17,
+                    "Object" : "Large Well Made Tapistry",
+                    "roll" : 7
+                },
+                {
+                    "ArtObject_id" : 18,
+                    "Object" : "Brass Mug made with Jade Inlay",
+                    "roll" : 8
+                },
+                {
+                    "ArtObject_id" : 19,
+                    "Object" : "Box of Turquoise Animal Figurines",
+                    "roll" : 9
+                },
+                {
+                    "ArtObject_id" : 20,
+                    "Object" : "Gold Bird Cage with Electrum Filgree",
+                    "roll" : 10
+                }
+            ]
+        },
+        {
+            "ArtObjectPrice" : "750GP",
+            "DiceType" : 10,
+            "ArtObjects" : [
+                {
+                    "ArtObject_id" : 21,
+                    "Object" : "Silver Chalice Set with Moonstones",
+                    "roll" : 1
+                },
+                {
+                    "ArtObject_id" : 22,
+                    "Object" : "Silver Plated Steel Longsword with Jet set in the Hilt",
+                    "roll" : 2
+                },
+                {
+                    "ArtObject_id" : 23,
+                    "Object" : "Carved Harp of Exotic Wood with Ivory Inlay and Zircon Gems",
+                    "roll" : 3
+                },
+                {
+                    "ArtObject_id" : 24,
+                    "Object" : "Small Gold Idol",
+                    "roll" : 4
+                },
+                {
+                    "ArtObject_id" : 25,
+                    "Object" : "Gold Dragon Comb set with Red Garnets as Eyes",
+                    "roll" : 5
+                },
+                {
+                    "ArtObject_id" : 26,
+                    "Object" : "Bottle stopper Cork Embossed with Gold Leaf and set with Amethysts",
+                    "roll" : 6
+                },
+                {
+                    "ArtObject_id" : 27,
+                    "Object" : "Ceremonial Electrum Dagger with Black Pearl in the Pommel",
+                    "roll" : 7
+                },
+                {
+                    "ArtObject_id" : 28,
+                    "Object" : "Silver and Gold Broach",
+                    "roll" : 8
+                },
+                {
+                    "ArtObject_id" : 29,
+                    "Object" : "Obsidian Statuette with gold fittings and inlay",
+                    "roll" : 9
+                },
+                {
+                    "ArtObject_id" : 30,
+                    "Object" : "Painted Gold War Mask",
+                    "roll" : 10
+                }
+            ]
+        },
+        {
+            "ArtObjectPrice" : "2500GP",
+            "DiceType" : 10,
+            "ArtObjects" : [
+                {
+                    "ArtObject_id" : 31,
+                    "Object" : "Fine Gold Chain set with Fire Opal",
+                    "roll" : 1
+                },
+                {
+                    "ArtObject_id" : 32,
+                    "Object" : "Old Masterpiece Painting",
+                    "roll" : 2
+                },
+                {
+                    "ArtObject_id" : 33,
+                    "Object" : "Embroidered Silk and Velvet Mantle Set with Numerous Moonstones",
+                    "roll" : 3
+                },
+                {
+                    "ArtObject_id" : 34,
+                    "Object" : "Platinum Bracelet set with Sapphire",
+                    "roll" : 4
+                },
+                {
+                    "ArtObject_id" : 35,
+                    "Object" : "Embroidered Glove set with Jewel Chips",
+                    "roll" : 5
+                },
+                {
+                    "ArtObject_id" : 36,
+                    "Object" : "Jewled Anklet",
+                    "roll" : 6
+                },
+                {
+                    "ArtObject_id" : 37,
+                    "Object" : "Gold Music Box",
+                    "roll" : 7
+                },
+                {
+                    "ArtObject_id" : 38,
+                    "Object" : "Gold Circlet set with four Aquamarines",
+                    "roll" : 8
+                },
+                {
+                    "ArtObject_id" : 39,
+                    "Object" : "Eye Patch with Mock Eye set in Blue Sapphire and Moonstone",
+                    "roll" : 9
+                },
+                {
+                    "ArtObject_id" : 40,
+                    "Object" : "A Necklace String of Small Pink Pearls",
+                    "roll" : 10
+                }
+            ]
+        },
+        {
+            "ArtObjectPrice" : "7500GP",
+            "DiceType" : 8,
+            "ArtObjects" : [
+                {
+                    "ArtObject_id" : 41,
+                    "Object" : "Jewled Gold Crown",
+                    "roll" : 1
+                },
+                {
+                    "ArtObject_id" : 42,
+                    "Object" : "Jewled Platinum Ring",
+                    "roll" : 2
+                },
+                {
+                    "ArtObject_id" : 43,
+                    "Object" : "Small Gold Statuette set with Rubies",
+                    "roll" : 3
+                },
+                {
+                    "ArtObject_id" : 44,
+                    "Object" : "Gold Cup set with Emeralds",
+                    "roll" : 4
+                },
+                {
+                    "ArtObject_id" : 45,
+                    "Object" : "Gold Jewlery Box with Platinum Filgree",
+                    "roll" : 5
+                },
+                {
+                    "ArtObject_id" : 46,
+                    "Object" : "Painted Gold Child's Sarcophagus",
+                    "roll" : 6
+                },
+                {
+                    "ArtObject_id" : 47,
+                    "Object" : "Jade Game Board with Solid Gold Playing Pieces",
+                    "roll" : 7
+                },
+                {
+                    "ArtObject_id" : 48,
+                    "Object" : "Bejewled Ivory Drinking Horn with Gold Filgree",
+                    "roll" : 8
+                }
+            ]
+        }
+    ],
+    "MagidItemRarity" : [
+        {
+            "MagicItemRarity_id" : 1,
+            "Rarity" : "Common",
+            "MinLevel" : 1,
+            "MinValue" : 50,
+            "MaxValue" : 100
+        },
+        {
+            "MagicItemRarity_id" : 2,
+            "Rarity" : "Uncommon",
+            "MinLevel" : 1,
+            "MinValue" : 101,
+            "MaxValue" : 500
+        },
+        {
+            "MagicItemRarity_id" : 3,
+            "Rarity" : "Rare",
+            "MinLevel" : 5,
+            "MinValue" : 501,
+            "MaxValue" : 5000
+        },
+        {
+            "MagicItemRarity_id" : 4,
+            "Rarity" : "Very Rare",
+            "MinLevel" : 11,
+            "MinValue" : 5001,
+            "MaxValue" : 50000
+        },
+        {
+            "MagicItemRarity_id" : 5,
+            "Rarity" : "Legendary",
+            "MinLevel" : 17,
+            "MinValue" : 50001,
+            "MaxValue" : -1
+        }
+    ],
+    "IndividualTreasure" : [
+        {
+            "MinChallange" : 0,
+            "MaxChallange" : 4,
+            "Treasure" : [
+                {
+                    "MinRoll" : 1,
+                    "MaxRoll" : 30,
+                    "Coins" : [
+                        {
+                            "CP" : "5-d6",
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 17,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 31,
+                    "MaxRoll" : 60,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : "4-d6",
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 14,
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 61,
+                    "MaxRoll" : 70,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : "3-d6",
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 10,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 71,
+                    "MaxRoll" : 95,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "3-d6",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 10,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 96,
+                    "MaxRoll" : 100,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : "1-d6"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 0,
+                            "PP" : 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "MinChallange" : 5,
+            "MaxChallange" : 10,
+            "Treasure" : [
+                {
+                    "MinRoll" : 1,
+                    "MaxRoll" : 30,
+                    "Coins" : [
+                        {
+                            "CP" : "4-d6-100",
+                            "SP" : 0,
+                            "EP" : "1-d6-10",
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 1400,
+                            "SP" : 0,
+                            "EP" : 35,
+                            "GP" : 0,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 31,
+                    "MaxRoll" : 60,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : "6-d6-10",
+                            "EP" : 0,
+                            "GP" : "2-d6-10",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 210,
+                            "EP" : 0,
+                            "GP" : 70,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 61,
+                    "MaxRoll" : 70,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : "3-d6-10",
+                            "GP" : "2-d6-10",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 105,
+                            "GP" : 70,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 71,
+                    "MaxRoll" : 95,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "4-d6-10",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 140,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 95,
+                    "MaxRoll" : 100,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "2-d6-10",
+                            "PP" : "3-d6"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 70,
+                            "PP" : 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "MinChallange" : 11,
+            "MaxChallange" : 16,
+            "Treasure" : [
+                {
+                    "MinRoll" : 1,
+                    "MaxRoll" : 20,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : "4-d6-100",
+                            "EP" : 0,
+                            "GP" : "1-d6-100",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 1400,
+                            "EP" : 0,
+                            "GP" : 350,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 21,
+                    "MaxRoll" : 35,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : "1-d6-100",
+                            "GP" : "1-d6-100",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 350,
+                            "GP" : 350,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 36,
+                    "MaxRoll" : 75,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "2-d6-100",
+                            "PP" : "1-d6-10"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 700,
+                            "PP" : 35
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 76,
+                    "MaxRoll" : 100,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "2-d6-100",
+                            "PP" : "2-d6-10"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 700,
+                            "PP" : 70
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "MinChallange" : 17,
+            "MaxChallange" : 10000,
+            "Treasure" : [
+                {
+                    "MinRoll" : 1,
+                    "MaxRoll" : 15,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : "2-d6-1000",
+                            "GP" : "8-d6-100",
+                            "PP" : 0
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 7000,
+                            "GP" : 2800,
+                            "PP" : 0
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 16,
+                    "MaxRoll" : 55,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "1-d6-1000",
+                            "PP" : "1-d6-100"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 3500,
+                            "PP" : 350
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 56,
+                    "MaxRoll" : 100,
+                    "Coins" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : "1-d6-1000",
+                            "PP" : "2-d6-100"
+                        }
+                    ],
+                    "Average" : [
+                        {
+                            "CP" : 0,
+                            "SP" : 0,
+                            "EP" : 0,
+                            "GP" : 3500,
+                            "PP" : 700
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "TreasureHorde" : [
+        {
+            "MinChallange" : 0,
+            "MaxChallange" : 4,
+            "Coins" : {
+                "CP" : "6-d6-100",
+                "SP" : "3-d6-100",
+                "EP" : 0,
+                "GP" : 0,
+                "PP" : 0
+            },
+            "AverageCoins" : {
+                "CP" : 2100,
+                "SP" : 1050,
+                "EP" : 0,
+                "GP" : 0,
+                "PP" : 0
+            },
+            "Treasure" : [
+                {
+                    "MinRoll" : 1,
+                    "MaxRoll" : 6,
+                    "Gems" : false,
+                    "Art" : false,
+                    "MagicItem" : false,
+                    "GemArtTable" : "",
+                    "GemArtMultiplier" : "",
+                    "GemArtAverage" : 1,
+                    "MagicItems" : [
+
+                    ]
+                },
+                {
+                    "MinRoll" : 7,
+                    "MaxRoll" : 16,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : false,
+                    "GemArtTable" : "10GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+
+                    ]
+                },
+                {
+                    "MinRoll" : 17,
+                    "MaxRoll" : 26,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : false,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d4",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+
+                    ]
+                },
+                {
+                    "MinRoll" : 27,
+                    "MaxRoll" : 36,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : false,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+
+                    ]
+                },
+                {
+                    "MinRoll" : 37,
+                    "MaxRoll" : 44,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "10GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d6",
+                            "Table" : "MagicItemA"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 45,
+                    "MaxRoll" : 52,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : true,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d4",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d6",
+                            "Table" : "MagicItemA"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 53,
+                    "MaxRoll" : 60,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d6",
+                            "Table" : "MagicItemA"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 61,
+                    "MaxRoll" : 65,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "10GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemB"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 66,
+                    "MaxRoll" : 70,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : true,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d4",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemB"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 71,
+                    "MaxRoll" : 75,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemB"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 76,
+                    "MaxRoll" : 78,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "10GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemC"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 79,
+                    "MaxRoll" : 80,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : true,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d4",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemC"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 81,
+                    "MaxRoll" : 85,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemC"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 86,
+                    "MaxRoll" : 92,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : true,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemF"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 93,
+                    "MaxRoll" : 97,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1-d4",
+                            "Table" : "MagicItemF"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 98,
+                    "MaxRoll" : 99,
+                    "Gems" : false,
+                    "Art" : true,
+                    "MagicItem" : true,
+                    "GemArtTable" : "25GP",
+                    "GemArtMultiplier" : "2-d4",
+                    "GemArtAverage" : 5,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1",
+                            "Table" : "MagicItemG"
+                        }
+                    ]
+                },
+                {
+                    "MinRoll" : 100,
+                    "MaxRoll" : 100,
+                    "Gems" : true,
+                    "Art" : false,
+                    "MagicItem" : true,
+                    "GemArtTable" : "50GP",
+                    "GemArtMultiplier" : "2-d6",
+                    "GemArtAverage" : 7,
+                    "MagicItems" : [
+                        {
+                            "NumberOfTreasures" : "1",
+                            "Table" : "MagicItemG"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "MagicItemA" : [
+        {
+            "MagicItem_id" : 1,
+            "MinRoll" : 1,
+            "MaxRoll" : 50,
+            "MagicItem" : "Potion of Healing"
+        },
+        {
+            "MagicItem_id" : 2,
+            "MinRoll" : 51,
+            "MaxRoll" : 60,
+            "MagicItem" : "Spell Scroll Cantrip"
+        },
+        {
+            "MagicItem_id" : 3,
+            "MinRoll" : 61,
+            "MaxRoll" : 70,
+            "MagicItem" : "Potion of Climbing"
+        },
+        {
+            "MagicItem_id" : 4,
+            "MinRoll" : 71,
+            "MaxRoll" : 90,
+            "MagicItem" : "Spell Scroll 1st Level"
+        },
+        {
+            "MagicItem_id" : 5,
+            "MinRoll" : 91,
+            "MaxRoll" : 94,
+            "MagicItem" : "Spell Scroll 2nd Level"
+        },
+        {
+            "MagicItem_id" : 6,
+            "MinRoll" : 95,
+            "MaxRoll" : 98,
+            "MagicItem" : "Potion of Greater Healing"
+        },
+        {
+            "MagicItem_id" : 7,
+            "MinRoll" : 99,
+            "MaxRoll" : 99,
+            "MagicItem" : "Bag of Holding"
+        },
+        {
+            "MagicItem_id" : 8,
+            "MinRoll" : 100,
+            "MaxRoll" : 100,
+            "MagicItem" : "DriftGlobe"
+        }
+    ],
+    "MagicItemB" : [
+        {
+            "MagicItem_id" : 9,
+            "MinRoll" : 1,
+            "MaxRoll" : 15,
+            "MagicItem" : "Potion of Greater Healing"
+        },
+        {
+            "MagicItem_id" : 10,
+            "MinRoll" : 16,
+            "MaxRoll" : 22,
+            "MagicItem" : "Potion of Fire Breath"
+        },
+        {
+            "MagicItem_id" : 11,
+            "MinRoll" : 23,
+            "MaxRoll" : 29,
+            "MagicItem" : "Potion of Resistance"
+        },
+        {
+            "MagicItem_id" : 12,
+            "MinRoll" : 30,
+            "MaxRoll" : 34,
+            "MagicItem" : "Ammunition"
+        },
+        {
+            "MagicItem_id" : 13,
+            "MinRoll" : 35,
+            "MaxRoll" : 39,
+            "MagicItem" : "Potion of Animal Friendship"
+        },
+        {
+            "MagicItem_id" : 14,
+            "MinRoll" : 40,
+            "MaxRoll" : 44,
+            "MagicItem" : "Potion of Hill Giant Strength"
+        },
+        {
+            "MagicItem_id" : 15,
+            "MinRoll" : 45,
+            "MaxRoll" : 49,
+            "MagicItem" : "Potion of Growth"
+        },
+        {
+            "MagicItem_id" : 16,
+            "MinRoll" : 50,
+            "MaxRoll" : 54,
+            "MagicItem" : "Potion of Water Breathing"
+        },
+        {
+            "MagicItem_id" : 17,
+            "MinRoll" : 55,
+            "MaxRoll" : 59,
+            "MagicItem" : "Spell Scroll 2nd Level"
+        },
+        {
+            "MagicItem_id" : 18,
+            "MinRoll" : 60,
+            "MaxRoll" : 64,
+            "MagicItem" : "Spell Scroll 3rd Level"
+        },
+        {
+            "MagicItem_id" : 19,
+            "MinRoll" : 65,
+            "MaxRoll" : 67,
+            "MagicItem" : "Bag of Holding"
+        },
+        {
+            "MagicItem_id" : 20,
+            "MinRoll" : 68,
+            "MaxRoll" : 70,
+            "MagicItem" : "Keoghtoms Ointment"
+        },
+        {
+            "MagicItem_id" : 21,
+            "MinRoll" : 71,
+            "MaxRoll" : 73,
+            "MagicItem" : "Oil of Slipperiness"
+        },
+        {
+            "MagicItem_id" : 22,
+            "MinRoll" : 74,
+            "MaxRoll" : 75,
+            "MagicItem" : "Dust of Dissapearance"
+        },
+        {
+            "MagicItem_id" : 23,
+            "MinRoll" : 76,
+            "MaxRoll" : 77,
+            "MagicItem" : "Dust of Dryness"
+        },
+        {
+            "MagicItem_id" : 24,
+            "MinRoll" : 78,
+            "MaxRoll" : 79,
+            "MagicItem" : "Dust of Sneezing and Choking"
+        },
+        {
+            "MagicItem_id" : 25,
+            "MinRoll" : 80,
+            "MaxRoll" : 81,
+            "MagicItem" : "Elemental Gem"
+        },
+        {
+            "MagicItem_id" : 26,
+            "MinRoll" : 82,
+            "MaxRoll" : 83,
+            "MagicItem" : "Philter of Love"
+        },
+        {
+            "MagicItem_id" : 27,
+            "MinRoll" : 84,
+            "MaxRoll" : 84,
+            "MagicItem" : "Alchemy Jug"
+        },
+        {
+            "MagicItem_id" : 28,
+            "MinRoll" : 85,
+            "MaxRoll" : 85,
+            "MagicItem" : "Cap of Waater Breathing"
+        },
+        {
+            "MagicItem_id" : 29,
+            "MinRoll" : 86,
+            "MaxRoll" : 86,
+            "MagicItem" : "Cloak of the Manta Ray"
+        },
+        {
+            "MagicItem_id" : 30,
+            "MinRoll" : 87,
+            "MaxRoll" : 87,
+            "MagicItem" : "DriftGlobe"
+        },
+        {
+            "MagicItem_id" : 31,
+            "MinRoll" : 88,
+            "MaxRoll" : 88,
+            "MagicItem" : "Goggles of Night"
+        },
+        {
+            "MagicItem_id" : 32,
+            "MinRoll" : 89,
+            "MaxRoll" : 89,
+            "MagicItem" : "Helm of Comprehending Languages"
+        },
+        {
+            "MagicItem_id" : 33,
+            "MinRoll" : 90,
+            "MaxRoll" : 90,
+            "MagicItem" : "Immovable Rod"
+        },
+        {
+            "MagicItem_id" : 34,
+            "MinRoll" : 91,
+            "MaxRoll" : 91,
+            "MagicItem" : "Lantern of Revealing"
+        },
+        {
+            "MagicItem_id" : 35,
+            "MinRoll" : 92,
+            "MaxRoll" : 92,
+            "MagicItem" : "Mariner's Armor"
+        },
+        {
+            "MagicItem_id" : 36,
+            "MinRoll" : 93,
+            "MaxRoll" : 93,
+            "MagicItem" : "Mithral Armor"
+        },
+        {
+            "MagicItem_id" : 37,
+            "MinRoll" : 94,
+            "MaxRoll" : 94,
+            "MagicItem" : "Potion of Poison"
+        },
+        {
+            "MagicItem_id" : 38,
+            "MinRoll" : 95,
+            "MaxRoll" : 95,
+            "MagicItem" : "Ring of Swimming"
+        },
+        {
+            "MagicItem_id" : 39,
+            "MinRoll" : 96,
+            "MaxRoll" : 96,
+            "MagicItem" : "Robe of Useful Items"
+        },
+        {
+            "MagicItem_id" : 40,
+            "MinRoll" : 97,
+            "MaxRoll" : 97,
+            "MagicItem" : "Rope of Climbing"
+        },
+        {
+            "MagicItem_id" : 41,
+            "MinRoll" : 98,
+            "MaxRoll" : 98,
+            "MagicItem" : "Saddle of the Cavalier"
+        },
+        {
+            "MagicItem_id" : 42,
+            "MinRoll" : 99,
+            "MaxRoll" : 99,
+            "MagicItem" : "Wand of Magic Detection"
+        },
+        {
+            "MagicItem_id" : 43,
+            "MinRoll" : 100,
+            "MaxRoll" : 100,
+            "MagicItem" : "Wand of Secrets"
+        }
+    ],
+    "MagicItemC" : [
+        {
+            "MagicItem_id" : 44,
+            "MinRoll" : 1,
+            "MaxRoll" : 15,
+            "MagicItem" : "Potion of Superior Healing"
+        },
+        {
+            "MagicItem_id" : 45,
+            "MinRoll" : 16,
+            "MaxRoll" : 22,
+            "MagicItem" : "Spell Scroll 4th Level"
+        },
+        {
+            "MagicItem_id" : 46,
+            "MinRoll" : 23,
+            "MaxRoll" : 27,
+            "MagicItem" : "Ammuniton +2"
+        },
+        {
+            "MagicItem_id" : 47,
+            "MinRoll" : 28,
+            "MaxRoll" : 32,
+            "MagicItem" : "Potion of Clairvoyance"
+        },
+        {
+            "MagicItem_id" : 48,
+            "MinRoll" : 33,
+            "MaxRoll" : 37,
+            "MagicItem" : "Potion of Diminution"
+        },
+        {
+            "MagicItem_id" : 49,
+            "MinRoll" : 38,
+            "MaxRoll" : 42,
+            "MagicItem" : "Potion of Gaseous Form"
+        },
+        {
+            "MagicItem_id" : 50,
+            "MinRoll" : 43,
+            "MaxRoll" : 47,
+            "MagicItem" : "Potion of Frost Giant Strength"
+        },
+        {
+            "MagicItem_id" : 51,
+            "MinRoll" : 48,
+            "MaxRoll" : 52,
+            "MagicItem" : "Potion of Heroism"
+        },
+        {
+            "MagicItem_id" : 52,
+            "MinRoll" : 53,
+            "MaxRoll" : 57,
+            "MagicItem" : "Potion of Healing"
+        },
+        {
+            "MagicItem_id" : 53,
+            "MinRoll" : 58,
+            "MaxRoll" : 62,
+            "MagicItem" : "Potion of Invulnerability"
+        },
+        {
+            "MagicItem_id" : 54,
+            "MinRoll" : 63,
+            "MaxRoll" : 67,
+            "MagicItem" : "Potion of mind reading"
+        },
+        {
+            "MagicItem_id" : 55,
+            "MinRoll" : 68,
+            "MaxRoll" : 72,
+            "MagicItem" : "Spell Scroll 5th Level"
+        },
+        {
+            "MagicItem_id" : 56,
+            "MinRoll" : 73,
+            "MaxRoll" : 75,
+            "MagicItem" : "Elixar of Health"
+        },
+        {
+            "MagicItem_id" : 57,
+            "MinRoll" : 76,
+            "MaxRoll" : 78,
+            "MagicItem" : "Oil of Etherealness"
+        },
+        {
+            "MagicItem_id" : 58,
+            "MinRoll" : 79,
+            "MaxRoll" : 81,
+            "MagicItem" : "Potion of Fire Giant Strength"
+        },
+        {
+            "MagicItem_id" : 59,
+            "MinRoll" : 82,
+            "MaxRoll" : 84,
+            "MagicItem" : "Quaals Feather Token"
+        },
+        {
+            "MagicItem_id" : 60,
+            "MinRoll" : 85,
+            "MaxRoll" : 87,
+            "MagicItem" : "Scroll of Protection"
+        },
+        {
+            "MagicItem_id" : 61,
+            "MinRoll" : 88,
+            "MaxRoll" : 89,
+            "MagicItem" : "Bag of Beans"
+        },
+        {
+            "MagicItem_id" : 62,
+            "MinRoll" : 90,
+            "MaxRoll" : 91,
+            "MagicItem" : "Bead of Force"
+        },
+        {
+            "MagicItem_id" : 63,
+            "MinRoll" : 92,
+            "MaxRoll" : 92,
+            "MagicItem" : "Chime of Opening"
+        },
+        {
+            "MagicItem_id" : 64,
+            "MinRoll" : 93,
+            "MaxRoll" : 93,
+            "MagicItem" : "Decanter of Endless Water"
+        },
+        {
+            "MagicItem_id" : 65,
+            "MinRoll" : 94,
+            "MaxRoll" : 94,
+            "MagicItem" : "Eyes of Minute Seeing"
+        },
+        {
+            "MagicItem_id" : 66,
+            "MinRoll" : 95,
+            "MaxRoll" : 95,
+            "MagicItem" : "Folding Boat"
+        },
+        {
+            "MagicItem_id" : 67,
+            "MinRoll" : 96,
+            "MaxRoll" : 96,
+            "MagicItem" : "Heward's Handy Haversack"
+        },
+        {
+            "MagicItem_id" : 68,
+            "MinRoll" : 97,
+            "MaxRoll" : 97,
+            "MagicItem" : "Horseshoes of Speed"
+        },
+        {
+            "MagicItem_id" : 69,
+            "MinRoll" : 98,
+            "MaxRoll" : 98,
+            "MagicItem" : "Necklace of Fireballs"
+        },
+        {
+            "MagicItem_id" : 70,
+            "MinRoll" : 99,
+            "MaxRoll" : 99,
+            "MagicItem" : "Periapt of Health"
+        },
+        {
+            "MagicItem_id" : 71,
+            "MinRoll" : 100,
+            "MaxRoll" : 100,
+            "MagicItem" : "Sending Stones"
+        }
+    ],
+    "MagicItemD" : [
+        {
+            "MagicItem_id" : 72,
+            "MinRoll" : 1,
+            "MaxRoll" : 20,
+            "MagicItem" : "Potion of Supreme Healing"
+        },
+        {
+            "MagicItem_id" : 73,
+            "MinRoll" : 21,
+            "MaxRoll" : 30,
+            "MagicItem" : "Potion of Invisibility"
+        },
+        {
+            "MagicItem_id" : 74,
+            "MinRoll" : 31,
+            "MaxRoll" : 40,
+            "MagicItem" : "Potion of Speed"
+        },
+        {
+            "MagicItem_id" : 75,
+            "MinRoll" : 41,
+            "MaxRoll" : 50,
+            "MagicItem" : "Spell Scroll 6th Level"
+        },
+        {
+            "MagicItem_id" : 76,
+            "MinRoll" : 51,
+            "MaxRoll" : 57,
+            "MagicItem" : "Spell Scroll 7th Level"
+        },
+        {
+            "MagicItem_id" : 77,
+            "MinRoll" : 58,
+            "MaxRoll" : 62,
+            "MagicItem" : "Ammunition +3"
+        },
+        {
+            "MagicItem_id" : 78,
+            "MinRoll" : 63,
+            "MaxRoll" : 67,
+            "MagicItem" : "Oil of Sharpness"
+        },
+        {
+            "MagicItem_id" : 79,
+            "MinRoll" : 68,
+            "MaxRoll" : 72,
+            "MagicItem" : "Potion of Flying"
+        },
+        {
+            "MagicItem_id" : 80,
+            "MinRoll" : 73,
+            "MaxRoll" : 77,
+            "MagicItem" : "Potion of Cloud Giant Strength"
+        },
+        {
+            "MagicItem_id" : 81,
+            "MinRoll" : 78,
+            "MaxRoll" : 82,
+            "MagicItem" : "Potion of Longevity"
+        },
+        {
+            "MagicItem_id" : 82,
+            "MinRoll" : 83,
+            "MaxRoll" : 87,
+            "MagicItem" : "Potion of Vitality"
+        },
+        {
+            "MagicItem_id" : 83,
+            "MinRoll" : 88,
+            "MaxRoll" : 92,
+            "MagicItem" : "Spell Scroll 8th Level"
+        },
+        {
+            "MagicItem_id" : 84,
+            "MinRoll" : 93,
+            "MaxRoll" : 95,
+            "MagicItem" : "Horseshoes of a Zephyr"
+        },
+        {
+            "MagicItem_id" : 85,
+            "MinRoll" : 96,
+            "MaxRoll" : 98,
+            "MagicItem" : "Nolzur's Marvelous Pigments"
+        },
+        {
+            "MagicItem_id" : 86,
+            "MinRoll" : 99,
+            "MaxRoll" : 99,
+            "MagicItem" : "Bag of Devouring"
+        },
+        {
+            "MagicItem_id" : 87,
+            "MinRoll" : 100,
+            "MaxRoll" : 100,
+            "MagicItem" : "Portable Hole"
+        }
+    ],
+    "MagicItemE" : [
+        {
+            "MagicItem_id" : 88,
+            "MinRoll" : 1,
+            "MaxRoll" : 30,
+            "MagicItem" : "Spell Scroll 8th Level"
+        },
+        {
+            "MagicItem_id" : 89,
+            "MinRoll" : 31,
+            "MaxRoll" : 55,
+            "MagicItem" : "Potion of Storm Giant Strength"
+        },
+        {
+            "MagicItem_id" : 90,
+            "MinRoll" : 56,
+            "MaxRoll" : 70,
+            "MagicItem" : "Potion of Supreme Healing"
+        },
+        {
+            "MagicItem_id" : 91,
+            "MinRoll" : 71,
+            "MaxRoll" : 85,
+            "MagicItem" : "Spell Scroll 9th Level"
+        },
+        {
+            "MagicItem_id" : 92,
+            "MinRoll" : 86,
+            "MaxRoll" : 93,
+            "MagicItem" : "Universal Solvent"
+        },
+        {
+            "MagicItem_id" : 93,
+            "MinRoll" : 94,
+            "MaxRoll" : 98,
+            "MagicItem" : "Arrow of Slaying"
+        },
+        {
+            "MagicItem_id" : 94,
+            "MinRoll" : 99,
+            "MaxRoll" : 100,
+            "MagicItem" : "Sovereign Glue"
+        }
+    ],
+    "MagicItemF" : [
+        {
+            "MagicItem_id" : 95,
+            "MinRoll" : 1,
+            "MaxRoll" : 15,
+            "MagicItem" : "Weapon +1"
+        },
+        {
+            "MagicItem_id" : 96,
+            "MinRoll" : 16,
+            "MaxRoll" : 18,
+            "MagicItem" : "Shield +1"
+        },
+        {
+            "MagicItem_id" : 97,
+            "MinRoll" : 19,
+            "MaxRoll" : 21,
+            "MagicItem" : "Sentinel Shield"
+        },
+        {
+            "MagicItem_id" : 98,
+            "MinRoll" : 22,
+            "MaxRoll" : 23,
+            "MagicItem" : "Amulet of Proof Against Detection and Location"
+        },
+        {
+            "MagicItem_id" : 99,
+            "MinRoll" : 24,
+            "MaxRoll" : 25,
+            "MagicItem" : "Boots of Elvenkind"
+        },
+        {
+            "MagicItem_id" : 100,
+            "MinRoll" : 26,
+            "MaxRoll" : 27,
+            "MagicItem" : "Boots of Striding and Sprinting"
+        },
+        {
+            "MagicItem_id" : 101,
+            "MinRoll" : 28,
+            "MaxRoll" : 29,
+            "MagicItem" : "Bracers of Archery"
+        },
+        {
+            "MagicItem_id" : 102,
+            "MinRoll" : 30,
+            "MaxRoll" : 31,
+            "MagicItem" : "Broach of Shielding"
+        },
+        {
+            "MagicItem_id" : 103,
+            "MinRoll" : 32,
+            "MaxRoll" : 33,
+            "MagicItem" : "Broom of Flying"
+        },
+        {
+            "MagicItem_id" : 104,
+            "MinRoll" : 34,
+            "MaxRoll" : 35,
+            "MagicItem" : "Cloak of Elvenkind"
+        },
+        {
+            "MagicItem_id" : 105,
+            "MinRoll" : 36,
+            "MaxRoll" : 37,
+            "MagicItem" : "Cloak of Protection"
+        },
+        {
+            "MagicItem_id" : 106,
+            "MinRoll" : 38,
+            "MaxRoll" : 39,
+            "MagicItem" : "Gauntlets of Ogre Power"
+        },
+        {
+            "MagicItem_id" : 107,
+            "MinRoll" : 40,
+            "MaxRoll" : 41,
+            "MagicItem" : "Hat of Disguise"
+        },
+        {
+            "MagicItem_id" : 108,
+            "MinRoll" : 42,
+            "MaxRoll" : 43,
+            "MagicItem" : "Javelin of Lightning"
+        },
+        {
+            "MagicItem_id" : 109,
+            "MinRoll" : 44,
+            "MaxRoll" : 45,
+            "MagicItem" : "Pearl of Power"
+        },
+        {
+            "MagicItem_id" : 110,
+            "MinRoll" : 46,
+            "MaxRoll" : 47,
+            "MagicItem" : "Rod of the Pact Keeper +1"
+        },
+        {
+            "MagicItem_id" : 111,
+            "MinRoll" : 48,
+            "MaxRoll" : 49,
+            "MagicItem" : "Slippers of Spider Climbing"
+        },
+        {
+            "MagicItem_id" : 112,
+            "MinRoll" : 50,
+            "MaxRoll" : 51,
+            "MagicItem" : "Staff of the Adder"
+        },
+        {
+            "MagicItem_id" : 113,
+            "MinRoll" : 52,
+            "MaxRoll" : 53,
+            "MagicItem" : "Staff of the Python"
+        }
+    ]
+}

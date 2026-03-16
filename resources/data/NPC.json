@@ -1,0 +1,1625 @@
+{
+    "appearance" : [
+        {
+            "appearance_id" : 1,
+            "feature" : "Distinctive Jewlery",
+            "roll" : 1
+        },
+        {
+            "appearance_id" : 2,
+            "feature" : "Piercing",
+            "roll" : 2
+        },
+        {
+            "appearance_id" : 3,
+            "feature" : "Flamboyant or outlandish clothing",
+            "roll" : 3
+        },
+        {
+            "appearance_id" : 4,
+            "feature" : "Formal/Clean clothes",
+            "roll" : 4
+        },
+        {
+            "appearance_id" : 5,
+            "feature" : "Ragged/dirty clothes",
+            "roll" : 5
+        },
+        {
+            "appearance_id" : 6,
+            "feature" : "Pronounced Scar",
+            "roll" : 6
+        },
+        {
+            "appearance_id" : 7,
+            "feature" : "Missing teeth",
+            "roll" : 7
+        },
+        {
+            "appearance_id" : 8,
+            "feature" : "Missing fingers",
+            "roll" : 8
+        },
+        {
+            "appearance_id" : 9,
+            "feature" : "Unusual eye color",
+            "roll" : 9
+        },
+        {
+            "appearance_id" : 10,
+            "feature" : "Tattoos",
+            "roll" : 10
+        },
+        {
+            "appearance_id" : 11,
+            "feature" : "Birthmark",
+            "roll" : 11
+        },
+        {
+            "appearance_id" : 12,
+            "feature" : "Unusual skin color",
+            "roll" : 12
+        },
+        {
+            "appearance_id" : 13,
+            "feature" : "Bald",
+            "roll" : 13
+        },
+        {
+            "appearance_id" : 14,
+            "feature" : "Braided beard or hair",
+            "roll" : 14
+        },
+        {
+            "appearance_id" : 15,
+            "feature" : "Unusual hair color",
+            "roll" : 15
+        },
+        {
+            "appearance_id" : 16,
+            "feature" : "Nervous eye twitch",
+            "roll" : 16
+        },
+        {
+            "appearance_id" : 17,
+            "feature" : "Distinctive nose",
+            "roll" : 17
+        },
+        {
+            "appearance_id" : 18,
+            "feature" : "Distinctive posture",
+            "roll" : 18
+        },
+        {
+            "appearance_id" : 19,
+            "feature" : "Exceptionally beautiful",
+            "roll" : 19
+        },
+        {
+            "appearance_id" : 20,
+            "feature" : "Exceptionally ugly",
+            "roll" : 20
+        }
+    ],
+    "HighAbilities" : [
+        {
+            "HighAbility_id" : 1,
+            "HighAbility" : "Strength",
+            "Description" : "Powerful-Brawny-Strong like an ox",
+            "roll" : "1"
+        },
+        {
+            "HighAbility_id" : 2,
+            "HighAbility" : "Dexterity",
+            "Description" : "Lithe-agile-graceful",
+            "roll" : "2"
+        },
+        {
+            "HighAbility_id" : 3,
+            "HighAbility" : "Constitution",
+            "Description" : "Hardy-Hale-Healthy",
+            "roll" : "3"
+        },
+        {
+            "HighAbility_id" : 4,
+            "HighAbility" : "Intelligence",
+            "Description" : "Studious-Learned-Inquisitive",
+            "roll" : "4"
+        },
+        {
+            "HighAbility_id" : 5,
+            "HighAbility" : "Wisdom",
+            "Description" : "Perceptive-Spiritual-Insightful",
+            "roll" : "5"
+        },
+        {
+            "HighAbility_id" : 6,
+            "HighAbility" : "Charisma",
+            "Description" : "Persuasive-Forceful-Born Leader",
+            "roll" : "6"
+        }
+    ],
+    "LowAbilities" : [
+        {
+            "LowAbility_id" : 1,
+            "LowAbility" : "Strength",
+            "Description" : "Feeble-Scrawny",
+            "roll" : "1"
+        },
+        {
+            "LowAbility_id" : 2,
+            "LowAbility" : "Dexterity",
+            "Description" : "Clumsy-Fumbling",
+            "roll" : "2"
+        },
+        {
+            "LowAbility_id" : 3,
+            "LowAbility" : "Constitution",
+            "Description" : "Sickly-Pale",
+            "roll" : "3"
+        },
+        {
+            "LowAbility_id" : 4,
+            "LowAbility" : "Intelligence",
+            "Description" : "Dim witted-Slow",
+            "roll" : "4"
+        },
+        {
+            "LowAbility_id" : 5,
+            "LowAbility" : "Wisdom",
+            "Description" : "Oblivious-Absentminded",
+            "roll" : "5"
+        },
+        {
+            "LowAbility_id" : 6,
+            "LowAbility" : "Charisma",
+            "Description" : "Dull-Boring",
+            "roll" : "6"
+        }
+    ],
+    "Talents" : [
+        {
+            "Talent_id" : 1,
+            "Talent" : "Plays a musical insturment",
+            "roll" : 1
+        },
+        {
+            "Talent_id" : 2,
+            "Talent" : "Speaks several languages fluently",
+            "roll" : 2
+        },
+        {
+            "Talent_id" : 3,
+            "Talent" : "Unbelievably lucky",
+            "roll" : 3
+        },
+        {
+            "Talent_id" : 4,
+            "Talent" : "Perfect memory",
+            "roll" : 4
+        },
+        {
+            "Talent_id" : 5,
+            "Talent" : "Great with animals",
+            "roll" : 5
+        },
+        {
+            "Talent_id" : 6,
+            "Talent" : "Great with children",
+            "roll" : 6
+        },
+        {
+            "Talent_id" : 7,
+            "Talent" : "Great at solving problems",
+            "roll" : 7
+        },
+        {
+            "Talent_id" : 8,
+            "Talent" : "Great at one game",
+            "roll" : 8
+        },
+        {
+            "Talent_id" : 9,
+            "Talent" : "Great at impersonations",
+            "roll" : 9
+        },
+        {
+            "Talent_id" : 10,
+            "Talent" : "Draws beautifully",
+            "roll" : 10
+        },
+        {
+            "Talent_id" : 11,
+            "Talent" : "Paints beautifully",
+            "roll" : 11
+        },
+        {
+            "Talent_id" : 12,
+            "Talent" : "Sings beautifully",
+            "roll" : 12
+        },
+        {
+            "Talent_id" : 13,
+            "Talent" : "Drinks everyone under the table",
+            "roll" : 13
+        },
+        {
+            "Talent_id" : 14,
+            "Talent" : "Expert carpenter",
+            "roll" : 14
+        },
+        {
+            "Talent_id" : 15,
+            "Talent" : "Expert cook",
+            "roll" : 15
+        },
+        {
+            "Talent_id" : 16,
+            "Talent" : "Expert dart thrower and rock skipper",
+            "roll" : 16
+        },
+        {
+            "Talent_id" : 17,
+            "Talent" : "Expert juggler",
+            "roll" : 17
+        },
+        {
+            "Talent_id" : 18,
+            "Talent" : "Skilled actor and master of disguise",
+            "roll" : 18
+        },
+        {
+            "Talent_id" : 19,
+            "Talent" : "Skilled dancer",
+            "roll" : 19
+        },
+        {
+            "Talent_id" : 20,
+            "Talent" : "Knows Thieves' cant",
+            "roll" : 20
+        }
+    ],
+    "Mannerisms" : [
+        {
+            "Mannerism_id" : 1,
+            "Mannerism" : "Prone to singing, wistling or humming quietly",
+            "roll" : 1
+        },
+        {
+            "Mannerism_id" : 2,
+            "Mannerism" : "Speaks in rhyme or some other peculiar way",
+            "roll" : 2
+        },
+        {
+            "Mannerism_id" : 3,
+            "Mannerism" : "Particularly low or high voice",
+            "roll" : 3
+        },
+        {
+            "Mannerism_id" : 4,
+            "Mannerism" : "Slurs words, lisp or stutters",
+            "roll" : 4
+        },
+        {
+            "Mannerism_id" : 5,
+            "Mannerism" : "Enunciates over clearly",
+            "roll" : 5
+        },
+        {
+            "Mannerism_id" : 6,
+            "Mannerism" : "Speaks loudly",
+            "roll" : 6
+        },
+        {
+            "Mannerism_id" : 7,
+            "Mannerism" : "Whispers",
+            "roll" : 7
+        },
+        {
+            "Mannerism_id" : 8,
+            "Mannerism" : "Uses flowerly speach or long words",
+            "roll" : 8
+        },
+        {
+            "Mannerism_id" : 9,
+            "Mannerism" : "Frequently uses the wrong word",
+            "roll" : 9
+        },
+        {
+            "Mannerism_id" : 10,
+            "Mannerism" : "Uses colorful oaths or long words",
+            "roll" : 10
+        },
+        {
+            "Mannerism_id" : 11,
+            "Mannerism" : "Makes constant jokes or puns",
+            "roll" : 11
+        },
+        {
+            "Mannerism_id" : 12,
+            "Mannerism" : "Prone to predictions of doom",
+            "roll" : 12
+        },
+        {
+            "Mannerism_id" : 13,
+            "Mannerism" : "Fidgets",
+            "roll" : 13
+        },
+        {
+            "Mannerism_id" : 14,
+            "Mannerism" : "Squints",
+            "roll" : 14
+        },
+        {
+            "Mannerism_id" : 15,
+            "Mannerism" : "Stares into the distance",
+            "roll" : 15
+        },
+        {
+            "Mannerism_id" : 16,
+            "Mannerism" : "Chews something",
+            "roll" : 16
+        },
+        {
+            "Mannerism_id" : 17,
+            "Mannerism" : "Paces",
+            "roll" : 17
+        },
+        {
+            "Mannerism_id" : 18,
+            "Mannerism" : "Taps fingers",
+            "roll" : 18
+        },
+        {
+            "Mannerism_id" : 19,
+            "Mannerism" : "Bites fingernails",
+            "roll" : 19
+        },
+        {
+            "Mannerism_id" : 20,
+            "Mannerism" : "Twirls hair or tugs beard",
+            "roll" : 20
+        }
+    ],
+    "InteractionTraits" : [
+        {
+            "InteractionTrait_id" : 1,
+            "InteractionTrait" : "Argumentative",
+            "roll" : 1
+        },
+        {
+            "InteractionTrait_id" : 2,
+            "InteractionTrait" : "Arrogant",
+            "roll" : 2
+        },
+        {
+            "InteractionTrait_id" : 3,
+            "InteractionTrait" : "Blustering",
+            "roll" : 3
+        },
+        {
+            "InteractionTrait_id" : 4,
+            "InteractionTrait" : "Rude",
+            "roll" : 4
+        },
+        {
+            "InteractionTrait_id" : 5,
+            "InteractionTrait" : "Curious",
+            "roll" : 5
+        },
+        {
+            "InteractionTrait_id" : 6,
+            "InteractionTrait" : "Friendly",
+            "roll" : 6
+        },
+        {
+            "InteractionTrait_id" : 7,
+            "InteractionTrait" : "Honest",
+            "roll" : 7
+        },
+        {
+            "InteractionTrait_id" : 8,
+            "InteractionTrait" : "Hot tempered",
+            "roll" : 8
+        },
+        {
+            "InteractionTrait_id" : 9,
+            "InteractionTrait" : "Irritable",
+            "roll" : 9
+        },
+        {
+            "InteractionTrait_id" : 10,
+            "InteractionTrait" : "Ponderous",
+            "roll" : 10
+        },
+        {
+            "InteractionTrait_id" : 11,
+            "InteractionTrait" : "Quiet",
+            "roll" : 11
+        },
+        {
+            "InteractionTrait_id" : 12,
+            "InteractionTrait" : "Suspicious",
+            "roll" : 12
+        }
+    ],
+    "GoodIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Beauty",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Charity",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Greater Good",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Life",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "Respect",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "Self Sacrifice",
+            "roll" : 6
+        }
+    ],
+    "EvilIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Domination",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Greed",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Might",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Pain",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "Retribution",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "Slaughter",
+            "roll" : 6
+        }
+    ],
+    "LawfulIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Community",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Fairness",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Honor",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Logic",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "Responsibility",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "Tradition",
+            "roll" : 6
+        }
+    ],
+    "ChaoticIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Change",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Creativity",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Freedom",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Independance",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "No limits",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "Whimsy",
+            "roll" : 6
+        }
+    ],
+    "NeutralIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Balance",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Knowledge",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Live and let live",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Moderation",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "Neutrality",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "People",
+            "roll" : 6
+        }
+    ],
+    "OtherIdeals" : [
+        {
+            "Ideal_id" : 1,
+            "Ideal" : "Aspiration",
+            "roll" : 1
+        },
+        {
+            "Ideal_id" : 2,
+            "Ideal" : "Discovery",
+            "roll" : 2
+        },
+        {
+            "Ideal_id" : 3,
+            "Ideal" : "Glory",
+            "roll" : 3
+        },
+        {
+            "Ideal_id" : 4,
+            "Ideal" : "Nation",
+            "roll" : 4
+        },
+        {
+            "Ideal_id" : 5,
+            "Ideal" : "Redemption",
+            "roll" : 5
+        },
+        {
+            "Ideal_id" : 6,
+            "Ideal" : "Self Knowledge",
+            "roll" : 6
+        }
+    ],
+    "Bonds" : [
+        {
+            "Bond_id" : 1,
+            "Bond" : "Dedicated to fulfill a perssonal life goal",
+            "roll" : 1
+        },
+        {
+            "Bond_id" : 2,
+            "Bond" : "Protective of close family members",
+            "roll" : 2
+        },
+        {
+            "Bond_id" : 3,
+            "Bond" : "Protective of colleagues and compatriots",
+            "roll" : 3
+        },
+        {
+            "Bond_id" : 4,
+            "Bond" : "Loyal to a benifactor, patron or employer",
+            "roll" : 4
+        },
+        {
+            "Bond_id" : 5,
+            "Bond" : "Captivated by a romantic interest",
+            "roll" : 5
+        },
+        {
+            "Bond_id" : 6,
+            "Bond" : "Drawn to a special place",
+            "roll" : 6
+        },
+        {
+            "Bond_id" : 7,
+            "Bond" : "Protective of a sentimental keepsake",
+            "roll" : 7
+        },
+        {
+            "Bond_id" : 8,
+            "Bond" : "Protective of a valuable posession",
+            "roll" : 8
+        },
+        {
+            "Bond_id" : 9,
+            "Bond" : "Out for revenge",
+            "roll" : 9
+        },
+        {
+            "Bond_id" : 10,
+            "Bond" : "Roll twwice, ignoring 10s",
+            "roll" : 10
+        }
+    ],
+    "FlawsAndSecrets" : [
+        {
+            "FlawSecret_id" : 1,
+            "FlawSecret" : "Forbidden love or susceptibility to romance",
+            "roll" : 1
+        },
+        {
+            "FlawSecret_id" : 2,
+            "FlawSecret" : "Enjoys decadant pleasures",
+            "roll" : 2
+        },
+        {
+            "FlawSecret_id" : 3,
+            "FlawSecret" : "Arrogance",
+            "roll" : 3
+        },
+        {
+            "FlawSecret_id" : 4,
+            "FlawSecret" : "Envies another creatures posessions or station",
+            "roll" : 4
+        },
+        {
+            "FlawSecret_id" : 5,
+            "FlawSecret" : "Overpowering greed",
+            "roll" : 5
+        },
+        {
+            "FlawSecret_id" : 6,
+            "FlawSecret" : "Prone to rage",
+            "roll" : 6
+        },
+        {
+            "FlawSecret_id" : 7,
+            "FlawSecret" : "Has a powerful enemy",
+            "roll" : 7
+        },
+        {
+            "FlawSecret_id" : 8,
+            "FlawSecret" : "Specific phobia",
+            "roll" : 8
+        },
+        {
+            "FlawSecret_id" : 9,
+            "FlawSecret" : "Shameful or scandalous history",
+            "roll" : 9
+        },
+        {
+            "FlawSecret_id" : 10,
+            "FlawSecret" : "Secret crime or misdeed",
+            "roll" : 10
+        },
+        {
+            "FlawSecret_id" : 11,
+            "FlawSecret" : "Posession of forbidden lore",
+            "roll" : 11
+        },
+        {
+            "FlawSecret_id" : 12,
+            "FlawSecret" : "Foolhardy bravery",
+            "roll" : 12
+        }
+    ],
+    "VillansScheme" : [
+        {
+            "Scheem_id" : 1,
+            "Scheme" : "Immortality",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Acquire a legendary item to prolong life",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Ascend to godhood",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Become undead or obtain a younger body",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Steal a planar creatures essence",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 1
+        },
+        {
+            "Scheem_id" : 2,
+            "Scheme" : "Influence",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Seize a position of power or title",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Win a contest or tournament",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Win favor with a power individual",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Place a pawn in a position of power",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 2
+        },
+        {
+            "Scheem_id" : 3,
+            "Scheme" : "Magic",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Obtain an ancient artiface",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Build a construct or magical device",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Carry out a deitys wishes",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Offer sacrifices to a deity",
+                    "SubSchemeRoll" : 4
+                },
+                {
+                    "SubScheme_id" : 5,
+                    "SubScheme" : "Contact a lost deity or power",
+                    "SubSchemeRoll" : 5
+                },
+                {
+                    "SubScheme_id" : 6,
+                    "SubScheme" : "Open a gate to another world",
+                    "SubSchemeRoll" : 6
+                }
+            ],
+            "SubScheme_dice" : 6,
+            "roll" : 3
+        },
+        {
+            "Scheem_id" : 4,
+            "Scheme" : "Mayhem",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Fulfill an apocalyptic prophecy",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Enact the will of a vengeful god or patron",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Spread a vile contageon",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Overthrow a government",
+                    "SubSchemeRoll" : 4
+                },
+                {
+                    "SubScheme_id" : 5,
+                    "SubScheme" : "Trigger a natural disaster",
+                    "SubSchemeRoll" : 5
+                },
+                {
+                    "SubScheme_id" : 6,
+                    "SubScheme" : "Utterly destroy a bloodline or clan",
+                    "SubSchemeRoll" : 6
+                }
+            ],
+            "SubScheme_dice" : 6,
+            "roll" : 4
+        },
+        {
+            "Scheem_id" : 5,
+            "Scheme" : "Passion",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Prolong the life of a loved one",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Prove worthy of another persons love",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Raise or restore a dead loved one",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Destroy rivals for another persons affection",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 4
+        },
+        {
+            "Scheem_id" : 6,
+            "Scheme" : "Power",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Conquer a region or incite a rebellion",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Seize control of an army",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Become the power behind the throne",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Gain the favor of a ruler",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 5
+        },
+        {
+            "Scheem_id" : 7,
+            "Scheme" : "Revenge",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Avenge a past humilliaton or insult",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Avenge a past imprisionment or injury",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Avenge the death of a loved one",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Retrieve stolen property and punish the thief",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 7
+        },
+        {
+            "Scheem_id" : 8,
+            "Scheme" : "Wealth",
+            "SubScheme" : [
+                {
+                    "SubScheme_id" : 1,
+                    "SubScheme" : "Control natural resources or trade",
+                    "SubSchemeRoll" : 1
+                },
+                {
+                    "SubScheme_id" : 2,
+                    "SubScheme" : "Marry into wealth",
+                    "SubSchemeRoll" : 2
+                },
+                {
+                    "SubScheme_id" : 3,
+                    "SubScheme" : "Plunder ancient ruins",
+                    "SubSchemeRoll" : 3
+                },
+                {
+                    "SubScheme_id" : 4,
+                    "SubScheme" : "Steal land, goods or money",
+                    "SubSchemeRoll" : 4
+                }
+            ],
+            "SubScheme_dice" : 4,
+            "roll" : 8
+        }
+    ],
+    "VillansMethods" : [
+        {
+            "VillansMethod_id" : 1,
+            "VillansMethod" : "Agricultural Devistation",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Blight",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Crop Failure",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Drought",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Famine",
+                    "SubMethodRoll" : 4
+                }
+            ],
+            "SubMethod_dice" : 4,
+            "roll" : 1
+        },
+        {
+            "VillansMethod_id" : 2,
+            "VillansMethod" : "Assult or Beatings",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 2
+        },
+        {
+            "VillansMethod_id" : 3,
+            "VillansMethod" : "Bounty Hunting or Assasination",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 3
+        },
+        {
+            "VillansMethod_id" : 4,
+            "VillansMethod" : "Captivity or Coercion",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Bribery",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Enticement",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Eviction",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Imprisionment",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Kidnapping",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Legal intimidation",
+                    "SubMethodRoll" : 6
+                },
+                {
+                    "SubMethod_id" : 7,
+                    "SubMethod" : "Press gangs",
+                    "SubMethodRoll" : 7
+                },
+                {
+                    "SubMethod_id" : 8,
+                    "SubMethod" : "Shackling",
+                    "SubMethodRoll" : 8
+                },
+                {
+                    "SubMethod_id" : 9,
+                    "SubMethod" : "Slavery",
+                    "SubMethodRoll" : 9
+                },
+                {
+                    "SubMethod_id" : 10,
+                    "SubMethod" : "Threats or harassment",
+                    "SubMethodRoll" : 10
+                }
+            ],
+            "SubMethod_dice" : 10,
+            "roll" : 4
+        },
+        {
+            "VillansMethod_id" : 5,
+            "VillansMethod" : "Confidence Scams",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Breach of contract",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Cheating",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Fast talking",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Fine print",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Fraud or swindling",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Quackery or tricks",
+                    "SubMethodRoll" : 6
+                }
+            ],
+            "SubMethod_dice" : 6,
+            "roll" : 5
+        },
+        {
+            "VillansMethod_id" : 6,
+            "VillansMethod" : "Defamation",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Framing",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Gossiping or slander",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Humiliation",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Libel or insults",
+                    "SubMethodRoll" : 4
+                }
+            ],
+            "SubMethod_dice" : 4,
+            "roll" : 6
+        },
+        {
+            "VillansMethod_id" : 7,
+            "VillansMethod" : "Dueling",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 7
+        },
+        {
+            "VillansMethod_id" : 8,
+            "VillansMethod" : "Execution",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Beheading",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Burning at the stake",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Burrying alive",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Crucifixion",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Drawing and quartering",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Hanging",
+                    "SubMethodRoll" : 6
+                },
+                {
+                    "SubMethod_id" : 7,
+                    "SubMethod" : "Impalement",
+                    "SubMethodRoll" : 7
+                },
+                {
+                    "SubMethod_id" : 8,
+                    "SubMethod" : "Sacrifice",
+                    "SubMethodRoll" : 8
+                }
+            ],
+            "SubMethod_dice" : 8,
+            "roll" : 8
+        },
+        {
+            "VillansMethod_id" : 9,
+            "VillansMethod" : "Impersonation or Disguise",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 9
+        },
+        {
+            "VillansMethod_id" : 10,
+            "VillansMethod" : "Lying or perjury",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 10
+        },
+        {
+            "VillansMethod_id" : 11,
+            "VillansMethod" : "Magical Mayhem",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Hauntings",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Illusions",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Infernal bargains",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Mind Control",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Petrification",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Raising or animating the dead",
+                    "SubMethodRoll" : 6
+                },
+                {
+                    "SubMethod_id" : 7,
+                    "SubMethod" : "Summoning monsters",
+                    "SubMethodRoll" : 7
+                },
+                {
+                    "SubMethod_id" : 8,
+                    "SubMethod" : "Weather control",
+                    "SubMethodRoll" : 8
+                }
+            ],
+            "SubMethod_dice" : 8,
+            "roll" : 11
+        },
+        {
+            "VillansMethod_id" : 12,
+            "VillansMethod" : "Murder",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Assassination",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Cannibalism",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Dismemberment",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Drowning",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Electrocution",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Euthanasia",
+                    "SubMethodRoll" : 6
+                },
+                {
+                    "SubMethod_id" : 7,
+                    "SubMethod" : "Disease",
+                    "SubMethodRoll" : 7
+                },
+                {
+                    "SubMethod_id" : 8,
+                    "SubMethod" : "Poisoning",
+                    "SubMethodRoll" : 8
+                },
+                {
+                    "SubMethod_id" : 9,
+                    "SubMethod" : "Stabbing",
+                    "SubMethodRoll" : 9
+                },
+                {
+                    "SubMethod_id" : 10,
+                    "SubMethod" : "Strangulation or suffocation",
+                    "SubMethodRoll" : 10
+                }
+            ],
+            "SubMethod_dice" : 10,
+            "roll" : 12
+        },
+        {
+            "VillansMethod_id" : 13,
+            "VillansMethod" : "Neglect",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 13
+        },
+        {
+            "VillansMethod_id" : 14,
+            "VillansMethod" : "Politics",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Betrayal or treason",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Conspericy",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Espionage or spying",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Genocide",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Oppression",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Raising taxes",
+                    "SubMethodRoll" : 6
+                }
+            ],
+            "SubMethod_dice" : 6,
+            "roll" : 14
+        },
+        {
+            "VillansMethod_id" : 15,
+            "VillansMethod" : "Religion",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Curses",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Desecration",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "False gods",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Heresy or cults",
+                    "SubMethodRoll" : 4
+                }
+            ],
+            "SubMethod_dice" : 4,
+            "roll" : 15
+        },
+        {
+            "VillansMethod_id" : 16,
+            "VillansMethod" : "Stalking",
+            "SubMethod" : -1,
+            "SubMethod_dice" : -1,
+            "roll" : 16
+        },
+        {
+            "VillansMethod_id" : 17,
+            "VillansMethod" : "Theft or property crime",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Arson",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Blackmail or extortion",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Burglary",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Counterfeiting",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "HIghway Robbery",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Looting",
+                    "SubMethodRoll" : 6
+                },
+                {
+                    "SubMethod_id" : 7,
+                    "SubMethod" : "Mugging",
+                    "SubMethodRoll" : 7
+                },
+                {
+                    "SubMethod_id" : 8,
+                    "SubMethod" : "Poaching",
+                    "SubMethodRoll" : 8
+                },
+                {
+                    "SubMethod_id" : 9,
+                    "SubMethod" : "Seizing property",
+                    "SubMethodRoll" : 9
+                },
+                {
+                    "SubMethod_id" : 10,
+                    "SubMethod" : "Smuggling",
+                    "SubMethodRoll" : 10
+                }
+            ],
+            "SubMethod_dice" : 10,
+            "roll" : 17
+        },
+        {
+            "VillansMethod_id" : 18,
+            "VillansMethod" : "Torture",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Acid",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Blinding",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Branding",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Racking",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Thumbscrews",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Whipping",
+                    "SubMethodRoll" : 6
+                }
+            ],
+            "SubMethod_dice" : 6,
+            "roll" : 18
+        },
+        {
+            "VillansMethod_id" : 19,
+            "VillansMethod" : "Vice",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Adultery",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Drugs and Alcohol",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Gambling",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Seduction",
+                    "SubMethodRoll" : 4
+                }
+            ],
+            "SubMethod_dice" : 4,
+            "roll" : 19
+        },
+        {
+            "VillansMethod_id" : 20,
+            "VillansMethod" : "Warfare",
+            "SubMethod" : [
+                {
+                    "SubMethod_id" : 1,
+                    "SubMethod" : "Ambush",
+                    "SubMethodRoll" : 1
+                },
+                {
+                    "SubMethod_id" : 2,
+                    "SubMethod" : "Invasion",
+                    "SubMethodRoll" : 2
+                },
+                {
+                    "SubMethod_id" : 3,
+                    "SubMethod" : "Massacre",
+                    "SubMethodRoll" : 3
+                },
+                {
+                    "SubMethod_id" : 4,
+                    "SubMethod" : "Mercenaries",
+                    "SubMethodRoll" : 4
+                },
+                {
+                    "SubMethod_id" : 5,
+                    "SubMethod" : "Rebellion",
+                    "SubMethodRoll" : 5
+                },
+                {
+                    "SubMethod_id" : 6,
+                    "SubMethod" : "Terrorism",
+                    "SubMethodRoll" : 6
+                }
+            ],
+            "SubMethod_dice" : 6,
+            "roll" : 20
+        }
+    ],
+    "VillansWeakness" : [
+        {
+            "VillansWeakness_id" : 1,
+            "VillansWeakness" : "A hidden item holds the villans soul",
+            "roll" : 1
+        },
+        {
+            "VillansWeakness_id" : 2,
+            "VillansWeakness" : "The villans power is broken if the death of its true love is avenged",
+            "roll" : 2
+        },
+        {
+            "VillansWeakness_id" : 3,
+            "VillansWeakness" : "The villan is weakened in the presence of a particular artifact",
+            "roll" : 3
+        },
+        {
+            "VillansWeakness_id" : 4,
+            "VillansWeakness" : "A special weapon deals extra damage when used against the villan",
+            "roll" : 4
+        },
+        {
+            "VillansWeakness_id" : 5,
+            "VillansWeakness" : "The villan is destroyed if it speaks its true name",
+            "roll" : 5
+        },
+        {
+            "VillansWeakness_id" : 6,
+            "VillansWeakness" : "An ancient prophecy or riddle reveals how the villan can be overthrown",
+            "roll" : 6
+        },
+        {
+            "VillansWeakness_id" : 7,
+            "VillansWeakness" : "The villan falls when an ancient enemy forgives it past actions",
+            "roll" : 7
+        },
+        {
+            "VillansWeakness_id" : 8,
+            "VillansWeakness" : "The villan loses its power if a mystic bargain it struck long ago is completed",
+            "roll" : 8
+        }
+    ]
+}

@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\DungeonGeneratorController;
+use App\Http\Controllers\EncounterController;
+use App\Http\Controllers\MapGenerationController;
+use App\Http\Controllers\MonsterController;
+use App\Http\Controllers\SavedEncounterTableController;
 use App\Models\Character;
 use Illuminate\Support\Facades\Route;
 
@@ -100,3 +105,36 @@ Route::get('/characters', [CharacterController::class, 'index'])->name('characte
 Route::get('/characters/create', [CharacterController::class, 'create'])->name('characters.create');
 Route::post('/characters', [CharacterController::class, 'store'])->name('characters.store');
 Route::post('/characters/{character}/delete', [CharacterController::class, 'destroy'])->name('characters.destroy');
+
+Route::get('/monsters', [MonsterController::class, 'index'])->name('monsters.index');
+
+Route::get('/encounters', [EncounterController::class, 'index'])->name('encounters.index');
+Route::post('/encounters/roll', [EncounterController::class, 'roll'])->name('encounters.roll');
+
+Route::get('/encounters/row/{row}/monster/{slot}', [EncounterController::class, 'pickMonster'])
+    ->name('encounters.pickMonster');
+
+Route::post('/encounters/row/{row}/monster/{slot}', [EncounterController::class, 'setMonster'])
+    ->name('encounters.setMonster');
+
+Route::get('/encounters/saved', [SavedEncounterTableController::class, 'index'])->name('encounters.saved');
+Route::post('/encounters/save', [SavedEncounterTableController::class, 'store'])->name('encounters.save');
+Route::post('/encounters/saved/{table}/load', [SavedEncounterTableController::class, 'load'])->name('encounters.saved.load');
+Route::delete('/encounters/saved/{table}', [SavedEncounterTableController::class, 'destroy'])->name('encounters.saved.delete');
+
+Route::get('/maps', [MapGenerationController::class, 'index'])->name('maps.index');
+
+//Auth access, move needed routes later
+Route::middleware(['auth'])->group(function () {
+    Route::get('/account', fn () => view('account.index'))->name('account.index');
+
+    // Your user-owned resources later:
+    // characters, encounters, maps, feedback
+});
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', fn () => view('admin.index'))->name('admin.index');
+});
+
+Route::get('/dungeons/generate', [DungeonGeneratorController::class, 'index'])->name('dungeons.generate');
+Route::post('/dungeons/generate', [DungeonGeneratorController::class, 'generate'])->name('dungeons.generate.run');

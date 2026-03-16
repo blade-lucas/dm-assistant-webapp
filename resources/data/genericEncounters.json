@@ -1,0 +1,314 @@
+{
+    "UrbanEncounter" : [
+        {
+            "UrbanEncounter_id" : 1,
+            "UrbanEncounter" : "Animals on the loose",
+            "roll" : 2
+        },
+        {
+            "UrbanEncounter_id" : 2,
+            "UrbanEncounter" : "Announcement",
+            "roll" : 3
+        },
+        {
+            "UrbanEncounter_id" : 3,
+            "UrbanEncounter" : "Brawl",
+            "roll" : 4
+        },
+        {
+            "UrbanEncounter_id" : 4,
+            "UrbanEncounter" : "Bullies",
+            "roll" : 5
+        },
+        {
+            "UrbanEncounter_id" : 5,
+            "UrbanEncounter" : "Companion",
+            "roll" : 6
+        },
+        {
+            "UrbanEncounter_id" : 6,
+            "UrbanEncounter" : "Contest",
+            "roll" : 7
+        },
+        {
+            "UrbanEncounter_id" : 7,
+            "UrbanEncounter" : "Corpse",
+            "roll" : 8
+        },
+        {
+            "UrbanEncounter_id" : 8,
+            "UrbanEncounter" : "Draft",
+            "roll" : 9
+        },
+        {
+            "UrbanEncounter_id" : 9,
+            "UrbanEncounter" : "Drunk",
+            "roll" : 10
+        },
+        {
+            "UrbanEncounter_id" : 10,
+            "UrbanEncounter" : "Fire",
+            "roll" : 11
+        },
+        {
+            "UrbanEncounter_id" : 11,
+            "UrbanEncounter" : "Found Trinket",
+            "roll" : 12
+        },
+        {
+            "UrbanEncounter_id" : 12,
+            "UrbanEncounter" : "Guard Harassment",
+            "roll" : 13
+        },
+        {
+            "UrbanEncounter_id" : 13,
+            "UrbanEncounter" : "Pickpocket",
+            "roll" : 14
+        },
+        {
+            "UrbanEncounter_id" : 14,
+            "UrbanEncounter" : "Procession",
+            "roll" : 15
+        },
+        {
+            "UrbanEncounter_id" : 15,
+            "UrbanEncounter" : "Protest",
+            "roll" : 16
+        },
+        {
+            "UrbanEncounter_id" : 16,
+            "UrbanEncounter" : "Runaway Cart",
+            "roll" : 17
+        },
+        {
+            "UrbanEncounter_id" : 17,
+            "UrbanEncounter" : "Shady Transaction",
+            "roll" : 18
+        },
+        {
+            "UrbanEncounter_id" : 18,
+            "UrbanEncounter" : "Spectacle",
+            "roll" : 19
+        },
+        {
+            "UrbanEncounter_id" : 19,
+            "UrbanEncounter" : "Urchin",
+            "roll" : 20
+        }
+    ],
+    "UnderSeaEncounters" : [
+        {
+            "UnderSeaEncounter_id" : 1,
+            "UnderSeaEncounter" : "Sunken ship covered in barnacles",
+            "roll" : 2
+        },
+        {
+            "UnderSeaEncounter_id" : 2,
+            "UnderSeaEncounter" : "Sunken ship with reef sharks or hunter sharks",
+            "roll" : 3
+        },
+        {
+            "UnderSeaEncounter_id" : 3,
+            "UnderSeaEncounter" : "Bed of giant oysters",
+            "roll" : 4
+        },
+        {
+            "UnderSeaEncounter_id" : 4,
+            "UnderSeaEncounter" : "Underwater steam vent",
+            "roll" : 5
+        },
+        {
+            "UnderSeaEncounter_id" : 5,
+            "UnderSeaEncounter" : "Uninhabited sunken ruin",
+            "roll" : 6
+        },
+        {
+            "UnderSeaEncounter_id" : 6,
+            "UnderSeaEncounter" : "Sunken ruin inhabited or haunted",
+            "roll" : 7
+        },
+        {
+            "UnderSeaEncounter_id" : 7,
+            "UnderSeaEncounter" : "Sunken statue or monolith",
+            "roll" : 8
+        },
+        {
+            "UnderSeaEncounter_id" : 8,
+            "UnderSeaEncounter" : "Friendly and curious giant sea horses",
+            "roll" : 9
+        },
+        {
+            "UnderSeaEncounter_id" : 9,
+            "UnderSeaEncounter" : "Patrol of friendly merfolk",
+            "roll" : 10
+        },
+        {
+            "UnderSeaEncounter_id" : 10,
+            "UnderSeaEncounter" : "Patrol of hostile merrow or sahuagin",
+            "roll" : 11
+        },
+        {
+            "UnderSeaEncounter_id" : 11,
+            "UnderSeaEncounter" : "Enormous kelp bed",
+            "roll" : 12
+        },
+        {
+            "UnderSeaEncounter_id" : 12,
+            "UnderSeaEncounter" : "Undersea cave, empty",
+            "roll" : 13
+        },
+        {
+            "UnderSeaEncounter_id" : 13,
+            "UnderSeaEncounter" : "Undersea cave, sea hag lair",
+            "roll" : 14
+        },
+        {
+            "UnderSeaEncounter_id" : 14,
+            "UnderSeaEncounter" : "Undersea cave, merfolf lair",
+            "roll" : 15
+        },
+        {
+            "UnderSeaEncounter_id" : 15,
+            "UnderSeaEncounter" : "Undersea cave, giant octopus lair",
+            "roll" : 16
+        },
+        {
+            "UnderSeaEncounter_id" : 16,
+            "UnderSeaEncounter" : "Undersea cave, dragon turtle lair",
+            "roll" : 17
+        },
+        {
+            "UnderSeaEncounter_id" : 17,
+            "UnderSeaEncounter" : "Bronze dragon searching for treasure",
+            "roll" : 18
+        },
+        {
+            "UnderSeaEncounter_id" : 18,
+            "UnderSeaEncounter" : "Storm giant walking on the ocean floor",
+            "roll" : 19
+        },
+        {
+            "UnderSeaEncounter_id" : 19,
+            "UnderSeaEncounter" : "Sunken treasure chest",
+            "roll" : 20
+        }
+    ],
+    "UnderwaterEncounterDistance" : [
+        {
+            "UnderwaterEncounterDistance_id" : 1,
+            "WaterConditions" : "Clear Water",
+            "LightConditions" : "Bright Light",
+            "Distance" : 60
+        },
+        {
+            "UnderwaterEncounterDistance_id" : 2,
+            "WaterConditions" : "Clear Water",
+            "LightConditions" : "Dim Light",
+            "Distance" : 30
+        },
+        {
+            "UnderwaterEncounterDistance_id" : 3,
+            "WaterConditions" : "Murky Water",
+            "LightConditions" : "-",
+            "Distance" : 10
+        },
+        {
+            "UnderwaterEncounterDistance_id" : 4,
+            "WaterConditions" : "-",
+            "LightConditions" : "No Light",
+            "Distance" : 10
+        }
+    ],
+    "SeaEncounters" : [
+        {
+            "SeaEncounter_id" : 1,
+            "SeaEncounter" : "Ghost Ship",
+            "minRoll" : 2,
+            "maxRoll" : 2
+        },
+        {
+            "SeaEncounter_id" : 2,
+            "SeaEncounter" : "Friendly and curious bronze dragon",
+            "minRoll" : 3,
+            "maxRoll" : 3
+        },
+        {
+            "SeaEncounter_id" : 3,
+            "SeaEncounter" : "Whirlpool",
+            "minRoll" : 4,
+            "maxRoll" : 4
+        },
+        {
+            "SeaEncounter_id" : 4,
+            "SeaEncounter" : "Merfolk Traders",
+            "minRoll" : 5,
+            "maxRoll" : 5
+        },
+        {
+            "SeaEncounter_id" : 5,
+            "SeaEncounter" : "Passing Warship",
+            "minRoll" : 6,
+            "maxRoll" : 6
+        },
+        {
+            "SeaEncounter_id" : 6,
+            "SeaEncounter" : "Hostile Pirate Ship",
+            "minRoll" : 7,
+            "maxRoll" : 8
+        },
+        {
+            "SeaEncounter_id" : 7,
+            "SeaEncounter" : "Passing merchant ship",
+            "minRoll" : 9,
+            "maxRoll" : 10
+        },
+        {
+            "SeaEncounter_id" : 8,
+            "SeaEncounter" : "Killer whale sighting",
+            "minRoll" : 11,
+            "maxRoll" : 12
+        },
+        {
+            "SeaEncounter_id" : 9,
+            "SeaEncounter" : "Floating debris",
+            "minRoll" : 13,
+            "maxRoll" : 14
+        },
+        {
+            "SeaEncounter_id" : 10,
+            "SeaEncounter" : "Longship crewed by hostile berserkers",
+            "minRoll" : 15,
+            "maxRoll" : 15
+        },
+        {
+            "SeaEncounter_id" : 11,
+            "SeaEncounter" : "Hostile griffons or harpies",
+            "minRoll" : 16,
+            "maxRoll" : 16
+        },
+        {
+            "SeaEncounter_id" : 12,
+            "SeaEncounter" : "Iceberg",
+            "minRoll" : 17,
+            "maxRoll" : 17
+        },
+        {
+            "SeaEncounter_id" : 13,
+            "SeaEncounter" : "Sahuagin boarding party",
+            "minRoll" : 18,
+            "maxRoll" : 18
+        },
+        {
+            "SeaEncounter_id" : 14,
+            "SeaEncounter" : "NPC in the water, clinging to floating debris",
+            "minRoll" : 19,
+            "maxRoll" : 19
+        },
+        {
+            "SeaEncounter_id" : 15,
+            "SeaEncounter" : "Sea monster",
+            "minRoll" : 20,
+            "maxRoll" : 20
+        }
+    ]
+}
