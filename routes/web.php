@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\MapController;
 use App\Models\Character;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,7 @@ Route::view('/encounters/generate', 'encounters.generate');
 
 Route::view('/maps', 'maps.index');
 Route::view('/maps/create', 'maps.create');
+Route::post('/maps/generate-map', [MapController::class, 'generate']);
 
 Route::get('/characters/{character}/basic', [CharacterController::class, 'edit'])
     ->name('characters.basic.edit');
