@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         loading.classList.remove('hidden');
         img.style.display = 'none';
         img.src="";
+        const theme = document.getElementById("theme").value;
+        const roomsRaw = document.getElementById("room_count").value;
+        const guidance = document.getElementById("guidance").value;
+
+
 
         const response = await fetch('/dungeons/generate-map', {
             method: 'POST',
@@ -20,7 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Content-Type': 'application/json',
                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
             },
-            body: JSON.stringify({})
+            body: JSON.stringify({
+                theme: theme,
+                rooms: roomsRaw,
+                guidance: guidance
+            })
         });
 
         const data = await response.json();
