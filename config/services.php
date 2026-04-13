@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'openai' => [
+        'endpoint' => env('OPENAI_ENDPOINT', 'https://api.openai.com/v1/chat/completions'),
+        'model' => env('OPENAI_MODEL', 'gpt-4.1-mini'),
+        'api_key' => env('OPENAI_API_KEY'),
+    ],
+
 ];
