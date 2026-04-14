@@ -112,10 +112,62 @@
                         </div>
                     </div>
 
-                    <button type="submit"
-                            class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
-                        Roll Encounter
-                    </button>
+                    {{-- AI Options --}}
+                    <div class="pt-2 border-t border-slate-800">
+                        <label class="text-xs text-slate-400">AI Prompt</label>
+                        <textarea
+                            name="ai_prompt"
+                            rows="4"
+                            placeholder="Generate eerie forest encounters for a level 3 party traveling at night..."
+                            class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm"
+                        >{{ old('ai_prompt', $selected['ai_prompt'] ?? '') }}</textarea>
+                        <p class="mt-1 text-xs text-slate-500">
+                            Optional. Describe tone, party level, pacing, or any special twist.
+                        </p>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-slate-400">Party Level</label>
+                        <input
+                            type="number"
+                            name="party_level"
+                            min="1"
+                            max="20"
+                            value="{{ old('party_level', $selected['party_level'] ?? '') }}"
+                            placeholder="e.g. 5"
+                            class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-slate-400">Tone</label>
+                        <select
+                            name="tone"
+                            class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm"
+                        >
+                            <option value="">Any</option>
+                            @foreach(['Dark','Heroic','Mysterious','Whimsical','Tense','Gritty'] as $tone)
+                                <option value="{{ $tone }}"
+                                    @selected(($selected['tone'] ?? null) === $tone)>
+                                    {{ $tone }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="grid gap-2">
+                        <button type="submit"
+                                formaction="{{ route('encounters.roll') }}"
+                                class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
+                            Roll Encounter
+                        </button>
+
+                        <button type="submit"
+                                formaction="{{ route('encounters.aiGenerate') }}"
+                                class="w-full rounded-xl bg-violet-600 px-4 py-3 text-sm font-semibold text-white hover:bg-violet-500">
+                            Generate with AI
+                        </button>
+                    </div>
                 </form>
             </div>
 

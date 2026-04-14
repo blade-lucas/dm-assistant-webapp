@@ -6,9 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class SavedEncounterTable extends Model
 {
-    protected $fillable = ['name', 'payload'];
+    protected $fillable = ['user_id', 'name', 'payload'];
 
     protected $casts = [
         'payload' => 'array',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

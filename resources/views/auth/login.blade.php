@@ -1,47 +1,53 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-layouts.app title="Login">
+    <div class="mx-auto max-w-md rounded-2xl border border-slate-800 bg-slate-950 p-6">
+        <h1 class="text-2xl font-semibold tracking-tight">Login</h1>
+        <p class="mt-1 text-sm text-slate-400">Access your DM Assistant account.</p>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+        @if ($errors->any())
+            <div class="mt-4 rounded-xl border border-red-900 bg-red-950/30 p-3 text-sm text-red-200">
+                <ul class="list-disc pl-5">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        @if (session('status'))
+            <div class="mt-4 rounded-xl border border-slate-800 bg-slate-900 p-3 text-sm">
+                {{ session('status') }}
+            </div>
+        @endif
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+        <form method="POST" action="/login" class="mt-6 grid gap-4">
+            @csrf
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+            <div>
+                <label class="text-xs text-slate-400">Email</label>
+                <input type="email" name="email" value="{{ old('email') }}" required autofocus
+                       class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+            </div>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+            <div>
+                <label class="text-xs text-slate-400">Password</label>
+                <input type="password" name="password" required
+                       class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+            </div>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
+            <label class="flex items-center gap-2 text-sm">
+                <input type="checkbox" name="remember">
+                Remember me
             </label>
-        </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
+            <button type="submit"
+                    class="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500">
+                Login
+            </button>
 
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+            <div class="flex justify-between text-sm text-slate-400">
+                <a href="/register" class="hover:text-white">Create account</a>
+                <a href="/forgot-password" class="hover:text-white">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+</x-layouts.app>
