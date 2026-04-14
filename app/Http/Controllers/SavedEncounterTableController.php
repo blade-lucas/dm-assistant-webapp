@@ -9,9 +9,13 @@ class SavedEncounterTableController extends Controller
 {
     public function index()
     {
-        $tables = SavedEncounterTable::query()
-            ->orderByDesc('created_at')
-            ->get();
+        $query = SavedEncounterTable::query()->orderByDesc('created_at');
+
+        if (!auth()->user()?->is_admin) {
+            $query->where('user_id', auth()->id());
+        }
+
+        $tables = $query->get();
 
         return view('encounters.saved', compact('tables'));
     }
@@ -39,6 +43,10 @@ class SavedEncounterTableController extends Controller
 
     public function load(SavedEncounterTable $table)
     {
+        if (!auth()->user()->is_admin && $table->user_id !== auth()->id()) {
+            abort(403);
+        }
+
         session()->put('encounter_generated_table', $table->payload);
 
         return redirect()->route('encounters.index', ['show' => 1])
@@ -47,6 +55,10 @@ class SavedEncounterTableController extends Controller
 
     public function destroy(SavedEncounterTable $table)
     {
+        if (!auth()->user()->is_admin && $table->user_id !== auth()->id()) {
+            abort(403);
+        }
+
         $table->delete();
 
         return back()->with('status', 'Deleted saved encounter table.');

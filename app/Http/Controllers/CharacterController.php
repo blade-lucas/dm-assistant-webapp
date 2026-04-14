@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Character;
+use App\Repositories\CurrencyRepository;
+use App\Repositories\ItemRepository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CharacterController extends Controller
 {
@@ -43,9 +46,13 @@ class CharacterController extends Controller
 
     public function index()
     {
-        $characters = \App\Models\Character::query()
-            ->orderByDesc('updated_at')
-            ->get();
+        $query = Character::query()->orderByDesc('updated_at');
+
+        if (!auth()->user()?->is_admin) {
+            $query->where('user_id', auth()->id());
+        }
+
+        $characters = $query->get();
 
         return view('characters.index', [
             'characters' => $characters,
@@ -65,7 +72,7 @@ class CharacterController extends Controller
         ]);
     }
 
-    public function store(\Illuminate\Http\Request $request)
+    public function store(Request $request, CurrencyRepository $currency)
     {
         $validated = $request->validate([
             'name' => ['required','string','max:120'],
@@ -75,7 +82,10 @@ class CharacterController extends Controller
             'alignment' => ['nullable','string','max:60'],
         ]);
 
-        $character = \App\Models\Character::create([
+        $startingGold = $currency->rollStartingGold($validated['class'] ?? null);
+
+        $character = Character::create([
+            'user_id' => auth()->id(),
             'name' => $validated['name'],
             'role' => $validated['role'],
             'race' => $validated['race'] ?? null,
@@ -88,7 +98,13 @@ class CharacterController extends Controller
                 'skills' => ['proficient' => []],
                 'features' => [],
                 'equipment' => [
-                    'wallet' => ['cp'=>0,'sp'=>0,'ep'=>0,'gp'=>0,'pp'=>0],
+                    'wallet' => [
+                        'cp' => 0,
+                        'sp' => 0,
+                        'ep' => 0,
+                        'gp' => $startingGold,
+                        'pp' => 0,
+                    ],
                     'inventory' => [],
                 ],
                 'spells' => [
@@ -136,29 +152,41 @@ class CharacterController extends Controller
         };
     }
 
-    public function edit(Character $character)
+    public function editBasic(Character $character)
     {
-        $abilities = $character->abilities ?? ['str'=>10,'dex'=>10,'con'=>10,'int'=>10,'wis'=>10,'cha'=>10];
-        $skills = $character->skills ?? ['proficient' => [], 'bonuses' => []];
-        $features = $character->features ?? [];
+        $data = $character->data ?? [];
+
+        $abilities = $character->abilities
+            ?? $data['abilities']
+            ?? [
+                'str' => 10,
+                'dex' => 10,
+                'con' => 10,
+                'int' => 10,
+                'wis' => 10,
+                'cha' => 10,
+            ];
+
+        $skills = $character->skills
+            ?? $data['skills']
+            ?? [
+                'proficient' => [],
+                'bonuses' => [],
+            ];
+
+        $features = $character->features
+            ?? $data['features']
+            ?? [];
 
         $options = [
-            'races' => ['Human','Elf','Dwarf','Halfling','Gnome','Half-Elf','Half-Orc','Tiefling'],
-            'classes' => ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard'],
-            'alignments' => [
-                'Lawful Good','Neutral Good','Chaotic Good',
-                'Lawful Neutral','True Neutral','Chaotic Neutral',
-                'Lawful Evil','Neutral Evil','Chaotic Evil'
-            ],
-            // Features dropdown sources (Sprint 2: placeholder lists; replace with your JSON tables later)
-            'appearance' => ['Distinctive jewelry','Scarred','Immaculate','Rugged','Mysterious','Elegant'],
-            'talents' => ['Plays an instrument','Great cook','Excellent liar','Painter','Gambler','Quick learner'],
-            'mannerisms' => ['Taps fingers','Stares','Laughs often','Whispers','Paces','Chews lip'],
-            'interaction' => ['Friendly','Suspicious','Blunt','Shy','Charming','Aggressive'],
-            'ideals' => ['Freedom','Power','Justice','Tradition','Knowledge','Charity'],
-            'bonds' => ['Family','Mentor','Guild','Homeland','Lost love','Oath'],
-            'flaws' => ['Greedy','Stubborn','Hot-tempered','Cowardly','Naive','Vengeful'],
-            'sex' => ['Male','Female','Non-binary','Other','Unknown'],
+            'appearance' => ['Distinctive jewelry', 'Piercings', 'Elegant clothes', 'Ragged clothes'],
+            'talents' => ['Sings beautifully', 'Expert juggler', 'Great memory', 'Animal whisperer'],
+            'mannerisms' => ['Speaks loudly', 'Whispers', 'Paces', 'Avoids eye contact'],
+            'interaction' => ['Friendly', 'Suspicious', 'Arrogant', 'Curious'],
+            'ideals' => ['Honor', 'Freedom', 'Power', 'Knowledge'],
+            'bonds' => ['Family', 'Homeland', 'A treasured item', 'A loved one'],
+            'flaws' => ['Greedy', 'Cowardly', 'Hot-headed', 'Secretive'],
+            'sex' => ['Male', 'Female', 'Other'],
         ];
 
         return view('characters.edit_basic', [
@@ -239,30 +267,18 @@ class CharacterController extends Controller
             ->with('status', 'Saved.');
     }
 
-    public function editEquipment(\App\Models\Character $character)
+    public function editEquipment(Character $character, ItemRepository $items)
     {
         $equipment = $character->data['equipment'] ?? [
-            'wallet' => ['cp'=>0,'sp'=>0,'ep'=>0,'gp'=>0,'pp'=>0],
-            'inventory' => [], // array of { id, name, type, qty, equipped, cost?, image? }
+            'wallet' => ['cp' => 0, 'sp' => 0, 'ep' => 0, 'gp' => 0, 'pp' => 0],
+            'inventory' => [],
         ];
 
-        // Sprint 2: stub catalog. Later: load from DB/JSON.
         $catalog = [
-            'weapons' => [
-                ['id'=>'club', 'name'=>'Club', 'cost'=>['sp'=>1], 'type'=>'Weapon', 'image'=>null],
-                ['id'=>'dagger', 'name'=>'Dagger', 'cost'=>['gp'=>2], 'type'=>'Weapon', 'image'=>null],
-            ],
-            'armor' => [
-                ['id'=>'leather', 'name'=>'Leather Armor', 'cost'=>['gp'=>10], 'type'=>'Armor', 'image'=>null],
-                ['id'=>'shield', 'name'=>'Shield', 'cost'=>['gp'=>10], 'type'=>'Armor', 'image'=>null],
-            ],
-            'gear' => [
-                ['id'=>'rope', 'name'=>'Hempen Rope (50 ft.)', 'cost'=>['gp'=>1], 'type'=>'Gear', 'image'=>null],
-                ['id'=>'torch', 'name'=>'Torch', 'cost'=>['cp'=>1], 'type'=>'Gear', 'image'=>null],
-            ],
-            'other' => [
-                ['id'=>'potion_healing', 'name'=>'Potion of Healing', 'cost'=>['gp'=>50], 'type'=>'Other', 'image'=>null],
-            ],
+            'weapons' => $items->byCategory('weapons'),
+            'armor' => $items->byCategory('armor'),
+            'gear' => $items->byCategory('gear'),
+            'other' => $items->byCategory('other'),
         ];
 
         return view('characters.edit_equipment', [
@@ -272,113 +288,100 @@ class CharacterController extends Controller
         ]);
     }
 
-    public function updateEquipment(\Illuminate\Http\Request $request, \App\Models\Character $character)
+    public function updateEquipment(Request $request, Character $character, ItemRepository $items)
     {
         $validated = $request->validate([
-            'equipment' => ['required','array'],
-            'equipment.wallet' => ['required','array'],
-            'equipment.wallet.cp' => ['required','integer','min:0'],
-            'equipment.wallet.sp' => ['required','integer','min:0'],
-            'equipment.wallet.ep' => ['required','integer','min:0'],
-            'equipment.wallet.gp' => ['required','integer','min:0'],
-            'equipment.wallet.pp' => ['required','integer','min:0'],
-
-            'equipment.inventory' => ['nullable','array'],
+            'equipment' => ['required', 'array'],
+            'equipment.wallet' => ['required', 'array'],
+            'equipment.wallet.cp' => ['required', 'integer', 'min:0'],
+            'equipment.wallet.sp' => ['required', 'integer', 'min:0'],
+            'equipment.wallet.ep' => ['required', 'integer', 'min:0'],
+            'equipment.wallet.gp' => ['required', 'integer', 'min:0'],
+            'equipment.wallet.pp' => ['required', 'integer', 'min:0'],
+            'equipment.inventory' => ['nullable', 'array'],
         ]);
 
-        // Normalize inventory rows a bit
         $inventory = array_values($validated['equipment']['inventory'] ?? []);
+
         foreach ($inventory as &$row) {
-            $row['qty'] = max(1, (int)($row['qty'] ?? 1));
+            $row['qty'] = max(1, (int) ($row['qty'] ?? 1));
             $row['equipped'] = !empty($row['equipped']);
         }
+        unset($row);
 
-        $equipment = [
+        $newAc = $this->calculateArmorClass($character, $inventory, $items);
+
+        $data = $character->data ?? [];
+        $data['equipment'] = [
             'wallet' => $validated['equipment']['wallet'],
             'inventory' => $inventory,
         ];
 
-        $data = $character->data ?? [];
-        $data['equipment'] = $equipment;
-
-        $character->update(['data' => $data]);
+        $character->update([
+            'data' => $data,
+            'ac' => $newAc,
+        ]);
 
         return redirect()
             ->route('characters.equipment.edit', $character)
             ->with('status', 'Saved.');
     }
 
-    public function purchaseEquipment(\Illuminate\Http\Request $request, \App\Models\Character $character)
+    public function purchaseEquipment(Request $request, Character $character, ItemRepository $items)
     {
         $validated = $request->validate([
-            'category' => ['required','in:weapons,armor,gear,other'],
-            'item_id' => ['required','string','max:120'],
-            'qty' => ['required','integer','min:1','max:99'],
+            'category' => ['required', 'in:weapons,armor,gear,other'],
+            'item_id' => ['required', 'string', 'max:120'],
+            'qty' => ['required', 'integer', 'min:1', 'max:99'],
         ]);
 
-        // Same stub catalog as editEquipment (keep identical for now)
-        $catalog = [
-            'weapons' => [
-                ['id'=>'club', 'name'=>'Club', 'cost'=>['sp'=>1], 'type'=>'Weapon', 'image'=>null],
-                ['id'=>'dagger', 'name'=>'Dagger', 'cost'=>['gp'=>2], 'type'=>'Weapon', 'image'=>null],
-            ],
-            'armor' => [
-                ['id'=>'leather', 'name'=>'Leather Armor', 'cost'=>['gp'=>10], 'type'=>'Armor', 'image'=>null],
-                ['id'=>'shield', 'name'=>'Shield', 'cost'=>['gp'=>10], 'type'=>'Armor', 'image'=>null],
-            ],
-            'gear' => [
-                ['id'=>'rope', 'name'=>'Hempen Rope (50 ft.)', 'cost'=>['gp'=>1], 'type'=>'Gear', 'image'=>null],
-                ['id'=>'torch', 'name'=>'Torch', 'cost'=>['cp'=>1], 'type'=>'Gear', 'image'=>null],
-            ],
-            'other' => [
-                ['id'=>'potion_healing', 'name'=>'Potion of Healing', 'cost'=>['gp'=>50], 'type'=>'Other', 'image'=>null],
-            ],
-        ];
-
-        $item = collect($catalog[$validated['category']])->firstWhere('id', $validated['item_id']);
+        $item = $items->findById($validated['item_id']);
         if (!$item) {
             return back()->with('status', 'Item not found.');
         }
 
-        $qty = (int)$validated['qty'];
+        $qty = (int) $validated['qty'];
 
         $data = $character->data ?? [];
-        $equipment = $data['equipment'] ?? ['wallet'=>['cp'=>0,'sp'=>0,'ep'=>0,'gp'=>0,'pp'=>0],'inventory'=>[]];
+        $equipment = $data['equipment'] ?? [
+            'wallet' => ['cp' => 0, 'sp' => 0, 'ep' => 0, 'gp' => 0, 'pp' => 0],
+            'inventory' => [],
+        ];
 
-        $wallet = $equipment['wallet'] ?? ['cp'=>0,'sp'=>0,'ep'=>0,'gp'=>0,'pp'=>0];
+        $wallet = $equipment['wallet'] ?? ['cp' => 0, 'sp' => 0, 'ep' => 0, 'gp' => 0, 'pp' => 0];
         $inventory = $equipment['inventory'] ?? [];
 
-        // Cost check (simple: single-currency costs for now)
-        $cost = $item['cost'] ?? [];
-        $currencyKey = array_key_first($cost);
-        $unitCost = $currencyKey ? (int)$cost[$currencyKey] : 0;
+        $currencyKey = $item['cost_currency'] ?? 'gp';
+        $unitCost = (int) ($item['cost_number'] ?? 0);
         $totalCost = $unitCost * $qty;
 
-        if ($currencyKey && (($wallet[$currencyKey] ?? 0) < $totalCost)) {
+        if (($wallet[$currencyKey] ?? 0) < $totalCost) {
             return back()->with('status', 'Not enough currency to purchase.');
         }
 
-        if ($currencyKey) {
-            $wallet[$currencyKey] = (int)$wallet[$currencyKey] - $totalCost;
-        }
+        $wallet[$currencyKey] = (int) $wallet[$currencyKey] - $totalCost;
 
-        // Add or increment inventory
         $found = false;
         foreach ($inventory as &$row) {
             if (($row['id'] ?? null) === $item['id']) {
-                $row['qty'] = max(1, (int)($row['qty'] ?? 1)) + $qty;
+                $row['qty'] = max(1, (int) ($row['qty'] ?? 1)) + $qty;
                 $found = true;
                 break;
             }
         }
+        unset($row);
+
         if (!$found) {
             $inventory[] = [
                 'id' => $item['id'],
                 'name' => $item['name'],
                 'type' => $item['type'] ?? 'Item',
+                'category' => $item['category'] ?? 'gear',
                 'qty' => $qty,
                 'equipped' => false,
                 'image' => $item['image'] ?? null,
+                'cost_number' => $item['cost_number'] ?? 0,
+                'cost_currency' => $item['cost_currency'] ?? 'gp',
             ];
         }
 
@@ -386,9 +389,60 @@ class CharacterController extends Controller
             'wallet' => $wallet,
             'inventory' => array_values($inventory),
         ];
+
         $character->update(['data' => $data]);
 
         return back()->with('status', 'Purchased!');
+    }
+
+    private function calculateArmorClass(Character $character, array $inventory, ItemRepository $items): int
+    {
+        $rawData = $character->data ?? [];
+
+        $abilities = $character->abilities
+            ?? ($rawData['abilities'] ?? ['dex' => 10]);
+
+        $dex = (int) ($abilities['dex'] ?? 10);
+        $dexMod = (int) floor(($dex - 10) / 2);
+
+        $baseAc = 10 + $dexMod;
+        $bestArmorAc = $baseAc;
+        $shieldBonus = 0;
+
+        foreach ($inventory as $row) {
+            if (empty($row['equipped']) || empty($row['id'])) {
+                continue;
+            }
+
+            $item = $items->findById($row['id']);
+            if (!$item) {
+                continue;
+            }
+
+            if (($item['category'] ?? null) !== 'armor' || empty($item['armor'])) {
+                continue;
+            }
+
+            $armor = $item['armor'];
+
+            // Shield is stored in armor list too
+            if (Str::lower($item['type'] ?? '') === 'shield' || Str::contains(Str::lower($item['name']), 'shield')) {
+                $shieldBonus += (int)($armor['ac'] ?? 2);
+                continue;
+            }
+
+            $ac = (int)($armor['ac'] ?? 10);
+
+            if (!empty($armor['dex_mod'])) {
+                $maxDex = (int)($armor['max_dex_mod'] ?? -1);
+                $dexToAdd = $maxDex >= 0 ? min($dexMod, $maxDex) : $dexMod;
+                $ac += max(0, $dexToAdd);
+            }
+
+            $bestArmorAc = max($bestArmorAc, $ac);
+        }
+
+        return $bestArmorAc + $shieldBonus;
     }
 
     public function editSpells(\App\Models\Character $character)

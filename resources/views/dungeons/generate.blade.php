@@ -123,11 +123,10 @@
                 <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                     <div class="flex items-center justify-between">
                         <div class="text-sm font-semibold">Map Preview</div>
-                        <div class="text-xs text-slate-500">AI output plugs in here later</div>
                         <form id="mapForm" method="POST" action="{{ route('dungeons.generate.map') }}">
                             @csrf
                             <div class="flex items-end">
-                                <button 
+                                <button
                                     id="generateBtn"
                                     type="submit"
                                     class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500"
@@ -146,19 +145,13 @@
                         <div id="loading" class="mt-4 flex h-[700px] items-center justify-center rounded-2xl border border-dashed border-slate-800 bg-slate-950 text-sm text-slate-500 hidden">
                             Generating map, please wait...
                         </div>
-                        <img 
-                            id="mapImage" 
+                        <img
+                            id="mapImage"
                             class="w-full h-[700px] object-contain border rounded shadow"
                             style="{{ $result ? '' : 'display:none;' }}"
                         />
 
-                        <div class="mt-4 rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                            <div class="grid grid-cols-10 gap-1">
-                                @for($i = 0; $i < 100; $i++)
-                                    <div class="aspect-square rounded bg-slate-900 {{ $i % 7 === 0 ? 'border border-indigo-500' : '' }}"></div>
-                                @endfor
-                            </div>
-                        </div>
+
                 </div>
 
                 {{-- RIGHT: OUTPUT SUMMARY --}}
