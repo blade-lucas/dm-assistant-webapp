@@ -152,13 +152,7 @@
                             style="{{ $result ? '' : 'display:none;' }}"
                         />
 
-                        <div class="mt-4 rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                            <div class="grid grid-cols-10 gap-1">
-                                @for($i = 0; $i < 100; $i++)
-                                    <div class="aspect-square rounded bg-slate-900 {{ $i % 7 === 0 ? 'border border-indigo-500' : '' }}"></div>
-                                @endfor
-                            </div>
-                        </div>
+                        
                 </div>
 
                 {{-- RIGHT: OUTPUT SUMMARY --}}
