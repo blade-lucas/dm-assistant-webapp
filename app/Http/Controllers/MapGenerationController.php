@@ -19,7 +19,7 @@ class MapGenerationController extends Controller
         // Need to use uvicorn fastapi to work
         // I'll add you guys to the repo where I host the
         // model file.
-        $response = Http::post('https://dmassist.kingelffe.com/sample', [
+        $response = Http::post('http://127.0.0.1:8001/sample', [
             'steps' => 20,
             'eta' => 0.0
         ]);
