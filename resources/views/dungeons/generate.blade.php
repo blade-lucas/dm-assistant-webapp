@@ -45,7 +45,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Theme</label>
-                        <select name="theme" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="theme" name="theme" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['Crypt','Forest Ruins','Cave','Castle','Sewers','Temple','Volcanic','Ice Cavern'] as $opt)
                                 <option value="{{ $opt }}">{{ $opt }}</option>
                             @endforeach
@@ -72,7 +72,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Rooms</label>
-                        <input type="number" name="room_count" min="3" max="50"
+                        <input id = "room_count" type="number" name="room_count" min="3" max="50"
                                value="{{ old('room_count',10) }}"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
@@ -102,6 +102,12 @@
                                 <option value="{{ $opt }}">{{ $opt }}</option>
                             @endforeach
                         </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-slate-400">Guidance Strength</label>
+                        <input id="guidance" type="range" min="0" max="5" step="0.1" value="2.5"
+                            class="mt-1 w-full rounded-xl border">
                     </div>
 
                     <div class="flex items-end">

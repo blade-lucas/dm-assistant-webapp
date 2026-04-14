@@ -16,10 +16,17 @@ class MapGenerationController extends Controller
 
     public function generate(Request $request)
     {
-        // Need to use uvicorn fastapi to work
-        // I'll add you guys to the repo where I host the
-        // model file.
+        $theme = $request->input('theme');
+        $roomsRaw = $request->input('rooms');
+        $guidance = $request->input('guidance', 2.5);
+
+        // Normalize 1–50 → 0.0–1.0
+        $rooms = $roomsRaw / 50;
+
         $response = Http::post('http://127.0.0.1:8001/sample', [
+            'theme' => $theme,
+            'rooms' => $rooms,
+            'guidance' => floatval($guidance),
             'steps' => 20,
             'eta' => 0.0
         ]);

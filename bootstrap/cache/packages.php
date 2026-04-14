@@ -6,13 +6,6 @@
       0 => 'Laravel\\Breeze\\BreezeServiceProvider',
     ),
   ),
-  'laravel/fortify' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Fortify\\FortifyServiceProvider',
-    ),
-  ),
   'laravel/pail' => 
   array (
     'providers' => 
