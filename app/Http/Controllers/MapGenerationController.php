@@ -16,11 +16,18 @@ class MapGenerationController extends Controller
 
     public function generate(Request $request)
     {
+        \Log::info('Incoming map request', [
+            'all' => $request->all(),
+            'theme' => $request->input('theme'),
+            'rooms' => $request->input('rooms'),
+            'guidance' => $request->input('guidance'),
+            'content_type' => $request->header('Content-Type'),
+        ]);
+
         $theme = $request->input('theme');
         $roomsRaw = $request->input('rooms');
         $guidance = $request->input('guidance', 2.5);
 
-        // Normalize 1–50 → 0.0–1.0
         $rooms = $roomsRaw / 50;
 
         $response = Http::post('http://127.0.0.1:8001/sample', [
@@ -32,7 +39,10 @@ class MapGenerationController extends Controller
         ]);
 
         if ($response->failed()) {
-            return response()->json(['error' => 'Map generation service unavailable'], 500);
+            return response()->json([
+                'error' => 'Map generation service unavailable',
+                'details' => $response->json() ?? $response->body(),
+            ], 500);
         }
 
         return response()->json([
