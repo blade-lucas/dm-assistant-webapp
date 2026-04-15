@@ -26,18 +26,47 @@
             <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('dungeons.generate') }}">Dungeon Generator</a>
 
             @auth
-                <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('dashboard') }}">Dashboard</a>
-
-                @if(auth()->user()->is_admin)
-                    <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="{{ route('admin.index') }}">Admin</a>
-                @endif
-
-                <form method="POST" action="/logout" class="inline">
-                    @csrf
-                    <button type="submit" class="rounded-lg px-3 py-2 hover:bg-slate-900">
-                        Logout
+                <div x-data="{ open: false }" class="relative ml-2">
+                    <button @click="open = !open"
+                            class="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 hover:bg-slate-800">
+                        <span>{{ auth()->user()->name }}</span>
+                        <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"/>
+                        </svg>
                     </button>
-                </form>
+
+                    <div x-show="open"
+                         @click.outside="open = false"
+                         class="absolute right-0 mt-2 w-48 rounded-xl border border-slate-800 bg-slate-900 shadow-lg">
+
+                        @if(auth()->user()->is_admin)
+                            <a href="{{ route('admin.index') }}"
+                               class="block px-4 py-2 text-sm hover:bg-slate-800">
+                                Admin Dashboard
+                            </a>
+                        @else
+                            <a href="{{ route('dashboard') }}"
+                               class="block px-4 py-2 text-sm hover:bg-slate-800">
+                                Dashboard
+                            </a>
+                        @endif
+
+                        <a href="{{ route('account.index') }}"
+                           class="block px-4 py-2 text-sm hover:bg-slate-800">
+                            Account
+                        </a>
+
+                        <form method="POST" action="/logout">
+                            @csrf
+                            <button type="submit"
+                                    class="w-full text-left px-4 py-2 text-sm hover:bg-slate-800">
+                                Logout
+                            </button>
+                        </form>
+                    </div>
+                </div>
             @else
                 <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/login">Login</a>
                 <a class="rounded-lg px-3 py-2 hover:bg-slate-900" href="/register">Register</a>
