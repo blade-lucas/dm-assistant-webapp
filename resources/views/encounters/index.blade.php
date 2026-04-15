@@ -174,9 +174,14 @@
             {{-- RIGHT PANEL --}}
             <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
 
-                <div class="flex items-center justify-between">
-                    <div class="text-sm font-semibold">Encounter Table</div>
-                    <div class="text-xs text-slate-500">Generated on Roll</div>
+                <div class="flex items-center justify-between gap-4">
+                    <div>
+                        <div class="text-sm font-semibold">Encounter Table</div>
+                        <div class="text-xs text-slate-500">
+                            {{ ($generated['params']['source'] ?? 'manual') === 'ai' ? 'Generated with AI' : 'Generated from encounter pool' }}
+                        </div>
+                    </div>
+
                     <a href="{{ route('encounters.index') }}"
                        class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
                         Clear
