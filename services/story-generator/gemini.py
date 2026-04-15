@@ -93,6 +93,7 @@ def _regeneration_prompt(
 # ── Core API call ──────────────────────────────────────────────────────────────
 
 async def generate_story(
+    print("GEMINI KEY PRESENT:", bool(GEMINI_API_KEY))
     image_path: str,
     mime_type: str,
     *,
@@ -143,6 +144,8 @@ async def generate_story(
 
     if response.status_code != 200:
         detail = _extract_error(response)
+        print("GEMINI STATUS:", response.status_code)
+        print("GEMINI ERROR:", detail)
         raise HTTPException(status_code=502, detail=f"Gemini API error: {detail}")
 
     data = response.json()
