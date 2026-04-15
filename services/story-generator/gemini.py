@@ -17,7 +17,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-2.5-flash:generateContent"
+    "gemini-2.5-flash-lite:generateContent"
 )
 
 GENERATION_CONFIG = {
@@ -102,25 +102,13 @@ async def generate_story(
     feedback_text: str | None = None,
     reaction: str | None = None,
 ) -> str:
-    """
-    Call Gemini with the map image and return the generated story text.
-
-    Pass `original_story` (and optionally the feedback args) to trigger
-    the refinement/regeneration path instead of the initial generation path.
-    """
-    print("GEMINI KEY PRESENT:", bool(GEMINI_API_KEY))
     if not GEMINI_API_KEY:
         raise HTTPException(status_code=500, detail="GEMINI_API_KEY is not configured on the server.")
 
-    # Read and base64-encode the image
     with open(image_path, "rb") as f:
         image_b64 = base64.b64encode(f.read()).decode("utf-8")
 
-    # Choose prompt
-    if original_story:
-        prompt = _regeneration_prompt(original_story, tone, enhancements, feedback_text, reaction)
-    else:
-        prompt = _initial_prompt()
+    prompt = _regeneration_prompt(original_story, tone, enhancements, feedback_text, reaction) if original_story else _initial_prompt()
 
     payload = {
         "contents": [
@@ -135,30 +123,42 @@ async def generate_story(
         "generationConfig": GENERATION_CONFIG,
     }
 
-    async with httpx.AsyncClient(timeout=60.0) as client:
-        response = await client.post(
-            GEMINI_URL,
-            params={"key": GEMINI_API_KEY},
-            json=payload,
-        )
+    delays = [0, 2, 5, 10]
 
-    if response.status_code != 200:
-        detail = _extract_error(response)
-        print("GEMINI STATUS:", response.status_code)
-        print("GEMINI ERROR:", detail)
-        raise HTTPException(status_code=502, detail=f"Gemini API error: {detail}")
+    async with httpx.AsyncClient(timeout=90.0) as client:
+        last_status = None
+        last_detail = None
 
-    data = response.json()
-    text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text")
+        for i, delay in enumerate(delays):
+            if delay:
+                await asyncio.sleep(delay)
 
-    if not text:
-        raise HTTPException(status_code=502, detail="Gemini returned an empty response.")
+            response = await client.post(
+                GEMINI_URL,
+                params={"key": GEMINI_API_KEY},
+                json=payload,
+            )
 
-    return text
+            if response.status_code == 200:
+                data = response.json()
+                text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text")
+                if text:
+                    return text
+                last_status = 502
+                last_detail = "Gemini returned an empty response."
+                continue
 
+            detail = _extract_error(response)
+            print(f"GEMINI ATTEMPT {i + 1} STATUS:", response.status_code)
+            print("GEMINI ERROR:", detail)
 
-def _extract_error(response: httpx.Response) -> str:
-    try:
-        return response.json().get("error", {}).get("message", response.text)
-    except Exception:
-        return response.text
+            last_status = response.status_code
+            last_detail = detail
+
+            if response.status_code not in (429, 500, 503):
+                break
+
+    raise HTTPException(
+        status_code=502,
+        detail=f"Gemini API error ({last_status}): {last_detail}"
+    )
