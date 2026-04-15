@@ -170,21 +170,25 @@
                 </div>
 
                 {{-- RIGHT: OUTPUT SUMMARY --}}
+                {{-- RIGHT: OUTPUT SUMMARY --}}
                 <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                     <div class="text-sm font-semibold">Dungeon Output</div>
 
-                    <div id="storyPlaceholder"
-                         class="mt-4 rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-500">
-                        Generated dungeon story will appear here.
-                    </div>
+                    <div class="mt-4 h-[700px] rounded-2xl border border-slate-800 bg-slate-950 p-4">
+                        <div id="storyPlaceholder"
+                             class="flex h-full items-center justify-center text-sm text-slate-500">
+                            Generated dungeon story will appear here.
+                        </div>
 
-                    <div id="storyLoading"
-                         class="mt-4 hidden rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-500">
-                        Generating story...
-                    </div>
+                        <div id="storyLoading"
+                             class="hidden h-full items-center justify-center text-sm text-slate-500">
+                            Generating story, please wait...
+                        </div>
 
-                    <div id="storyOutput"
-                         class="mt-4 hidden rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-200 whitespace-pre-line"></div>
+                        <div id="storyOutput"
+                             class="hidden h-full overflow-y-auto whitespace-pre-line pr-2 text-sm leading-6 text-slate-200 scroll-smooth"
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,7 +316,11 @@
             loading.classList.remove('hidden');
             loading.classList.add('flex');
 
+            storyPlaceholder.classList.add('hidden');
+            storyOutput.classList.add('hidden');
             storyLoading.classList.remove('hidden');
+            storyLoading.classList.add('flex');
+            storyOutput.textContent = '';
 
             generateBtn.disabled = true;
 
