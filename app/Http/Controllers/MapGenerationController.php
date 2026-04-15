@@ -34,7 +34,7 @@ class MapGenerationController extends Controller
             'theme' => $theme,
             'rooms' => $rooms,
             'guidance' => floatval($guidance),
-            'steps' => 20,
+            'steps' => 10,
             'eta' => 0.0
         ]);
 
