@@ -240,4 +240,24 @@ class MapGenerationController extends Controller
 
         return [$binary, $mime];
     }
+
+    public function destroy(Request $request, Map $map)
+    {
+        $user = $request->user();
+        $isAdmin = (bool) ($user->is_admin ?? false);
+
+        if (!$isAdmin && (int) $map->user_id !== (int) $user->id) {
+            abort(403);
+        }
+
+        if ($map->image_path) {
+            Storage::disk('public')->delete($map->image_path);
+        }
+
+        $map->delete();
+
+        return redirect()
+            ->route('saves.index', ['type' => 'maps'])
+            ->with('status', 'Map deleted.');
+    }
 }

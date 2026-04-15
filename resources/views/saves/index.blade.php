@@ -64,35 +64,47 @@
                             </div>
 
                         @elseif($type === 'maps')
-                            <div class="flex items-center gap-4">
-                                <div class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-slate-800 bg-slate-900">
-                                    @if($item->image_path)
-                                        <img
-                                            src="{{ asset('storage/' . $item->image_path) }}"
-                                            alt="{{ $item->name ?? 'Saved map' }}"
-                                            class="h-full w-full object-cover"
-                                        >
-                                    @else
-                                        <div class="flex h-full w-full items-center justify-center text-xs text-slate-500">
-                                            No Image
+                            <div class="flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-4 min-w-0 flex-1">
+                                    <div class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-slate-800 bg-slate-900">
+                                        @if($item->image_path)
+                                            <img
+                                                src="{{ asset('storage/' . $item->image_path) }}"
+                                                alt="{{ $item->name ?? 'Saved map' }}"
+                                                class="h-full w-full object-cover"
+                                            >
+                                        @else
+                                            <div class="flex h-full w-full items-center justify-center text-xs text-slate-500">
+                                                No Image
+                                            </div>
+                                        @endif
+                                    </div>
+
+                                    <div class="min-w-0 flex-1">
+                                        <div class="text-lg font-semibold">
+                                            {{ $item->name ?: 'Untitled Map' }}
                                         </div>
-                                    @endif
+                                        <div class="mt-1 text-sm text-slate-400">
+                                            {{ $item->theme ?: 'Unknown Theme' }}
+                                            @if($item->size) • {{ ucfirst($item->size) }} @endif
+                                            @if($item->difficulty) • {{ ucfirst($item->difficulty) }} @endif
+                                        </div>
+                                        <div class="mt-2 text-xs text-slate-500">
+                                            @if($item->room_count) {{ $item->room_count }} rooms • @endif
+                                            Saved {{ $item->created_at->diffForHumans() }}
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="min-w-0 flex-1">
-                                    <div class="text-lg font-semibold">
-                                        {{ $item->name ?: 'Untitled Map' }}
-                                    </div>
-                                    <div class="mt-1 text-sm text-slate-400">
-                                        {{ $item->theme ?: 'Unknown Theme' }}
-                                        @if($item->size) • {{ ucfirst($item->size) }} @endif
-                                        @if($item->difficulty) • {{ ucfirst($item->difficulty) }} @endif
-                                    </div>
-                                    <div class="mt-2 text-xs text-slate-500">
-                                        @if($item->room_count) {{ $item->room_count }} rooms • @endif
-                                        Saved {{ $item->created_at->diffForHumans() }}
-                                    </div>
-                                </div>
+                                <form method="POST" action="{{ route('maps.destroy', $item) }}"
+                                      onsubmit="return confirm('Delete this saved map?');"
+                                      class="shrink-0">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
+                                        Delete
+                                    </button>
+                                </form>
                             </div>
                         @elseif($type === 'feedback')
                             <div class="text-lg font-semibold">

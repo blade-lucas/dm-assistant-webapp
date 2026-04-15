@@ -135,6 +135,8 @@ Route::middleware('auth')->group(function () {
     //Maps
     Route::post('/maps/save', [MapGenerationController::class, 'store'])
         ->name('maps.store');
+    Route::delete('/maps/{map}', [MapGenerationController::class, 'destroy'])
+        ->name('maps.destroy');
 });
 
 /*

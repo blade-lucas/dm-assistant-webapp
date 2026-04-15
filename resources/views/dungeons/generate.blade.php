@@ -144,10 +144,15 @@
 
                     <div id="saveMapContainer" class="mt-4 hidden">
                         @auth
-                            <form method="POST" action="{{ route('maps.store') }}" class="flex items-center gap-3">
+                            <form method="POST" action="{{ route('maps.store') }}" class="flex flex-col gap-3 md:flex-row md:items-center">
                                 @csrf
 
-                                <input type="hidden" name="name" id="save_name">
+                                <input type="text"
+                                       name="name"
+                                       id="save_name"
+                                       placeholder="Name this map..."
+                                       class="w-full md:w-80 rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+
                                 <input type="hidden" name="theme" id="save_theme">
                                 <input type="hidden" name="size" id="save_size">
                                 <input type="hidden" name="difficulty" id="save_difficulty">
