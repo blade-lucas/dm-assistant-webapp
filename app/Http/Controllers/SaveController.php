@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Character;
 use App\Models\Map;
+use App\Models\MapFeedback;
 use App\Models\SavedEncounterTable;
 use Illuminate\Http\Request;
 
@@ -22,6 +23,11 @@ class SaveController extends Controller
                 ->get(),
 
             'maps' => Map::query()
+                ->when(!$isAdmin, fn ($q) => $q->where('user_id', $user->id))
+                ->latest()
+                ->get(),
+
+            'feedback' => MapFeedback::query()
                 ->when(!$isAdmin, fn ($q) => $q->where('user_id', $user->id))
                 ->latest()
                 ->get(),
@@ -46,6 +52,7 @@ class SaveController extends Controller
         $item = match ($type) {
             'encounters' => SavedEncounterTable::findOrFail($id),
             'maps' => Map::findOrFail($id),
+            'feedback' => MapFeedback::findOrFail($id),
             default => Character::findOrFail($id),
         };
 

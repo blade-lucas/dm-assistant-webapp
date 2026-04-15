@@ -132,6 +132,39 @@
                             </div>
                         </div>
                     @endif
+
+                @elseif($type === 'feedback')
+                    <div class="text-xl font-semibold">{{ ucfirst($item->feedback_type) }} Feedback</div>
+                    <div class="mt-2 text-sm text-slate-400">
+                        {{ $item->dungeon_name ?: 'Unnamed Dungeon' }}
+                        @if($item->theme) • {{ $item->theme }} @endif
+                        @if($item->tone) • {{ $item->tone }} @endif
+                    </div>
+
+                    <div class="mt-4 grid gap-2 text-sm text-slate-300 md:grid-cols-2">
+                        <div>Map Rating: {{ $item->map_rating ?? '—' }}/5</div>
+                        <div>Layout Rating: {{ $item->layout_rating ?? '—' }}/5</div>
+                        <div>Overall Rating: {{ $item->overall_rating ?? '—' }}/5</div>
+                        <div>Submitted: {{ $item->created_at->format('Y-m-d H:i') }}</div>
+                    </div>
+
+                    @if($item->comments)
+                        <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-4">
+                            <h2 class="text-lg font-semibold">Comments</h2>
+                            <div class="mt-3 whitespace-pre-line text-sm text-slate-300">
+                                {{ $item->comments }}
+                            </div>
+                        </div>
+                    @endif
+
+                    @if($item->map_id)
+                        <div class="mt-6">
+                            <a href="{{ route('saves.show', ['type' => 'maps', 'id' => $item->map_id]) }}"
+                               class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
+                                View Related Map
+                            </a>
+                        </div>
+                    @endif
                 @endif
             </div>
         </div>

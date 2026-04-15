@@ -19,6 +19,11 @@
                    href="{{ route('saves.index', ['type' => 'maps']) }}">
                     Maps
                 </a>
+
+                <a class="rounded-xl px-3 py-2 {{ $type === 'feedback' ? 'bg-slate-900' : 'hover:bg-slate-900' }}"
+                   href="{{ route('saves.index', ['type' => 'feedback']) }}">
+                    Feedback
+                </a>
             </nav>
         </aside>
 
@@ -89,6 +94,22 @@
                                     </div>
                                 </div>
                             </div>
+                        @elseif($type === 'feedback')
+                            <div class="text-lg font-semibold">
+                                {{ ucfirst($item->feedback_type) }} Feedback
+                            </div>
+                            <div class="mt-1 text-sm text-slate-400">
+                                {{ $item->dungeon_name ?: 'Unnamed Dungeon' }}
+                                @if($item->theme) • {{ $item->theme }} @endif
+                                @if($item->tone) • {{ $item->tone }} @endif
+                            </div>
+                            <div class="mt-2 text-xs text-slate-500">
+                                Map: {{ $item->map_rating ?? '—' }}/5
+                                • Layout: {{ $item->layout_rating ?? '—' }}/5
+                                • Overall: {{ $item->overall_rating ?? '—' }}/5
+                                • Submitted {{ $item->created_at->diffForHumans() }}
+                            </div>
+
                         @endif
                     </a>
                 @empty

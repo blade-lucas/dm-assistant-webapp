@@ -23,7 +23,7 @@
                 <div class="mt-1 text-sm text-slate-400">Review dungeon generation tools and outputs.</div>
             </a>
 
-            <a href="#" class="rounded-2xl border border-slate-800 bg-slate-950 p-5 hover:bg-slate-900">
+            <a href="{{ route('saves.index', ['type' => 'feedback']) }}" class="rounded-2xl border border-slate-800 bg-slate-950 p-5 hover:bg-slate-900">
                 <div class="text-lg font-semibold">Feedback</div>
                 <div class="mt-1 text-sm text-slate-400">View user feedback and future admin tools.</div>
             </a>
