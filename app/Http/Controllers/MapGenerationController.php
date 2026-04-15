@@ -16,37 +16,31 @@ class MapGenerationController extends Controller
 
     public function generate(Request $request)
     {
-        \Log::info('Incoming map request', [
-            'all' => $request->all(),
-            'theme' => $request->input('theme'),
-            'rooms' => $request->input('rooms'),
-            'guidance' => $request->input('guidance'),
-            'content_type' => $request->header('Content-Type'),
-        ]);
+        set_time_limit(120);
+        ini_set('max_execution_time', '120');
 
         $theme = $request->input('theme');
-        $roomsRaw = $request->input('rooms');
+        $rooms = $request->input('rooms');
         $guidance = $request->input('guidance', 2.5);
 
-        $rooms = $roomsRaw / 50;
-
-        $response = Http::timeout(240)->post(config('services.mapgen.url') . '/sample', [
-            'theme' => $theme,
-            'rooms' => $rooms,
-            'guidance' => floatval($guidance),
-            'steps' => 10,
-            'eta' => 0.0
-        ]);
+        $response = Http::connectTimeout(15)
+            ->timeout(120)
+            ->post(config('services.mapgen.url') . '/sample', [
+                'theme' => $theme,
+                'rooms' => $rooms,
+                'guidance' => $guidance,
+                'steps' => 10,
+                'eta' => 0.0,
+            ]);
 
         if ($response->failed()) {
             return response()->json([
-                'error' => 'Map generation service unavailable',
-                'details' => $response->json() ?? $response->body(),
+                'error' => 'Map generation service unavailable'
             ], 500);
         }
 
         return response()->json([
-            'image' => $response->json()['image']
+            'image' => $response->json()['image'] ?? null
         ]);
     }
 }
