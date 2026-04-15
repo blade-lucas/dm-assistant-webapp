@@ -23,6 +23,8 @@ class MapGenerationController extends Controller
             'guidance' => $request->input('guidance'),
             'content_type' => $request->header('Content-Type'),
         ]);
+        set_time_limit(120);
+        ini_set('max_execution_time', '120');
 
         $theme = $request->input('theme');
         $roomsRaw = $request->input('rooms');
