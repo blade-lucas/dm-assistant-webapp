@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Map;
+use App\Models\MapStory;
+use App\Services\StoryGeneratorService;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use App\Services\StoryGeneratorService;
+use Throwable;
 
 class MapGenerationController extends Controller
 {
@@ -31,71 +35,79 @@ class MapGenerationController extends Controller
         $theme = $validated['theme'];
         $roomCount = (int) $validated['room_count'];
         $guidance = (float) ($validated['guidance'] ?? 2.5);
-        $rooms = $roomCount / 50;
+        $tone = $validated['tone'] ?? null;
 
-        $response = Http::connectTimeout(15)
-            ->timeout(120)
-            ->post(config('services.mapgen.url') . '/sample', [
-                'theme' => $theme,
-                'rooms' => $rooms,
-                'guidance' => $guidance,
-                'steps' => 10,
-                'eta' => 0.0,
+        // The ML service expects rooms normalized to 0..1
+        $roomsNormalized = $roomCount / 50;
+
+        try {
+            $mapResponse = Http::connectTimeout(15)
+                ->timeout(120)
+                ->acceptJson()
+                ->post(rtrim(config('services.mapgen.url'), '/') . '/sample', [
+                    'theme' => $theme,
+                    'rooms' => $roomsNormalized,
+                    'guidance' => $guidance,
+                    'steps' => 10,
+                    'eta' => 0.0,
+                ])
+                ->throw();
+        } catch (RequestException $e) {
+            Log::error('Map generation request failed', [
+                'message' => $e->getMessage(),
+                'response' => optional($e->response)->body(),
             ]);
 
-        if ($response->failed()) {
             return response()->json([
-                'error' => 'Map generation service unavailable',
-                'details' => $response->json() ?? $response->body(),
+                'error' => 'Map generation service unavailable.',
             ], 500);
         }
 
-        $imageBase64 = $response->json()['image'] ?? null;
+        $imageBase64 = data_get($mapResponse->json(), 'image');
 
-        if (!$imageBase64) {
+        if (!is_string($imageBase64) || trim($imageBase64) === '') {
+            Log::error('Map generation returned no image', [
+                'response' => $mapResponse->json(),
+            ]);
+
             return response()->json([
                 'error' => 'Map service returned no image.',
             ], 500);
         }
 
         $storyText = null;
+        $storyMeta = null;
 
         try {
-            $binary = base64_decode($imageBase64, true);
+            $tempPath = $this->writePreviewImageToTempFile($imageBase64);
 
-            if ($binary !== false) {
-                $tmpPath = storage_path('app/tmp/' . Str::uuid() . '.png');
+            $storyResponse = $storyService->generateFromImage(
+                absolutePath: $tempPath,
+                filename: basename($tempPath),
+                mimeType: 'image/png',
+                tone: $tone,
+            );
 
-                if (!is_dir(dirname($tmpPath))) {
-                    mkdir(dirname($tmpPath), 0775, true);
-                }
-
-                file_put_contents($tmpPath, $binary);
-
-                $storyResponse = $storyService->generateFromImage(
-                    absolutePath: $tmpPath,
-                    filename: basename($tmpPath),
-                    mimeType: 'image/png',
-                    tone: $validated['tone'] ?? null,
-                );
-
-                $storyText = $storyResponse['story_text'] ?? null;
-
-                @unlink($tmpPath);
-            }
-        } catch (\Throwable $e) {
-            \Log::error('Preview story generation failed', [
-                'error' => $e->getMessage(),
+            $storyText = $storyResponse['story_text'] ?? null;
+            $storyMeta = $storyResponse;
+        } catch (Throwable $e) {
+            Log::error('Preview story generation failed', [
+                'message' => $e->getMessage(),
             ]);
+        } finally {
+            if (isset($tempPath) && is_string($tempPath) && is_file($tempPath)) {
+                @unlink($tempPath);
+            }
         }
 
         return response()->json([
             'image' => $imageBase64,
             'story_text' => $storyText,
+            'story_meta' => $storyMeta,
         ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request, StoryGeneratorService $storyService)
     {
         $validated = $request->validate([
             'name' => ['nullable', 'string', 'max:120'],
@@ -108,22 +120,18 @@ class MapGenerationController extends Controller
             'tone' => ['nullable', 'string', 'max:60'],
             'guidance_strength' => ['nullable', 'numeric', 'min:0', 'max:5'],
             'image_base64' => ['required', 'string'],
+
+            // Optional preview-generated story so we do not have to regenerate on save
+            'story_text' => ['nullable', 'string'],
+            'story_meta' => ['nullable', 'string'],
         ]);
 
-        $imageData = $validated['image_base64'];
+        [$binary, $mime] = $this->decodeImageBase64($validated['image_base64']);
 
-        // Strip data URL prefix if present
-        if (str_starts_with($imageData, 'data:image')) {
-            [$meta, $imageData] = explode(',', $imageData, 2);
-            $mime = str_contains($meta, 'jpeg') ? 'jpeg' : (str_contains($meta, 'webp') ? 'webp' : 'png');
-        } else {
-            $mime = 'png';
-        }
-
-        $binary = base64_decode($imageData, true);
-
-        if ($binary === false) {
-            return back()->withErrors(['image_base64' => 'Generated image data is invalid.']);
+        if ($binary === null) {
+            return back()->withErrors([
+                'image_base64' => 'Generated image data is invalid.',
+            ]);
         }
 
         $filename = 'maps/' . Str::uuid() . '.' . $mime;
@@ -144,34 +152,92 @@ class MapGenerationController extends Controller
             'meta' => [],
         ]);
 
-        // 🔥 Generate story immediately after saving map
+        $storyText = $validated['story_text'] ?? null;
+        $storyMetaRaw = $validated['story_meta'] ?? null;
+        $storyMeta = null;
+
+        if (is_string($storyMetaRaw) && trim($storyMetaRaw) !== '') {
+            $decodedMeta = json_decode($storyMetaRaw, true);
+            if (is_array($decodedMeta)) {
+                $storyMeta = $decodedMeta;
+            }
+        }
+
         try {
-            $storyService = app(StoryGeneratorService::class);
+            // If preview already generated a story, reuse it.
+            if ($storyText) {
+                MapStory::create([
+                    'map_id' => $map->id,
+                    'story_text' => $storyText,
+                    'tone' => $validated['tone'] ?? null,
+                    'meta' => $storyMeta ?? [],
+                ]);
+            } else {
+                // Fallback: generate story on save if preview story was missing
+                $absolutePath = storage_path('app/public/' . $filename);
 
-            $absolutePath = storage_path('app/public/' . $filename);
+                $storyResponse = $storyService->generateFromImage(
+                    absolutePath: $absolutePath,
+                    filename: basename($filename),
+                    mimeType: 'image/' . $mime,
+                    tone: $validated['tone'] ?? null,
+                );
 
-            $storyResponse = $storyService->generateFromImage(
-                absolutePath: $absolutePath,
-                filename: basename($filename),
-                mimeType: 'image/' . $mime,
-                tone: $validated['tone'] ?? null,
-            );
-
-            \App\Models\MapStory::create([
-                'map_id' => $map->id,
-                'story_text' => $storyResponse['story_text'] ?? 'No story generated.',
-                'tone' => $validated['tone'] ?? null,
-                'meta' => $storyResponse,
-            ]);
-
-        } catch (\Throwable $e) {
-            \Log::error('Story generation failed', [
-                'error' => $e->getMessage(),
+                MapStory::create([
+                    'map_id' => $map->id,
+                    'story_text' => $storyResponse['story_text'] ?? 'No story generated.',
+                    'tone' => $validated['tone'] ?? null,
+                    'meta' => $storyResponse,
+                ]);
+            }
+        } catch (Throwable $e) {
+            Log::error('Story generation failed during save', [
+                'message' => $e->getMessage(),
             ]);
         }
 
         return redirect()
             ->route('saves.show', ['type' => 'maps', 'id' => $map->id])
             ->with('status', 'Map saved.');
+    }
+
+    private function writePreviewImageToTempFile(string $imageBase64): string
+    {
+        $binary = base64_decode($imageBase64, true);
+
+        if ($binary === false) {
+            throw new \RuntimeException('Preview image base64 could not be decoded.');
+        }
+
+        $dir = storage_path('app/tmp');
+
+        if (!is_dir($dir)) {
+            mkdir($dir, 0775, true);
+        }
+
+        $path = $dir . '/' . Str::uuid() . '.png';
+        file_put_contents($path, $binary);
+
+        return $path;
+    }
+
+    private function decodeImageBase64(string $imageData): array
+    {
+        $mime = 'png';
+
+        if (str_starts_with($imageData, 'data:image')) {
+            [$meta, $imageData] = explode(',', $imageData, 2);
+            $mime = str_contains($meta, 'jpeg')
+                ? 'jpeg'
+                : (str_contains($meta, 'webp') ? 'webp' : 'png');
+        }
+
+        $binary = base64_decode($imageData, true);
+
+        if ($binary === false) {
+            return [null, $mime];
+        }
+
+        return [$binary, $mime];
     }
 }

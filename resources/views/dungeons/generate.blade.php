@@ -5,7 +5,7 @@
                 <div>
                     <h1 class="text-2xl font-semibold tracking-tight">Dungeon Generator</h1>
                     <p class="mt-1 text-sm text-slate-400">
-                        Configure a dungeon layout now, then plug in AI generation when the model is ready.
+                        Generate a dungeon map and AI story together.
                     </p>
                 </div>
 
@@ -28,7 +28,6 @@
         @endif
 
         <div class="mt-6 grid gap-6">
-
             {{-- PARAMETERS PANEL --}}
             <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
                 <div class="mb-4 text-sm font-semibold">Generation Parameters</div>
@@ -72,7 +71,7 @@
                     <div>
                         <label class="text-xs text-slate-400">Rooms</label>
                         <input id="room_count" type="number" name="room_count" min="3" max="50"
-                               value="{{ old('room_count',10) }}"
+                               value="{{ old('room_count', 10) }}"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
 
@@ -138,7 +137,6 @@
                     <img id="mapImage"
                          class="mt-4 hidden h-[700px] w-full rounded-2xl border object-contain shadow" />
 
-                    {{-- Save map --}}
                     <div id="saveMapContainer" class="mt-4 hidden">
                         @auth
                             <form method="POST" action="{{ route('maps.store') }}" class="flex items-center gap-3">
@@ -154,6 +152,8 @@
                                 <input type="hidden" name="tone" id="save_tone">
                                 <input type="hidden" name="guidance_strength" id="save_guidance_strength">
                                 <input type="hidden" name="image_base64" id="save_image_base64">
+                                <input type="hidden" name="story_text" id="save_story_text">
+                                <input type="hidden" name="story_meta" id="save_story_meta">
 
                                 <button type="submit"
                                         class="rounded-xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white">
@@ -293,7 +293,6 @@
         const storyOutput = document.getElementById('storyOutput');
 
         generateBtn?.addEventListener('click', async () => {
-            const form = document.getElementById('dungeonParamsForm');
             const formData = new FormData();
 
             formData.append('_token', document.querySelector('input[name="_token"]').value);
@@ -302,16 +301,22 @@
             formData.append('guidance', document.getElementById('guidance').value);
             formData.append('tone', document.getElementById('tone').value);
 
+            // Reset UI state
             placeholder.classList.add('hidden');
             mapImage.classList.add('hidden');
             saveMapContainer.classList.add('hidden');
+
+            storyPlaceholder.classList.add('hidden');
+            storyOutput.classList.add('hidden');
+
             loading.classList.remove('hidden');
             loading.classList.add('flex');
 
+            storyLoading.classList.remove('hidden');
+
+            generateBtn.disabled = true;
+
             try {
-                storyPlaceholder.classList.add('hidden');
-                storyOutput.classList.add('hidden');
-                storyLoading.classList.remove('hidden');
                 const response = await fetch("{{ route('dungeons.generate.map') }}", {
                     method: 'POST',
                     headers: {
@@ -321,14 +326,6 @@
                 });
 
                 const data = await response.json();
-
-                if (data.story_text) {
-                    storyOutput.textContent = data.story_text;
-                    storyOutput.classList.remove('hidden');
-                } else {
-                    storyPlaceholder.textContent = 'Map generated, but no story was returned.';
-                    storyPlaceholder.classList.remove('hidden');
-                }
 
                 if (!response.ok || !data.image) {
                     throw new Error(data.error || 'Map generation failed.');
@@ -352,13 +349,26 @@
                 document.getElementById('save_tone').value = document.getElementById('tone').value;
                 document.getElementById('save_guidance_strength').value = document.getElementById('guidance').value;
                 document.getElementById('save_image_base64').value = imageSrc;
+                document.getElementById('save_story_text').value = data.story_text || '';
+                document.getElementById('save_story_meta').value = data.story_meta ? JSON.stringify(data.story_meta) : '';
+
+                if (data.story_text) {
+                    storyOutput.textContent = data.story_text;
+                    storyOutput.classList.remove('hidden');
+                } else {
+                    storyPlaceholder.textContent = 'Map generated, but no story was returned.';
+                    storyPlaceholder.classList.remove('hidden');
+                }
             } catch (error) {
                 alert(error.message || 'Map generation failed.');
                 placeholder.classList.remove('hidden');
+                storyPlaceholder.textContent = 'Story generation failed.';
+                storyPlaceholder.classList.remove('hidden');
             } finally {
                 loading.classList.add('hidden');
                 loading.classList.remove('flex');
                 storyLoading.classList.add('hidden');
+                generateBtn.disabled = false;
             }
         });
     </script>
