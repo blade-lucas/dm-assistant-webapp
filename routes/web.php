@@ -126,6 +126,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/encounters/save', [SavedEncounterTableController::class, 'store'])->name('encounters.save');
     Route::post('/encounters/saved/{table}/load', [SavedEncounterTableController::class, 'load'])->name('encounters.saved.load');
     Route::delete('/encounters/saved/{table}', [SavedEncounterTableController::class, 'destroy'])->name('encounters.saved.delete');
+
+    //Maps
+    Route::post('/maps/save', [MapGenerationController::class, 'store'])
+        ->name('maps.store');
 });
 
 /*

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Character;
+use App\Models\Map;
 use App\Models\SavedEncounterTable;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class SaveController extends Controller
     {
         $type = $type ?: 'characters';
         $user = $request->user();
-        $isAdmin = $user->is_admin;
+        $isAdmin = (bool) ($user->is_admin ?? false);
 
         $items = match ($type) {
             'encounters' => SavedEncounterTable::query()
@@ -20,7 +21,10 @@ class SaveController extends Controller
                 ->latest()
                 ->get(),
 
-            'maps' => collect(),
+            'maps' => Map::query()
+                ->when(!$isAdmin, fn ($q) => $q->where('user_id', $user->id))
+                ->latest()
+                ->get(),
 
             default => Character::query()
                 ->when(!$isAdmin, fn ($q) => $q->where('user_id', $user->id))
@@ -37,15 +41,19 @@ class SaveController extends Controller
     public function show(Request $request, string $type, int $id)
     {
         $user = $request->user();
-        $isAdmin = $user->is_admin;
+        $isAdmin = (bool) ($user->is_admin ?? false);
 
         $item = match ($type) {
             'encounters' => SavedEncounterTable::findOrFail($id),
-            'maps' => null,
+            'maps' => Map::findOrFail($id),
             default => Character::findOrFail($id),
         };
 
-        if ($item && !$isAdmin && isset($item->user_id) && $item->user_id !== $user->id) {
+        if (
+            !$isAdmin &&
+            isset($item->user_id) &&
+            (int) $item->user_id !== (int) $user->id
+        ) {
             abort(403);
         }
 

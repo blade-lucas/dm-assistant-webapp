@@ -31,15 +31,14 @@
 
             {{-- PARAMETERS PANEL --}}
             <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+                <div class="mb-4 text-sm font-semibold">Generation Parameters</div>
 
-                <div class="text-sm font-semibold mb-4">Generation Parameters</div>
-
-                <form method="POST" action="{{ route('dungeons.generate.run') }}" class="grid gap-4 md:grid-cols-4 xl:grid-cols-6">
+                <form id="dungeonParamsForm" class="grid gap-4 md:grid-cols-4 xl:grid-cols-6">
                     @csrf
 
                     <div class="col-span-2">
                         <label class="text-xs text-slate-400">Dungeon Name</label>
-                        <input name="name" value="{{ old('name') }}"
+                        <input id="name" name="name" value="{{ old('name') }}"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
 
@@ -54,7 +53,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Size</label>
-                        <select name="size" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="size" name="size" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['small','medium','large','huge'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -63,7 +62,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Difficulty</label>
-                        <select name="difficulty" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="difficulty" name="difficulty" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['easy','medium','hard','deadly'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -72,14 +71,14 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Rooms</label>
-                        <input id = "room_count" type="number" name="room_count" min="3" max="50"
+                        <input id="room_count" type="number" name="room_count" min="3" max="50"
                                value="{{ old('room_count',10) }}"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
 
                     <div>
                         <label class="text-xs text-slate-400">Encounter Density</label>
-                        <select name="encounter_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="encounter_density" name="encounter_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['low','medium','high'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -88,7 +87,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Treasure Density</label>
-                        <select name="treasure_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="treasure_density" name="treasure_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['low','medium','high'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -97,7 +96,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Tone</label>
-                        <select name="tone" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select id="tone" name="tone" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['Mysterious','Heroic','Dark','Ancient','Creepy'] as $opt)
                                 <option value="{{ $opt }}">{{ $opt }}</option>
                             @endforeach
@@ -106,12 +105,13 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Guidance Strength</label>
-                        <input id="guidance" type="range" min="0" max="5" step="0.1" value="2.5"
-                            class="mt-1 w-full rounded-xl border">
+                        <input id="guidance" name="guidance" type="range" min="0" max="5" step="0.1" value="2.5"
+                               class="mt-1 w-full rounded-xl border">
                     </div>
 
                     <div class="flex items-end">
-                        <button class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
+                        <button id="generateMapBtn" type="button"
+                                class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500">
                             Generate
                         </button>
                     </div>
@@ -119,99 +119,73 @@
             </div>
 
             <div class="grid gap-6 xl:grid-cols-[2fr_1fr]">
-                {{-- CENTER: MAP PREVIEW --}}
+                {{-- MAP PREVIEW --}}
                 <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                     <div class="flex items-center justify-between">
                         <div class="text-sm font-semibold">Map Preview</div>
-                        <form id="mapForm" method="POST" action="{{ route('dungeons.generate.map') }}">
-                            @csrf
-                            <div class="flex items-end">
-                                <button
-                                    id="generateBtn"
-                                    type="submit"
-                                    class="w-full rounded-xl bg-indigo-600 px-4 py-3 text-sm font-semibold text-white hover:bg-indigo-500"
-                                >
-                                    Generate Map
-                                </button>
-                            </div>
-                        </form>
                     </div>
 
-                        <div id="placeholder" class="mt-4 flex h-[700px] items-center justify-center rounded-2xl border border-dashed border-slate-800 bg-slate-950 text-sm text-slate-500"
-                        style="{{ $result ? 'display:none;' : '' }}">
-                            No dungeon generated yet.
-                        </div>
+                    <div id="placeholder"
+                         class="mt-4 flex h-[700px] items-center justify-center rounded-2xl border border-dashed border-slate-800 bg-slate-950 text-sm text-slate-500">
+                        No dungeon generated yet.
+                    </div>
 
-                        <div id="loading" class="mt-4 flex h-[700px] items-center justify-center rounded-2xl border border-dashed border-slate-800 bg-slate-950 text-sm text-slate-500 hidden">
-                            Generating map, please wait...
-                        </div>
-                        <img
-                            id="mapImage"
-                            class="w-full h-[700px] object-contain border rounded shadow"
-                            style="{{ $result ? '' : 'display:none;' }}"
-                        />
+                    <div id="loading"
+                         class="mt-4 hidden h-[700px] items-center justify-center rounded-2xl border border-dashed border-slate-800 bg-slate-950 text-sm text-slate-500">
+                        Generating map, please wait...
+                    </div>
 
+                    <img id="mapImage"
+                         class="mt-4 hidden h-[700px] w-full rounded-2xl border object-contain shadow" />
 
+                    {{-- Save map --}}
+                    <div id="saveMapContainer" class="mt-4 hidden">
+                        @auth
+                            <form method="POST" action="{{ route('maps.store') }}" class="flex items-center gap-3">
+                                @csrf
+
+                                <input type="hidden" name="name" id="save_name">
+                                <input type="hidden" name="theme" id="save_theme">
+                                <input type="hidden" name="size" id="save_size">
+                                <input type="hidden" name="difficulty" id="save_difficulty">
+                                <input type="hidden" name="room_count" id="save_room_count">
+                                <input type="hidden" name="encounter_density" id="save_encounter_density">
+                                <input type="hidden" name="treasure_density" id="save_treasure_density">
+                                <input type="hidden" name="tone" id="save_tone">
+                                <input type="hidden" name="guidance_strength" id="save_guidance_strength">
+                                <input type="hidden" name="image_base64" id="save_image_base64">
+
+                                <button type="submit"
+                                        class="rounded-xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white">
+                                    Save Map
+                                </button>
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}"
+                               class="inline-flex rounded-xl bg-slate-100 px-4 py-2 text-sm font-medium text-slate-900 hover:bg-white">
+                                Log in to save this map
+                            </a>
+                        @endauth
+                    </div>
                 </div>
 
                 {{-- RIGHT: OUTPUT SUMMARY --}}
                 <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                     <div class="text-sm font-semibold">Dungeon Output</div>
 
-                    @if(!$result)
-                        <div class="mt-4 rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-500">
-                            Generated dungeon details will appear here.
-                        </div>
-                    @else
-                        <div class="mt-4 grid gap-4">
-                            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                                <div class="text-lg font-semibold">{{ $result['name'] }}</div>
-                                <div class="mt-2 text-sm text-slate-300">
-                                    {{ $result['theme'] }} • {{ ucfirst($result['size']) }} • {{ ucfirst($result['difficulty']) }}
-                                </div>
-                                <div class="mt-2 text-xs text-slate-500">
-                                    {{ $result['room_count'] }} rooms • Encounter {{ ucfirst($result['encounter_density']) }} • Treasure {{ ucfirst($result['treasure_density']) }}
-                                </div>
-                            </div>
+                    <div id="storyPlaceholder"
+                         class="mt-4 rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-500">
+                        Generated dungeon story will appear here.
+                    </div>
 
-                            @if($result['description'])
-                                <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                                    <div class="text-sm font-semibold">Description</div>
-                                    <div class="mt-2 text-sm text-slate-300">
-                                        {{ $result['description'] }}
-                                    </div>
-                                </div>
-                            @endif
+                    <div id="storyLoading"
+                         class="mt-4 hidden rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-500">
+                        Generating story...
+                    </div>
 
-                            @if(!empty($result['npcs']))
-                                <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                                    <div class="text-sm font-semibold">Generated NPCs</div>
-                                    <div class="mt-3 grid gap-2">
-                                        @foreach($result['npcs'] as $npc)
-                                            <div class="rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
-                                                <div class="font-semibold">{{ $npc['name'] }}</div>
-                                                <div class="text-slate-500">{{ $npc['role'] }}</div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            @endif
-
-                            <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
-                                <div class="text-sm font-semibold">Rooms</div>
-                                <div class="mt-3 grid gap-2 max-h-[420px] overflow-auto">
-                                    @foreach($result['rooms'] as $room)
-                                        <div class="rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
-                                            <div class="font-semibold">{{ $room['name'] }} — {{ $room['type'] }}</div>
-                                            <div class="mt-1 text-slate-500">{{ $room['summary'] }}</div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    @endif
+                    <div id="storyOutput"
+                         class="mt-4 hidden rounded-2xl border border-slate-800 bg-slate-950 p-4 text-sm text-slate-200 whitespace-pre-line"></div>
                 </div>
-
             </div>
         </div>
 
@@ -244,7 +218,6 @@
                     <div>
                         <label class="text-xs text-slate-400">Dungeon Name</label>
                         <input name="feedback_dungeon_name"
-                               value="{{ $result['name'] ?? old('feedback_dungeon_name') }}"
                                placeholder="Auto-filled if generated"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
@@ -308,4 +281,85 @@
             </form>
         </div>
     </div>
+
+    <script>
+        const generateBtn = document.getElementById('generateMapBtn');
+        const placeholder = document.getElementById('placeholder');
+        const loading = document.getElementById('loading');
+        const mapImage = document.getElementById('mapImage');
+        const saveMapContainer = document.getElementById('saveMapContainer');
+        const storyPlaceholder = document.getElementById('storyPlaceholder');
+        const storyLoading = document.getElementById('storyLoading');
+        const storyOutput = document.getElementById('storyOutput');
+
+        generateBtn?.addEventListener('click', async () => {
+            const form = document.getElementById('dungeonParamsForm');
+            const formData = new FormData();
+
+            formData.append('_token', document.querySelector('input[name="_token"]').value);
+            formData.append('theme', document.getElementById('theme').value);
+            formData.append('room_count', document.getElementById('room_count').value);
+            formData.append('guidance', document.getElementById('guidance').value);
+            formData.append('tone', document.getElementById('tone').value);
+
+            placeholder.classList.add('hidden');
+            mapImage.classList.add('hidden');
+            saveMapContainer.classList.add('hidden');
+            loading.classList.remove('hidden');
+            loading.classList.add('flex');
+
+            try {
+                storyPlaceholder.classList.add('hidden');
+                storyOutput.classList.add('hidden');
+                storyLoading.classList.remove('hidden');
+                const response = await fetch("{{ route('dungeons.generate.map') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                    },
+                    body: formData,
+                });
+
+                const data = await response.json();
+
+                if (data.story_text) {
+                    storyOutput.textContent = data.story_text;
+                    storyOutput.classList.remove('hidden');
+                } else {
+                    storyPlaceholder.textContent = 'Map generated, but no story was returned.';
+                    storyPlaceholder.classList.remove('hidden');
+                }
+
+                if (!response.ok || !data.image) {
+                    throw new Error(data.error || 'Map generation failed.');
+                }
+
+                const imageSrc = data.image.startsWith('data:image')
+                    ? data.image
+                    : `data:image/png;base64,${data.image}`;
+
+                mapImage.src = imageSrc;
+                mapImage.classList.remove('hidden');
+                saveMapContainer.classList.remove('hidden');
+
+                document.getElementById('save_name').value = document.getElementById('name').value;
+                document.getElementById('save_theme').value = document.getElementById('theme').value;
+                document.getElementById('save_size').value = document.getElementById('size').value;
+                document.getElementById('save_difficulty').value = document.getElementById('difficulty').value;
+                document.getElementById('save_room_count').value = document.getElementById('room_count').value;
+                document.getElementById('save_encounter_density').value = document.getElementById('encounter_density').value;
+                document.getElementById('save_treasure_density').value = document.getElementById('treasure_density').value;
+                document.getElementById('save_tone').value = document.getElementById('tone').value;
+                document.getElementById('save_guidance_strength').value = document.getElementById('guidance').value;
+                document.getElementById('save_image_base64').value = imageSrc;
+            } catch (error) {
+                alert(error.message || 'Map generation failed.');
+                placeholder.classList.remove('hidden');
+            } finally {
+                loading.classList.add('hidden');
+                loading.classList.remove('flex');
+                storyLoading.classList.add('hidden');
+            }
+        });
+    </script>
 </x-layouts.app>

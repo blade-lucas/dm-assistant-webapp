@@ -45,4 +45,8 @@ return [
         'url' => env('MAPGEN_URL'),
     ],
 
+    'story_generator' => [
+        'base_url' => env('STORY_GENERATOR_URL'),
+    ],
+
 ];
