@@ -18,9 +18,9 @@
                 <div class="mt-1 text-sm text-slate-400">Review saved encounter tables.</div>
             </a>
 
-            <a href="{{ route('dungeons.generate') }}" class="rounded-2xl border border-slate-800 bg-slate-950 p-5 hover:bg-slate-900">
+            <a href="{{ route('saves.index', ['type' => 'maps']) }}" class="rounded-2xl border border-slate-800 bg-slate-950 p-5 hover:bg-slate-900">
                 <div class="text-lg font-semibold">Dungeons</div>
-                <div class="mt-1 text-sm text-slate-400">Review dungeon generation tools and outputs.</div>
+                <div class="mt-1 text-sm text-slate-400">Review saved dungeon maps and generated stories.</div>
             </a>
 
             <a href="{{ route('saves.index', ['type' => 'feedback']) }}" class="rounded-2xl border border-slate-800 bg-slate-950 p-5 hover:bg-slate-900">
