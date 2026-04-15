@@ -93,7 +93,6 @@ def _regeneration_prompt(
 # ── Core API call ──────────────────────────────────────────────────────────────
 
 async def generate_story(
-    print("GEMINI KEY PRESENT:", bool(GEMINI_API_KEY))
     image_path: str,
     mime_type: str,
     *,
@@ -109,6 +108,7 @@ async def generate_story(
     Pass `original_story` (and optionally the feedback args) to trigger
     the refinement/regeneration path instead of the initial generation path.
     """
+    print("GEMINI KEY PRESENT:", bool(GEMINI_API_KEY))
     if not GEMINI_API_KEY:
         raise HTTPException(status_code=500, detail="GEMINI_API_KEY is not configured on the server.")
 
