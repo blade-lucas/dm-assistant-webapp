@@ -1,4 +1,9 @@
 <x-layouts.app title="Dungeon Generator">
+    @if(session('status'))
+        <div class="mt-4 rounded-2xl border border-emerald-900 bg-emerald-950/30 p-4 text-sm text-emerald-200">
+            {{ session('status') }}
+        </div>
+    @endif
     <div class="mx-auto max-w-7xl">
         <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
             <div class="flex items-start justify-between gap-4">
@@ -44,7 +49,7 @@
                     <div>
                         <label class="text-xs text-slate-400">Theme</label>
                         <select id="theme" name="theme" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
-                            @foreach(['Crypt','Forest Ruins','Cave','Castle','Sewers','Temple','Volcanic','Ice Cavern'] as $opt)
+                            @foreach(['Crypt','Cave','Dungeon'] as $opt)
                                 <option value="{{ $opt }}">{{ $opt }}</option>
                             @endforeach
                         </select>
@@ -52,7 +57,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Size</label>
-                        <select id="size" name="size" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select disabled id="size" name="size" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['small','medium','large','huge'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -61,7 +66,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Difficulty</label>
-                        <select id="difficulty" name="difficulty" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select disabled id="difficulty" name="difficulty" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['easy','medium','hard','deadly'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -77,7 +82,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Encounter Density</label>
-                        <select id="encounter_density" name="encounter_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select disabled id="encounter_density" name="encounter_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['low','medium','high'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -86,7 +91,7 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Treasure Density</label>
-                        <select id="treasure_density" name="treasure_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                        <select disabled id="treasure_density" name="treasure_density" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                             @foreach(['low','medium','high'] as $opt)
                                 <option value="{{ $opt }}">{{ ucfirst($opt) }}</option>
                             @endforeach
@@ -170,7 +175,6 @@
                 </div>
 
                 {{-- RIGHT: OUTPUT SUMMARY --}}
-                {{-- RIGHT: OUTPUT SUMMARY --}}
                 <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                     <div class="text-sm font-semibold">Dungeon Output</div>
 
@@ -186,7 +190,7 @@
                         </div>
 
                         <div id="storyOutput"
-                             class="hidden h-full overflow-y-auto whitespace-pre-line pr-2 text-sm leading-6 text-slate-200 scroll-smooth"
+                             class="hidden h-full overflow-y-auto whitespace-pre-line pr-2 text-sm leading-6 text-slate-200 scroll-smooth">
                         </div>
                     </div>
                 </div>
@@ -204,7 +208,7 @@
                 </div>
             </div>
 
-            <form method="POST" action="#" class="mt-6 grid gap-4">
+            <form method="POST" action="{{ route('feedback.maps.store') }}" class="mt-6 grid gap-4">
                 @csrf
 
                 <div class="grid gap-4 md:grid-cols-2">
@@ -218,10 +222,12 @@
                             <option value="feature">Feature Request</option>
                         </select>
                     </div>
-
+                    <input type="hidden" name="map_id" id="feedback_map_id">
+                    <input type="hidden" name="theme" id="feedback_theme">
+                    <input type="hidden" name="tone" id="feedback_tone">
                     <div>
                         <label class="text-xs text-slate-400">Dungeon Name</label>
-                        <input name="feedback_dungeon_name"
+                        <input name="dungeon_name" id="feedback_dungeon_name"
                                placeholder="Auto-filled if generated"
                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
                     </div>
@@ -229,7 +235,7 @@
 
                 <div>
                     <label class="text-xs text-slate-400">Comments</label>
-                    <textarea name="feedback_comments"
+                    <textarea name="comments"
                               rows="5"
                               placeholder="What did you think of this generated dungeon?"
                               class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm"></textarea>
@@ -359,6 +365,9 @@
                 document.getElementById('save_image_base64').value = imageSrc;
                 document.getElementById('save_story_text').value = data.story_text || '';
                 document.getElementById('save_story_meta').value = data.story_meta ? JSON.stringify(data.story_meta) : '';
+                document.getElementById('feedback_dungeon_name').value = document.getElementById('name').value || '';
+                document.getElementById('feedback_theme').value = document.getElementById('theme').value || '';
+                document.getElementById('feedback_tone').value = document.getElementById('tone').value || '';
 
                 if (data.story_text) {
                     storyOutput.textContent = data.story_text;

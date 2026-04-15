@@ -3,6 +3,7 @@
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\DungeonGeneratorController;
 use App\Http\Controllers\EncounterController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ItemLibraryController;
 use App\Http\Controllers\MapGenerationController;
 use App\Http\Controllers\MonsterController;
@@ -47,6 +48,8 @@ Route::post('/maps/generate-map', [MapGenerationController::class, 'generate'])-
 Route::get('/dungeons/generate', [DungeonGeneratorController::class, 'index'])->name('dungeons.generate');
 Route::post('/dungeons/generate', [DungeonGeneratorController::class, 'generate'])->name('dungeons.generate.run');
 Route::post('/dungeons/generate-map', [MapGenerationController::class, 'generate'])->name('dungeons.generate.map');
+
+Route::post('/feedback/maps', [FeedbackController::class, 'store'])->name('feedback.maps.store');
 
 /*
 |--------------------------------------------------------------------------

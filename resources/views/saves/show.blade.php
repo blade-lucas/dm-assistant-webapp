@@ -95,6 +95,43 @@
                         <div>Guidance Strength: {{ $item->guidance_strength ?? '—' }}</div>
                         <div>Saved: {{ $item->created_at->format('Y-m-d H:i') }}</div>
                     </div>
+
+                    @php
+                        $feedbackItems = \App\Models\MapFeedback::where('map_id', $item->id)->latest()->get();
+                    @endphp
+
+                    @if($feedbackItems->isNotEmpty())
+                        <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-950 p-5">
+                            <h2 class="text-lg font-semibold">Feedback</h2>
+
+                            <div class="mt-4 grid gap-3">
+                                @foreach($feedbackItems as $feedback)
+                                    <div class="rounded-xl border border-slate-800 bg-slate-900 p-4">
+                                        <div class="flex items-center justify-between gap-3">
+                                            <div class="text-sm font-medium text-slate-200">
+                                                {{ ucfirst($feedback->feedback_type) }}
+                                            </div>
+                                            <div class="text-xs text-slate-500">
+                                                {{ $feedback->created_at->format('Y-m-d H:i') }}
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-2 text-xs text-slate-400">
+                                            Map: {{ $feedback->map_rating ?? '—' }}/5
+                                            • Layout: {{ $feedback->layout_rating ?? '—' }}/5
+                                            • Overall: {{ $feedback->overall_rating ?? '—' }}/5
+                                        </div>
+
+                                        @if($feedback->comments)
+                                            <div class="mt-3 whitespace-pre-line text-sm text-slate-300">
+                                                {{ $feedback->comments }}
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
                 @endif
             </div>
         </div>
