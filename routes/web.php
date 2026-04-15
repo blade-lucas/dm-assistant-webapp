@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\DungeonGeneratorController;
 use App\Http\Controllers\EncounterController;
@@ -59,7 +60,8 @@ Route::post('/feedback/maps', [FeedbackController::class, 'store'])->name('feedb
 
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard.user')->name('dashboard');
-    Route::view('/account', 'account.index')->name('account.index');
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+    Route::post('/account/password', [AccountController::class, 'updatePassword'])->name('account.password.update');
 
     /*
     |--------------------------------------------------------------------------
