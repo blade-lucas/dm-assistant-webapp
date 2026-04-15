@@ -16,12 +16,19 @@ class MapGenerationController extends Controller
 
     public function generate(Request $request)
     {
-        set_time_limit(120);
-        ini_set('max_execution_time', '120');
+        \Log::info('Incoming map request', [
+            'all' => $request->all(),
+            'theme' => $request->input('theme'),
+            'rooms' => $request->input('rooms'),
+            'guidance' => $request->input('guidance'),
+            'content_type' => $request->header('Content-Type'),
+        ]);
 
         $theme = $request->input('theme');
-        $rooms = $request->input('rooms');
+        $roomsRaw = $request->input('rooms');
         $guidance = $request->input('guidance', 2.5);
+
+        $rooms = $roomsRaw / 50;
 
         $response = Http::connectTimeout(15)
             ->timeout(120)
@@ -35,12 +42,13 @@ class MapGenerationController extends Controller
 
         if ($response->failed()) {
             return response()->json([
-                'error' => 'Map generation service unavailable'
+                'error' => 'Map generation service unavailable',
+                'details' => $response->json() ?? $response->body(),
             ], 500);
         }
 
         return response()->json([
-            'image' => $response->json()['image'] ?? null
+            'image' => $response->json()['image']
         ]);
     }
 }
