@@ -30,7 +30,7 @@ class MapGenerationController extends Controller
 
         $rooms = $roomsRaw / 50;
 
-        $response = Http::timeout(120)->post(config('services.mapgen.url') . '/sample', [
+        $response = Http::timeout(240)->post(config('services.mapgen.url') . '/sample', [
             'theme' => $theme,
             'rooms' => $rooms,
             'guidance' => floatval($guidance),
