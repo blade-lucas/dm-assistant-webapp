@@ -45,7 +45,7 @@ class MapGenerationController extends Controller
                     'w_theme' => 1.5,
                     'w_rooms' => 1.0,
                     'w_both' => 1.5,
-                    'steps' => 15,
+                    'steps' => 50,
                 ])
                 ->throw();
         } catch (RequestException $e) {
