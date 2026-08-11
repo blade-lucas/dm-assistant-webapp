@@ -334,14 +334,6 @@
             generateBtn.disabled = true;
 
             try {
-                const response = await fetch("{{ route('dungeons.generate.map') }}", {
-                    method: 'POST',
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                    },
-                    body: formData,
-                });
-
                 const data = await response.json();
 
                 if (!response.ok || !data.image) {
@@ -354,22 +346,86 @@
 
                 mapImage.src = imageSrc;
                 mapImage.classList.remove('hidden');
-                saveMapContainer.classList.remove('hidden');
 
-                document.getElementById('save_name').value = document.getElementById('name').value;
-                document.getElementById('save_theme').value = document.getElementById('theme').value;
-                document.getElementById('save_size').value = document.getElementById('size').value;
-                document.getElementById('save_difficulty').value = document.getElementById('difficulty').value;
-                document.getElementById('save_room_count').value = document.getElementById('room_count').value;
-                document.getElementById('save_encounter_density').value = document.getElementById('encounter_density').value;
-                document.getElementById('save_treasure_density').value = document.getElementById('treasure_density').value;
-                document.getElementById('save_tone').value = document.getElementById('tone').value;
-                document.getElementById('save_image_base64').value = imageSrc;
-                document.getElementById('save_story_text').value = data.story_text || '';
-                document.getElementById('save_story_meta').value = data.story_meta ? JSON.stringify(data.story_meta) : '';
-                document.getElementById('feedback_dungeon_name').value = document.getElementById('name').value || '';
-                document.getElementById('feedback_theme').value = document.getElementById('theme').value || '';
-                document.getElementById('feedback_tone').value = document.getElementById('tone').value || '';
+                if (saveMapContainer) {
+                    saveMapContainer.classList.remove('hidden');
+                }
+
+                // Populate save fields only if the authenticated save form exists.
+                const saveName = document.getElementById('save_name');
+
+                if (saveName) {
+                    saveName.value = document.getElementById('name')?.value ?? '';
+
+                    const saveTheme = document.getElementById('save_theme');
+                    if (saveTheme) {
+                        saveTheme.value = document.getElementById('theme')?.value ?? '';
+                    }
+
+                    const saveSize = document.getElementById('save_size');
+                    if (saveSize) {
+                        saveSize.value = document.getElementById('size')?.value ?? '';
+                    }
+
+                    const saveDifficulty = document.getElementById('save_difficulty');
+                    if (saveDifficulty) {
+                        saveDifficulty.value = document.getElementById('difficulty')?.value ?? '';
+                    }
+
+                    const saveRoomCount = document.getElementById('save_room_count');
+                    if (saveRoomCount) {
+                        saveRoomCount.value = document.getElementById('room_count')?.value ?? '';
+                    }
+
+                    const saveEncounterDensity = document.getElementById('save_encounter_density');
+                    if (saveEncounterDensity) {
+                        saveEncounterDensity.value = document.getElementById('encounter_density')?.value ?? '';
+                    }
+
+                    const saveTreasureDensity = document.getElementById('save_treasure_density');
+                    if (saveTreasureDensity) {
+                        saveTreasureDensity.value = document.getElementById('treasure_density')?.value ?? '';
+                    }
+
+                    const saveTone = document.getElementById('save_tone');
+                    if (saveTone) {
+                        saveTone.value = document.getElementById('tone')?.value ?? '';
+                    }
+
+                    const saveImage = document.getElementById('save_image_base64');
+                    if (saveImage) {
+                        saveImage.value = imageSrc;
+                    }
+
+                    const saveStoryText = document.getElementById('save_story_text');
+                    if (saveStoryText) {
+                        saveStoryText.value = data.story_text || '';
+                    }
+
+                    const saveStoryMeta = document.getElementById('save_story_meta');
+                    if (saveStoryMeta) {
+                        saveStoryMeta.value = data.story_meta
+                            ? JSON.stringify(data.story_meta)
+                            : '';
+                    }
+                }
+
+                // Populate feedback fields only if they exist.
+                const feedbackDungeonName = document.getElementById('feedback_dungeon_name');
+
+                if (feedbackDungeonName) {
+                    feedbackDungeonName.value = document.getElementById('name')?.value ?? '';
+
+                    const feedbackTheme = document.getElementById('feedback_theme');
+                    if (feedbackTheme) {
+                        feedbackTheme.value = document.getElementById('theme')?.value ?? '';
+                    }
+
+                    const feedbackTone = document.getElementById('feedback_tone');
+                    if (feedbackTone) {
+                        feedbackTone.value = document.getElementById('tone')?.value ?? '';
+                    }
+                }
 
                 if (data.story_text) {
                     storyOutput.textContent = data.story_text;
