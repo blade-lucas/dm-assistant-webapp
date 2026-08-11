@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CampaignCharacterController;
+use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\DungeonController;
 use App\Http\Controllers\DungeonGeneratorController;
 use App\Http\Controllers\EncounterController;
 use App\Http\Controllers\FeedbackController;
@@ -10,6 +13,7 @@ use App\Http\Controllers\MapGenerationController;
 use App\Http\Controllers\MonsterController;
 use App\Http\Controllers\SaveController;
 use App\Http\Controllers\SavedEncounterTableController;
+use App\Http\Controllers\SessionNoteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -137,7 +141,40 @@ Route::middleware('auth')->group(function () {
         ->name('maps.store');
     Route::delete('/maps/{map}', [MapGenerationController::class, 'destroy'])
         ->name('maps.destroy');
+
+
+    Route::resource('campaigns', CampaignController::class);
+    Route::resource('campaigns.session-notes', SessionNoteController::class);
+
+
+    Route::get('/campaigns/{campaign}/characters', [CampaignCharacterController::class, 'index'])
+        ->name('campaigns.characters.index');
+
+    Route::post('/campaigns/{campaign}/characters/{character}/attach', [CampaignCharacterController::class, 'attach'])
+        ->name('campaigns.characters.attach');
+
+    Route::post('/campaigns/{campaign}/characters/{character}/detach', [CampaignCharacterController::class, 'detach'])
+        ->name('campaigns.characters.detach');
 });
+
+Route::prefix('dungeon-new')->group(function () {
+    Route::get('/generate', [DungeonController::class, 'create'])
+        ->name('dungeon-new.create');
+
+    Route::get('/viewer', [DungeonController::class, 'generate'])
+        ->name('dungeon-new.viewer');
+
+    Route::get('/list', [DungeonController::class, 'index'])
+        ->name('dungeon-new.list');
+
+    Route::get('/{dungeon}', [DungeonController::class, 'show'])
+        ->name('dungeon-new.show');
+
+    Route::post('/save', [DungeonController::class, 'store'])
+        ->name('dungeon-new.store');
+
+});
+
 
 /*
 |--------------------------------------------------------------------------

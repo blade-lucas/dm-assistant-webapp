@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Campaign;
 use App\Models\Character;
 use App\Repositories\CurrencyRepository;
 use App\Repositories\ItemRepository;
@@ -59,9 +60,17 @@ class CharacterController extends Controller
         ]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
+        $campaign = null;
+
+        if ($request->filled('campaign')) {
+            $campaign = Campaign::where('user_id', auth()->id())
+                ->findOrFail($request->campaign);
+        }
+
         return view('characters.create', [
+            'campaign' => $campaign,
             'raceOptions' => ['Human','Elf','Dwarf','Halfling','Gnome','Half-Elf','Half-Orc','Tiefling','Dragonborn'],
             'classOptions' => ['Barbarian','Bard','Cleric','Druid','Fighter','Monk','Paladin','Ranger','Rogue','Sorcerer','Warlock','Wizard'],
             'alignmentOptions' => [
@@ -80,12 +89,23 @@ class CharacterController extends Controller
             'race' => ['nullable','string','max:60'],
             'class' => ['nullable','string','max:60'],
             'alignment' => ['nullable','string','max:60'],
+            'campaign_id' => ['nullable', 'exists:campaigns,id'],
         ]);
 
         $startingGold = $currency->rollStartingGold($validated['class'] ?? null);
 
+        $campaignId = null;
+
+        if (!empty($validated['campaign_id'])) {
+            $campaign = Campaign::where('user_id', auth()->id())
+                ->findOrFail($validated['campaign_id']);
+
+            $campaignId = $campaign->id;
+        }
+
         $character = Character::create([
             'user_id' => auth()->id(),
+            'campaign_id' => $campaignId,
             'name' => $validated['name'],
             'role' => $validated['role'],
             'race' => $validated['race'] ?? null,
@@ -124,6 +144,12 @@ class CharacterController extends Controller
                 ],
             ],
         ]);
+
+        if ($character->campaign_id) {
+            return redirect()
+                ->route('campaigns.characters.index', $character->campaign_id)
+                ->with('success', 'Character created and attached to campaign.');
+        }
 
         return redirect()->route('characters.basic.edit', $character);
     }

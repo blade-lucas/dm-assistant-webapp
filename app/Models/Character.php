@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Campaign;
 
 class Character extends Model
 {
@@ -11,6 +12,7 @@ class Character extends Model
         'abilities','skills','features',
         'ac','initiative','speed',
         'data',
+        'campaign_id',
     ];
 
     protected $casts = [
@@ -23,6 +25,11 @@ class Character extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
     }
 }
 

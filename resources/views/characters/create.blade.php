@@ -26,6 +26,10 @@
         <form method="POST" action="{{ route('characters.store') }}" class="mt-6 grid gap-5">
             @csrf
 
+            @if(isset($campaign) && $campaign)
+                <input type="hidden" name="campaign_id" value="{{ $campaign->id }}">
+            @endif
+
             <div>
                 <label class="text-sm text-slate-300">Name</label>
                 <input name="name" value="{{ old('name') }}"
