@@ -334,6 +334,14 @@
             generateBtn.disabled = true;
 
             try {
+                const response = await fetch("{{ route('dungeons.generate.map') }}", {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                    },
+                    body: formData,
+                });
+
                 const data = await response.json();
 
                 if (!response.ok || !data.image) {
@@ -344,6 +352,7 @@
                     ? data.image
                     : `data:image/png;base64,${data.image}`;
 
+                // Display generated map
                 mapImage.src = imageSrc;
                 mapImage.classList.remove('hidden');
 
@@ -351,7 +360,7 @@
                     saveMapContainer.classList.remove('hidden');
                 }
 
-                // Populate save fields only if the authenticated save form exists.
+                // Populate authenticated save form if it exists
                 const saveName = document.getElementById('save_name');
 
                 if (saveName) {
@@ -379,12 +388,14 @@
 
                     const saveEncounterDensity = document.getElementById('save_encounter_density');
                     if (saveEncounterDensity) {
-                        saveEncounterDensity.value = document.getElementById('encounter_density')?.value ?? '';
+                        saveEncounterDensity.value =
+                            document.getElementById('encounter_density')?.value ?? '';
                     }
 
                     const saveTreasureDensity = document.getElementById('save_treasure_density');
                     if (saveTreasureDensity) {
-                        saveTreasureDensity.value = document.getElementById('treasure_density')?.value ?? '';
+                        saveTreasureDensity.value =
+                            document.getElementById('treasure_density')?.value ?? '';
                     }
 
                     const saveTone = document.getElementById('save_tone');
@@ -410,39 +421,57 @@
                     }
                 }
 
-                // Populate feedback fields only if they exist.
-                const feedbackDungeonName = document.getElementById('feedback_dungeon_name');
+                // Populate feedback fields if they exist
+                const feedbackDungeonName =
+                    document.getElementById('feedback_dungeon_name');
 
                 if (feedbackDungeonName) {
-                    feedbackDungeonName.value = document.getElementById('name')?.value ?? '';
+                    feedbackDungeonName.value =
+                        document.getElementById('name')?.value ?? '';
 
                     const feedbackTheme = document.getElementById('feedback_theme');
                     if (feedbackTheme) {
-                        feedbackTheme.value = document.getElementById('theme')?.value ?? '';
+                        feedbackTheme.value =
+                            document.getElementById('theme')?.value ?? '';
                     }
 
                     const feedbackTone = document.getElementById('feedback_tone');
                     if (feedbackTone) {
-                        feedbackTone.value = document.getElementById('tone')?.value ?? '';
+                        feedbackTone.value =
+                            document.getElementById('tone')?.value ?? '';
                     }
                 }
 
+                // Story output
                 if (data.story_text) {
                     storyOutput.textContent = data.story_text;
                     storyOutput.classList.remove('hidden');
+
+                    if (storyPlaceholder) {
+                        storyPlaceholder.classList.add('hidden');
+                    }
                 } else {
-                    storyPlaceholder.textContent = 'Map generated, but no story was returned.';
+                    storyPlaceholder.textContent =
+                        'Map generated, but no story was returned.';
                     storyPlaceholder.classList.remove('hidden');
                 }
+
             } catch (error) {
+                console.error('Dungeon generation error:', error);
+
                 alert(error.message || 'Map generation failed.');
+
                 placeholder.classList.remove('hidden');
-                storyPlaceholder.textContent = 'Story generation failed.';
+
+                storyPlaceholder.textContent = 'Unable to complete generation.';
                 storyPlaceholder.classList.remove('hidden');
+
             } finally {
                 loading.classList.add('hidden');
                 loading.classList.remove('flex');
+
                 storyLoading.classList.add('hidden');
+
                 generateBtn.disabled = false;
             }
         });
