@@ -25,7 +25,6 @@ class MapGenerationController extends Controller
         $validated = $request->validate([
             'theme' => ['required', 'string', 'max:60'],
             'room_count' => ['required', 'integer', 'min:3', 'max:50'],
-            'guidance' => ['nullable', 'numeric', 'min:0', 'max:5'],
             'tone' => ['nullable', 'string', 'max:60'],
         ]);
 
@@ -34,11 +33,7 @@ class MapGenerationController extends Controller
 
         $theme = $validated['theme'];
         $roomCount = (int) $validated['room_count'];
-        $guidance = (float) ($validated['guidance'] ?? 2.5);
         $tone = $validated['tone'] ?? null;
-
-        // The ML service expects rooms normalized to 0..1
-        $roomsNormalized = $roomCount / 50;
 
         try {
             $mapResponse = Http::connectTimeout(15)
@@ -46,10 +41,11 @@ class MapGenerationController extends Controller
                 ->acceptJson()
                 ->post(rtrim(config('services.mapgen.url'), '/') . '/sample', [
                     'theme' => $theme,
-                    'rooms' => $roomsNormalized,
-                    'guidance' => $guidance,
-                    'steps' => 10,
-                    'eta' => 0.0,
+                    'rooms' => $roomCount,
+                    'w_theme' => 1.5,
+                    'w_rooms' => 1.0,
+                    'w_both' => 1.5,
+                    'steps' => 15,
                 ])
                 ->throw();
         } catch (RequestException $e) {
@@ -118,7 +114,6 @@ class MapGenerationController extends Controller
             'encounter_density' => ['nullable', 'string', 'max:30'],
             'treasure_density' => ['nullable', 'string', 'max:30'],
             'tone' => ['nullable', 'string', 'max:60'],
-            'guidance_strength' => ['nullable', 'numeric', 'min:0', 'max:5'],
             'image_base64' => ['required', 'string'],
 
             // Optional preview-generated story so we do not have to regenerate on save
@@ -147,7 +142,6 @@ class MapGenerationController extends Controller
             'encounter_density' => $validated['encounter_density'] ?? null,
             'treasure_density' => $validated['treasure_density'] ?? null,
             'tone' => $validated['tone'] ?? null,
-            'guidance_strength' => $validated['guidance_strength'] ?? null,
             'image_path' => $filename,
             'meta' => [],
         ]);

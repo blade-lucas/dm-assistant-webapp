@@ -48,10 +48,14 @@
 
                     <div>
                         <label class="text-xs text-slate-400">Theme</label>
-                        <select id="theme" name="theme" class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
-                            @foreach(['Crypt','Cave','Dungeon'] as $opt)
-                                <option value="{{ $opt }}">{{ $opt }}</option>
-                            @endforeach
+                        <select id="theme" name="theme"
+                                class="mt-1 w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
+                            <option value="dungeon">Dungeon</option>
+                            <option value="crypt">Crypt</option>
+                            <option value="cave">Cave</option>
+                            <option value="forest">Forest</option>
+                            <option value="volcanic">Volcanic</option>
+                            <option value="ice_cavern">Ice Cavern</option>
                         </select>
                     </div>
 
@@ -107,11 +111,7 @@
                         </select>
                     </div>
 
-                    <div>
-                        <label class="text-xs text-slate-400">Guidance Strength</label>
-                        <input id="guidance" name="guidance" type="range" min="0" max="5" step="0.1" value="2.5"
-                               class="mt-1 w-full rounded-xl border">
-                    </div>
+
 
                     <div class="flex items-end">
                         <button id="generateMapBtn" type="button"
@@ -160,7 +160,6 @@
                                 <input type="hidden" name="encounter_density" id="save_encounter_density">
                                 <input type="hidden" name="treasure_density" id="save_treasure_density">
                                 <input type="hidden" name="tone" id="save_tone">
-                                <input type="hidden" name="guidance_strength" id="save_guidance_strength">
                                 <input type="hidden" name="image_base64" id="save_image_base64">
                                 <input type="hidden" name="story_text" id="save_story_text">
                                 <input type="hidden" name="story_meta" id="save_story_meta">
@@ -313,7 +312,6 @@
             formData.append('_token', document.querySelector('input[name="_token"]').value);
             formData.append('theme', document.getElementById('theme').value);
             formData.append('room_count', document.getElementById('room_count').value);
-            formData.append('guidance', document.getElementById('guidance').value);
             formData.append('tone', document.getElementById('tone').value);
 
             // Reset UI state
@@ -366,7 +364,6 @@
                 document.getElementById('save_encounter_density').value = document.getElementById('encounter_density').value;
                 document.getElementById('save_treasure_density').value = document.getElementById('treasure_density').value;
                 document.getElementById('save_tone').value = document.getElementById('tone').value;
-                document.getElementById('save_guidance_strength').value = document.getElementById('guidance').value;
                 document.getElementById('save_image_base64').value = imageSrc;
                 document.getElementById('save_story_text').value = data.story_text || '';
                 document.getElementById('save_story_meta').value = data.story_meta ? JSON.stringify(data.story_meta) : '';
