@@ -3,10 +3,21 @@
         <div class="flex items-start justify-between">
             <div>
                 <h1 class="text-2xl font-semibold tracking-tight">Create Character</h1>
-                <p class="mt-1 text-sm text-slate-400">Start a new character and jump into Basic Info/Stats.</p>
+                @if(isset($campaign) && $campaign)
+                    <p class="mt-1 text-sm text-slate-400">
+                        Creating for campaign:
+                        <span class="font-medium text-slate-200">{{ $campaign->name }}</span>
+                    </p>
+                @else
+                    <p class="mt-1 text-sm text-slate-400">
+                        Start a new character and jump into Basic Info/Stats.
+                    </p>
+                @endif
             </div>
 
-            <a href="{{ route('characters.index') }}"
+            <a href="{{ isset($campaign) && $campaign
+                ? route('campaigns.characters.index', $campaign)
+                : route('characters.index') }}"
                class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
                 Back
             </a>

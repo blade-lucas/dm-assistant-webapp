@@ -147,11 +147,16 @@ class CharacterController extends Controller
 
         if ($character->campaign_id) {
             return redirect()
-                ->route('campaigns.characters.index', $character->campaign_id)
-                ->with('success', 'Character created and attached to campaign.');
+                ->route('characters.basic.edit', [
+                    'character' => $character,
+                    'campaign' => $character->campaign_id,
+                ])
+                ->with('success', 'Character created and attached to campaign. Continue building the character below.');
         }
 
-        return redirect()->route('characters.basic.edit', $character);
+        return redirect()
+            ->route('characters.basic.edit', $character)
+            ->with('success', 'Character created. Continue building the character below.');
     }
 
     public function destroy(\App\Models\Character $character)
@@ -289,7 +294,7 @@ class CharacterController extends Controller
         ]);
 
         return redirect()
-            ->route('characters.basic.edit', $character)
+            ->route('characters.basic.edit', $this->characterRouteParams($character))
             ->with('status', 'Saved.');
     }
 
@@ -349,7 +354,7 @@ class CharacterController extends Controller
         ]);
 
         return redirect()
-            ->route('characters.equipment.edit', $character)
+            ->route('characters.equipment.edit', $this->characterRouteParams($character))
             ->with('status', 'Saved.');
     }
 
@@ -675,7 +680,7 @@ class CharacterController extends Controller
         $character->update(['data' => $data]);
 
         return redirect()
-            ->route('characters.npc_traits.edit', $character)
+            ->route('characters.npc_traits.edit', $this->characterRouteParams($character))
             ->with('status', 'Saved.');
     }
 
@@ -766,7 +771,9 @@ class CharacterController extends Controller
         $data['dm_notes'] = $dmNotes;
         $character->update(['data' => $data]);
 
-        return redirect()->route('characters.notes.edit', $character)->with('status', 'Saved.');
+        return redirect()
+            ->route('characters.notes.edit', $this->characterRouteParams($character))
+            ->with('status', 'Saved.');
     }
 
     public function deleteNote(\Illuminate\Http\Request $request, \App\Models\Character $character)
@@ -804,6 +811,22 @@ class CharacterController extends Controller
         $data['dm_notes'] = $dmNotes;
         $character->update(['data' => $data]);
 
-        return redirect()->route('characters.notes.edit', $character)->with('status', 'Deleted.');
+        return redirect()
+            ->route('characters.notes.edit', $this->characterRouteParams($character))
+            ->with('status', 'Deleted.');
+    }
+
+    private function campaignContext(Character $character): array
+    {
+        if ($character->campaign_id) {
+            return [
+                'character' => $character,
+                'campaign' => $character->campaign_id,
+            ];
+        }
+
+        return [
+            'character' => $character,
+        ];
     }
 }

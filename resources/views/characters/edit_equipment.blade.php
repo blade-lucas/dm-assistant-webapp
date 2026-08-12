@@ -11,7 +11,7 @@
     <div class="grid gap-6 md:grid-cols-[240px_1fr]">
 
         {{-- Sidebar --}}
-        <aside class="rounded-2xl border border-slate-800 bg-slate-950 p-3">
+        <aside class="flex flex-col rounded-2xl border border-slate-800 bg-slate-950 p-3">
             <div class="px-3 py-2 text-xs font-semibold text-slate-400">Character</div>
             <nav class="grid gap-1 text-sm">
                 <a class="rounded-xl px-3 py-2 hover:bg-slate-900" href="{{ route('characters.basic.edit', $character) }}">Basic Info / Stats</a>
@@ -36,6 +36,21 @@
 
                 <a class="rounded-xl px-3 py-2 hover:bg-slate-900" href="{{ route('characters.notes.edit', $character) }}">DM Notes</a>
             </nav>
+            <div class="mt-4 rounded-xl border border-slate-800 bg-slate-950 p-3 text-xs text-slate-400">
+                <div class="font-semibold text-slate-300">{{ $character->name }}</div>
+                <div class="mt-1">AC: <span class="text-slate-200">{{ $character->ac ?? '—' }}</span></div>
+                <div>Init: <span class="text-slate-200">{{ $character->initiative ?? '—' }}</span></div>
+                <div>Speed: <span class="text-slate-200">{{ $character->speed ?? '—' }}</span></div>
+            </div>
+
+            @if($character->campaign_id)
+                <div class="mt-auto pt-4">
+                    <a href="{{ route('campaigns.characters.index', $character->campaign_id) }}"
+                       class="block w-full rounded-xl border border-slate-700 px-4 py-2 text-center text-sm hover:bg-slate-900">
+                        Return to Campaign
+                    </a>
+                </div>
+            @endif
         </aside>
 
         {{-- Main --}}
