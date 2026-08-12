@@ -40,6 +40,28 @@
             @endif
         </div>
 
+        @if($campaignId)
+            <div class="mb-6 rounded-xl border border-emerald-800/60 bg-emerald-950/30 px-4 py-3">
+                <div class="flex items-start gap-3">
+                    <div class="mt-0.5 text-emerald-400">
+                        ✦
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-emerald-300">
+                            Campaign Context Active
+                        </p>
+
+                        <p class="mt-1 text-sm text-slate-400">
+                            AI-generated encounters will use characters, recent sessions,
+                            campaign events, unresolved hooks, and other relevant details
+                            from this campaign.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <div class="mt-6 grid gap-6 lg:grid-cols-[360px_1fr]">
 
             {{-- LEFT PANEL --}}
@@ -184,6 +206,12 @@
                         <div class="text-xs text-slate-500">
                             {{ ($generated['params']['source'] ?? 'manual') === 'ai' ? 'Generated with AI' : 'Generated from encounter pool' }}
                         </div>
+                        @if(data_get($generated, 'params.campaign_context_used'))
+                            <div class="mb-4 flex items-center gap-2 text-sm text-emerald-400">
+                                <span>✦</span>
+                                <span>Generated using campaign context</span>
+                            </div>
+                        @endif
                     </div>
 
                     <a href="{{ route('encounters.index') }}"

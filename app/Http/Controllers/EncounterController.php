@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CampaignContextService;
 use App\Repositories\EncounterRepository;
 use App\Repositories\MonsterRepository;
 use Illuminate\Http\Request;
@@ -115,7 +116,10 @@ class EncounterController extends Controller
         ])->with('status', 'Encounter table generated.');
     }
 
-    public function aiGenerate(Request $request)
+    public function aiGenerate(
+        Request $request,
+        CampaignContextService $campaignContextService
+    )
     {
         $validated = $request->validate([
             'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
@@ -130,10 +134,13 @@ class EncounterController extends Controller
         ]);
 
         $campaignId = $validated['campaign_id'] ?? null;
+        $campaignContext = null;
 
         if ($campaignId) {
-            \App\Models\Campaign::where('user_id', auth()->id())
+            $campaign = \App\Models\Campaign::where('user_id', auth()->id())
                 ->findOrFail($campaignId);
+
+            $campaignContext = $campaignContextService->build($campaign);
         }
 
         $locationType = $this->normalizeAny($validated['location_type'] ?? null);
@@ -154,7 +161,8 @@ class EncounterController extends Controller
             dice: $dice,
             aiPrompt: $aiPrompt,
             partyLevel: $partyLevel,
-            tone: $tone
+            tone: $tone,
+            campaignContext: $campaignContext
         );
 
         session()->put('encounter_generated_table', [
@@ -169,6 +177,7 @@ class EncounterController extends Controller
                 'tone' => $tone,
                 'source' => 'ai',
                 'mode' => 'ai',
+                'campaign_context_used' => $campaignContext !== null,
             ],
             'pool_count' => count($aiRows),
             'rows' => $aiRows,
@@ -331,7 +340,8 @@ class EncounterController extends Controller
         string $dice,
         string $aiPrompt,
         ?int $partyLevel,
-        ?string $tone
+        ?string $tone,
+        ?array $campaignContext = null
     ): array {
         $count = count($outcomes);
 
@@ -363,6 +373,12 @@ Rules:
 - Do not include markdown.
 - Do not include explanations.
 - Keep each encounterDetails under 220 characters.
+- If campaign context is provided, use it when relevant to maintain continuity with the campaign.
+- Prefer encounters that naturally connect to established NPCs, locations, events, player decisions, or unresolved hooks.
+- Do not force campaign references into every encounter.
+- Do not contradict established campaign facts.
+- Treat DM notes as guidance, not facts that have already occurred.
+- Do not reveal hidden DM notes directly unless they naturally become part of the encounter.
 PROMPT;
 
         $userPrompt = [
@@ -374,6 +390,7 @@ PROMPT;
             'party_level' => $partyLevel,
             'tone' => $tone,
             'dm_prompt' => $aiPrompt,
+            'campaign_context' => $campaignContext,
         ];
 
         $response = Http::withToken(config('services.openai.api_key'))
