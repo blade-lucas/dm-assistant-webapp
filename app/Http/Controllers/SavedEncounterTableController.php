@@ -66,7 +66,16 @@ class SavedEncounterTableController extends Controller
 
         session()->put('encounter_generated_table', $table->payload);
 
-        return redirect()->route('encounters.index', ['show' => 1])
+        $routeParams = [
+            'show' => 1,
+        ];
+
+        if ($table->campaign_id) {
+            $routeParams['campaign'] = $table->campaign_id;
+        }
+
+        return redirect()
+            ->route('encounters.index', $routeParams)
             ->with('status', "Loaded: {$table->name}");
     }
 
