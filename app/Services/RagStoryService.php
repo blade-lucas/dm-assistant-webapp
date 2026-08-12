@@ -30,7 +30,6 @@ class RagStoryService
                     'room_count' => $roomCount,
                     'rooms' => $rooms,
                     'campaign_id' => $campaignId,
-                    'extra' => [],
                 ],
                 'user_prompt' => $userPrompt ?? '',
                 'party_level' => $partyLevel,
