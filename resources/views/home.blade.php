@@ -14,16 +14,18 @@
                  HERO
             ============================================================ --}}
             <section class="relative overflow-hidden rounded-3xl border border-slate-800
-                            bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950
-                            px-6 py-10 shadow-2xl shadow-black/20 md:px-10 md:py-12">
+                bg-slate-950 px-6 py-10 shadow-2xl shadow-black/20
+                md:px-10 md:py-12">
 
-                {{-- Decorative background details --}}
-                <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72
-                            rounded-full border border-amber-400/10">
+                {{-- Fantasy map background --}}
+                <div
+                    class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-35"
+                    style="background-image: url('{{ asset('images/dm-hero-background.png') }}');">
                 </div>
 
-                <div class="pointer-events-none absolute -right-10 -top-10 h-48 w-48
-                            rounded-full border border-amber-400/10">
+                {{-- Dark overlay keeps the content readable --}}
+                <div class="pointer-events-none absolute inset-0
+                bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/55">
                 </div>
 
                 <div class="relative grid gap-10 lg:grid-cols-[1.45fr_0.75fr] lg:items-center">
