@@ -47,7 +47,7 @@
                                 @endif
 
                                 @if($note->session_date)
-                                    • {{ \Carbon\Carbon::parse($note->session_date)->format('M j, Y') }}
+                                    • {{ $note->session_date->format('M j, Y') }}
                                 @endif
                             </div>
 

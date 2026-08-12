@@ -39,6 +39,9 @@ class SessionNoteController extends Controller
             'summary' => ['nullable', 'string'],
             'important_events' => ['nullable', 'string'],
             'unresolved_hooks' => ['nullable', 'string'],
+            'npcs_locations' => ['nullable', 'string'],
+            'player_decisions' => ['nullable', 'string'],
+            'dm_notes' => ['nullable', 'string'],
         ]);
 
         $campaign->sessionNotes()->create($validated);
@@ -76,6 +79,9 @@ class SessionNoteController extends Controller
             'summary' => ['nullable', 'string'],
             'important_events' => ['nullable', 'string'],
             'unresolved_hooks' => ['nullable', 'string'],
+            'npcs_locations' => ['nullable', 'string'],
+            'player_decisions' => ['nullable', 'string'],
+            'dm_notes' => ['nullable', 'string'],
         ]);
 
         $sessionNote->update($validated);

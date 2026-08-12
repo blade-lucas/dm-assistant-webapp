@@ -13,7 +13,14 @@ class SessionNote extends Model
         'session_date',
         'summary',
         'important_events',
+        'npcs_locations',
+        'player_decisions',
         'unresolved_hooks',
+        'dm_notes',
+    ];
+
+    protected $casts = [
+        'session_date' => 'date',
     ];
 
     public function campaign()
