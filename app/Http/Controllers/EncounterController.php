@@ -374,7 +374,7 @@ Rules:
 - Do not include explanations.
 - Keep each encounterDetails under 220 characters.
 - If campaign context is provided, use it when relevant to maintain continuity with the campaign.
-- Prefer encounters that naturally connect to established NPCs, locations, events, player decisions, or unresolved hooks.
+- Use campaign context selectively. For a full encounter table, directly connect roughly one-third to one-half of the encounters to established campaign NPCs, locations, events, decisions, or unresolved hooks when relevant. Allow the remaining encounters to introduce new situations that fit the campaign's established setting and tone.
 - Do not force campaign references into every encounter.
 - Do not contradict established campaign facts.
 - Treat DM notes as guidance, not facts that have already occurred.
