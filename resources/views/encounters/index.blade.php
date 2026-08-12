@@ -207,7 +207,7 @@
                             {{ ($generated['params']['source'] ?? 'manual') === 'ai' ? 'Generated with AI' : 'Generated from encounter pool' }}
                         </div>
                         @if(data_get($generated, 'params.campaign_context_used'))
-                            <div class="mb-4 flex items-center gap-2 text-sm text-emerald-400">
+                            <div class="mb-4 flex items-center gap-2 text-sm text-emerald-400 mt-2">
                                 <span>✦</span>
                                 <span>Generated using campaign context</span>
                             </div>

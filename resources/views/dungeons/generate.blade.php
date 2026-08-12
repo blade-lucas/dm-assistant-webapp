@@ -41,7 +41,7 @@
 
         @if(request('campaign'))
             <div class="mb-6 rounded-xl border border-emerald-800/60 bg-emerald-950/30 px-4 py-3">
-                <div class="flex items-start gap-3">
+                <div class="flex items-start gap-3 mt-2">
                     <div class="mt-0.5 text-emerald-400">
                         ✦
                     </div>
