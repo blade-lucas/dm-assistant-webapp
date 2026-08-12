@@ -26,6 +26,7 @@ class DungeonController extends Controller
     public function generate(Request $request)
     {
         $validated = $request->validate([
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
             'width' => ['nullable', 'integer', 'min:30', 'max:200'],
             'height' => ['nullable', 'integer', 'min:30', 'max:200'],
             'room_count' => ['nullable', 'integer', 'min:3', 'max:50'],
@@ -35,6 +36,15 @@ class DungeonController extends Controller
             'type' => ['nullable', 'string', 'max:50'],
             'theme' => ['nullable', 'string', 'max:255'],
         ]);
+
+        $campaignId = null;
+
+        if (!empty($validated['campaign_id'])) {
+            $campaign = \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($validated['campaign_id']);
+
+            $campaignId = $campaign->id;
+        }
 
         $generator = new DungeonGenerator();
 
@@ -54,6 +64,7 @@ class DungeonController extends Controller
         return view('dungeon.canvas-viewer', [
             'dungeon' => $dungeon->toArray(),
             'savedDungeon' => null,
+            'campaignId' => $campaignId,
         ]);
     }
 
@@ -62,15 +73,31 @@ class DungeonController extends Controller
         return view('dungeon.canvas-viewer', [
             'dungeon' => $dungeon->dungeon_data,
             'savedDungeon' => $dungeon,
+            'campaignId' => $dungeon->campaign_id,
         ]);
     }
 
     public function store(Request $request)
     {
-        $data = $request->all();
+        $validated = $request->validate([
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
+        ]);
+
+        $campaignId = null;
+
+        if (!empty($validated['campaign_id'])) {
+            $campaign = \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($validated['campaign_id']);
+
+            $campaignId = $campaign->id;
+        }
+
+        // Keep campaign_id out of dungeon_data itself.
+        $data = $request->except('campaign_id');
 
         $dungeon = Dungeon::create([
             'user_id' => auth()->id(),
+            'campaign_id' => $campaignId,
             'name' => $data['name'] ?? ('Dungeon ' . ($data['metadata']['seed'] ?? time())),
             'type' => $data['metadata']['type'] ?? 'unknown',
             'theme' => $data['metadata']['theme'] ?? null,
@@ -81,6 +108,10 @@ class DungeonController extends Controller
         return response()->json([
             'success' => true,
             'id' => $dungeon->id,
+            'campaign_id' => $dungeon->campaign_id,
+            'redirect_url' => $dungeon->campaign_id
+                ? route('campaigns.dungeons.index', $dungeon->campaign_id)
+                : route('dungeon-new.show', $dungeon),
         ]);
     }
 }

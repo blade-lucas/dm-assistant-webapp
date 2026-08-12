@@ -33,6 +33,7 @@ class MapGenerationController extends Controller
             'room_count' => ['required', 'integer', 'min:3', 'max:50'],
             'tone' => ['nullable', 'string', 'max:60'],
             'difficulty' => ['nullable', 'string', 'max:30'],
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
         ]);
 
         set_time_limit(180);
@@ -79,6 +80,13 @@ class MapGenerationController extends Controller
             ], 500);
         }
 
+        $campaign = null;
+
+        if (!empty($validated['campaign_id']) && auth()->check()) {
+            $campaign = \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($validated['campaign_id']);
+        }
+
         $storyText = null;
         $storyMeta = null;
 
@@ -88,8 +96,8 @@ class MapGenerationController extends Controller
                 roomCount: $roomCount,
                 tone: $tone,
                 difficulty: $difficulty,
-                campaignId: null,
-                campaignNotes: null,
+                campaignId: $campaign ? (string) $campaign->id : null,
+                campaignNotes: $campaign?->campaign_summary,
                 userPrompt: null,
                 partyLevel: 1,
                 partySize: 4,
@@ -146,6 +154,7 @@ class MapGenerationController extends Controller
     public function store(Request $request, StoryGeneratorService $storyService)
     {
         $validated = $request->validate([
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
             'name' => ['nullable', 'string', 'max:120'],
             'theme' => ['nullable', 'string', 'max:60'],
             'size' => ['nullable', 'string', 'max:30'],
@@ -172,7 +181,17 @@ class MapGenerationController extends Controller
         $filename = 'maps/' . Str::uuid() . '.' . $mime;
         Storage::disk('public')->put($filename, $binary);
 
+        $campaignId = null;
+
+        if (!empty($validated['campaign_id'])) {
+            $campaign = \App\Models\Campaign::where('user_id', $request->user()->id)
+                ->findOrFail($validated['campaign_id']);
+
+            $campaignId = $campaign->id;
+        }
+
         $map = Map::create([
+            'campaign_id' => $campaignId,
             'user_id' => $request->user()->id,
             'name' => $validated['name'] ?: 'Untitled Map',
             'theme' => $validated['theme'] ?? null,
@@ -228,6 +247,12 @@ class MapGenerationController extends Controller
             Log::error('Story generation failed during save', [
                 'message' => $e->getMessage(),
             ]);
+        }
+
+        if ($map->campaign_id) {
+            return redirect()
+                ->route('campaigns.dungeons.index', $map->campaign_id)
+                ->with('success', 'Map saved and attached to campaign.');
         }
 
         return redirect()

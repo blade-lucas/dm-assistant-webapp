@@ -127,7 +127,11 @@
             @endif
 
             <form method="GET" action="{{ route('dungeon-new.viewer') }}">
-
+                @if(request('campaign'))
+                    <input type="hidden"
+                           name="campaign_id"
+                           value="{{ (int) request('campaign') }}">
+                @endif
                 <div class="form-grid">
 
                     <div class="form-group full">

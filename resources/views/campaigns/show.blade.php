@@ -101,9 +101,10 @@
                                 Import generated maps or create new campaign dungeons.
                             </p>
                         </div>
-                        <span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400">
-                            Soon
-                        </span>
+                        <a href="{{ route('campaigns.dungeons.index', $campaign) }}"
+                           class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 hover:bg-slate-900">
+                            Open
+                        </a>
                     </div>
                 </div>
 

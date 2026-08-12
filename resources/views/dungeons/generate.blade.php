@@ -14,10 +14,17 @@
                     </p>
                 </div>
 
-                <a href="{{ route('characters.index') }}"
-                   class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
-                    Back
-                </a>
+                @if(request('campaign'))
+                    <a href="{{ route('campaigns.dungeons.index', request('campaign')) }}"
+                       class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
+                        Back to Campaign
+                    </a>
+                @else
+                    <a href="{{ route('maps.index') }}"
+                       class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
+                        Back
+                    </a>
+                @endif
             </div>
         </div>
 
@@ -153,6 +160,11 @@
                                        placeholder="Name this map..."
                                        class="w-full md:w-80 rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm">
 
+                                @if(request('campaign'))
+                                    <input type="hidden"
+                                           name="campaign_id"
+                                           value="{{ (int) request('campaign') }}">
+                                @endif
                                 <input type="hidden" name="theme" id="save_theme">
                                 <input type="hidden" name="size" id="save_size">
                                 <input type="hidden" name="difficulty" id="save_difficulty">
@@ -314,6 +326,9 @@
             formData.append('room_count', document.getElementById('room_count').value);
             formData.append('tone', document.getElementById('tone').value);
             formData.append('difficulty', document.getElementById('difficulty')?.value ?? 'medium');
+            @if(request('campaign'))
+                formData.append('campaign_id', @json((int) request('campaign')));
+            @endif
 
             // Reset UI state
             placeholder.classList.add('hidden');

@@ -33,4 +33,14 @@ class Campaign extends Model
     {
         return $this->hasMany(Character::class);
     }
+
+    public function maps()
+    {
+        return $this->hasMany(Map::class);
+    }
+
+    public function dungeons()
+    {
+        return $this->hasMany(Dungeon::class);
+    }
 }

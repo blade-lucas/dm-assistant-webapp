@@ -75,23 +75,38 @@ window.DungeonEditor = {
         state.dungeon.name =
             document.getElementById('dungeon-name').value || 'Generated Dungeon';
 
-        const response = await fetch(state.storeUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': state.csrfToken,
-            },
-            body: JSON.stringify(state.dungeon),
-        });
+        const payload = {
+            ...state.dungeon,
+            campaign_id: window.campaignId ?? null,
+        };
 
-        const data = await response.json();
+        try {
+            const response = await fetch(state.storeUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': state.csrfToken,
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
 
-        if (data.success) {
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || 'Dungeon could not be saved.');
+            }
+
+            if (data.redirect_url) {
+                window.location.href = data.redirect_url;
+                return;
+            }
+
             alert(`Dungeon saved. ID: ${data.id}`);
-            return;
+        } catch (error) {
+            console.error('Dungeon save failed:', error);
+            alert(error.message || 'Dungeon could not be saved.');
         }
-
-        alert('Dungeon could not be saved.');
     },
 
     bindEvents() {

@@ -485,6 +485,7 @@
         window.dungeon = @json($dungeon);
         window.storeUrl = "{{ route('dungeon-new.store') }}";
         window.csrfToken = "{{ csrf_token() }}";
+        window.campaignId = @json($campaignId ?? null);
     </script>
 
     @vite('resources/js/dungeon/canvas-viewer.js')

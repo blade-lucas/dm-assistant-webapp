@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CampaignCharacterController;
 use App\Http\Controllers\CampaignController;
+use App\Http\Controllers\CampaignDungeonController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\DungeonController;
 use App\Http\Controllers\DungeonGeneratorController;
@@ -155,9 +156,24 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/campaigns/{campaign}/characters/{character}/detach', [CampaignCharacterController::class, 'detach'])
         ->name('campaigns.characters.detach');
+
+    Route::get('/campaigns/{campaign}/dungeons', [CampaignDungeonController::class, 'index'])
+        ->name('campaigns.dungeons.index');
+
+    Route::post('/campaigns/{campaign}/maps/{map}/attach', [CampaignDungeonController::class, 'attachMap'])
+        ->name('campaigns.maps.attach');
+
+    Route::post('/campaigns/{campaign}/maps/{map}/detach', [CampaignDungeonController::class, 'detachMap'])
+        ->name('campaigns.maps.detach');
+
+    Route::post('/campaigns/{campaign}/dungeons/{dungeon}/attach', [CampaignDungeonController::class, 'attachDungeon'])
+        ->name('campaigns.dungeons.attach');
+
+    Route::post('/campaigns/{campaign}/dungeons/{dungeon}/detach', [CampaignDungeonController::class, 'detachDungeon'])
+        ->name('campaigns.dungeons.detach');
 });
 
-Route::prefix('dungeon-new')->group(function () {
+Route::middleware('auth')->prefix('dungeon-new')->group(function () {
     Route::get('/generate', [DungeonController::class, 'create'])
         ->name('dungeon-new.create');
 
