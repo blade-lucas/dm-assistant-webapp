@@ -2,58 +2,122 @@
 
     <style>
         .dungeon-page {
-            padding: 24px;
-            color: #f9fafb;
+            color: #f8fafc;
             max-width: 1600px;
             margin: 0 auto;
         }
 
+        /* ================================================================
+           PAGE HEADER
+        ================================================================ */
+
         .dungeon-header {
-            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+
+            margin-bottom: 24px;
+            padding: 26px 28px;
+
+            border: 1px solid rgba(16, 185, 129, 0.22);
+            border-radius: 24px;
+
+            background:
+                radial-gradient(
+                    circle at 90% 0%,
+                    rgba(16, 185, 129, 0.08),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #020617
+                );
+        }
+
+        .dungeon-header::before {
+            content: "INTERACTIVE DUNGEON EDITOR";
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #34d399;
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
         }
 
         .dungeon-header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 4px;
+            margin: 0;
+
+            color: #f8fafc;
+
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.025em;
         }
 
         .dungeon-header p {
-            color: #9ca3af;
-            margin: 0;
+            margin: 8px 0 0;
+
+            color: #94a3b8;
+
+            font-size: 13px;
         }
+
+
+        /* ================================================================
+           MAIN LAYOUT
+        ================================================================ */
 
         .dungeon-layout {
             display: grid;
-            grid-template-columns: minmax(900px, 1fr) 360px;
-            gap: 24px;
+            grid-template-columns: minmax(780px, 1fr) 340px;
+            gap: 20px;
             align-items: start;
         }
 
+
+        /* ================================================================
+           PANELS
+        ================================================================ */
+
         .canvas-panel,
         .sidebar {
-            background: #111827;
-            border: 1px solid #374151;
-            border-radius: 14px;
+            overflow: hidden;
+
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+
+            background: #020617;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.18);
         }
 
-        .canvas-panel {
-            background: #111827;
-            border: 1px solid #374151;
-            border-radius: 14px;
-            overflow: hidden;
-        }
+
+        /* ================================================================
+           TOOLBAR
+        ================================================================ */
 
         .toolbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            padding: 14px 16px;
-            background: #111827;
-            border-bottom: 1px solid #374151;
+            padding: 12px 14px;
 
-            gap: 16px;
+            gap: 14px;
+
+            border-bottom: 1px solid #1e293b;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(15, 23, 42, 0.98),
+                    rgba(2, 6, 23, 0.98)
+                );
+
             flex-wrap: nowrap;
         }
 
@@ -61,99 +125,158 @@
         .toolbar-right {
             display: flex;
             align-items: center;
-            gap: 8px;
+
+            gap: 7px;
+
             flex-wrap: nowrap;
         }
 
-        .toolbar button,
-        .mode-button {
-            background: linear-gradient(#1f2937, #111827);
-            color: #f9fafb;
+        .mode-label {
+            margin-right: 3px;
 
-            border: 1px solid #4b5563;
+            color: #64748b;
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .toolbar button,
+        .mode-button,
+        .editor-button {
+            height: 40px;
+
+            padding: 0 14px;
+
+            border: 1px solid #334155;
             border-radius: 10px;
 
-            padding: 0 18px;
-            height: 44px;
+            background:
+                linear-gradient(
+                    180deg,
+                    #1e293b,
+                    #0f172a
+                );
 
-            min-width: auto;
+            color: #cbd5e1;
+
+            font-size: 12px;
+            font-weight: 700;
+
             white-space: nowrap;
 
             cursor: pointer;
 
-            font-size: 14px;
-            font-weight: 700;
-
             box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.08),
-                0 2px 6px rgba(0,0,0,0.25);
+                inset 0 1px 0 rgba(255,255,255,0.04);
 
-            transition: all .15s ease;
-        }
-
-        .mode-button {
-            min-width: 86px;
+            transition:
+                background 0.15s ease,
+                border-color 0.15s ease,
+                color 0.15s ease,
+                transform 0.15s ease;
         }
 
         .toolbar button:hover,
-        .mode-button:hover {
-            background: linear-gradient(#374151, #1f2937);
-            border-color: #6b7280;
+        .mode-button:hover,
+        .editor-button:hover {
+            border-color: #475569;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #334155,
+                    #1e293b
+                );
+
+            color: #f8fafc;
+        }
+
+        .toolbar button:active,
+        .mode-button:active,
+        .editor-button:active {
+            transform: translateY(1px);
+        }
+
+        .mode-button {
+            min-width: 78px;
         }
 
         .mode-button.active {
-            background: linear-gradient(#2563eb, #1d4ed8);
-            border-color: #93c5fd;
+            border-color: rgba(16, 185, 129, 0.6);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #10b981,
+                    #047857
+                );
+
+            color: #022c22;
         }
 
         .door-mode-button.active {
-            background: linear-gradient(#f97316, #7c2d12);
-            border-color: #fdba74;
+            border-color: #fb923c;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f97316,
+                    #c2410c
+                );
+
             color: #fff7ed;
         }
 
-        .legend-bar {
-            position: sticky;
-            top: 73px;
-            z-index: 9;
 
+        /* ================================================================
+           LEGEND
+        ================================================================ */
+
+        .legend-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             gap: 16px;
-            padding: 12px 16px;
+
+            padding: 10px 16px;
+
+            border-bottom: 1px solid #1e293b;
 
             background: #0f172a;
-            border-bottom: 1px solid #374151;
-        }
-
-        .canvas-wrap {
-            height: 720px;
-            overflow: hidden;
-            background: #020617;
         }
 
         .legend-items {
             display: flex;
             align-items: center;
-            gap: 22px;
+
+            gap: 18px;
+
             flex-wrap: wrap;
         }
 
         .legend-item {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            color: #f9fafb;
+
+            gap: 7px;
+
+            color: #94a3b8;
+
+            font-size: 11px;
             font-weight: 600;
         }
 
         .legend-swatch {
-            width: 18px;
-            height: 18px;
             display: inline-block;
-            border: 1px solid #6b7280;
+
+            width: 14px;
+            height: 14px;
+
+            border: 1px solid #475569;
+            border-radius: 4px;
         }
 
         .room-swatch {
@@ -165,32 +288,63 @@
         }
 
         .start-swatch {
+            border-color: #22c55e;
+
             background: #22c55e;
         }
 
         .end-swatch {
+            border-color: #ef4444;
+
             background: #ef4444;
         }
 
         .legend-door {
-            width: 28px;
-            height: 5px;
-            background: #f97316;
             display: inline-block;
+
+            width: 24px;
+            height: 4px;
+
             border-radius: 999px;
+
+            background: #f97316;
         }
 
         .tool-help {
-            color: #d1d5db;
-            font-size: 14px;
+            color: #64748b;
+
+            font-size: 11px;
+            font-style: italic;
+        }
+
+
+        /* ================================================================
+           CANVAS
+        ================================================================ */
+
+        .canvas-wrap {
+            height: 720px;
+
+            overflow: hidden;
+
+            background: #020617;
         }
 
         #dungeon-canvas {
             display: block;
+
             width: 100%;
-            height: 100%;
-            background: #020617;
+            height: 720px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #07111f,
+                    #020617 70%
+                );
+
             cursor: grab;
+
             image-rendering: pixelated;
         }
 
@@ -198,16 +352,49 @@
             cursor: grabbing;
         }
 
+
+        /* ================================================================
+           SIDEBAR
+        ================================================================ */
+
         .sidebar {
+            position: sticky;
+            top: 88px;
+
             padding: 20px;
-            color: #f9fafb;
+
+            color: #f8fafc;
+
+            border-color: rgba(16, 185, 129, 0.16);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(15, 23, 42, 0.96),
+                    rgba(2, 6, 23, 0.98)
+                );
         }
 
         .sidebar h2 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 16px;
+            margin: 0 0 16px;
+
+            color: #f1f5f9;
+
+            font-size: 18px;
+            font-weight: 750;
+        }
+
+        .sidebar h2:first-child::before {
+            content: "DUNGEON";
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: #34d399;
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
         }
 
         .room-detail {
@@ -216,50 +403,142 @@
 
         .room-detail strong {
             display: block;
-            font-size: 13px;
-            color: #9ca3af;
-            margin-bottom: 5px;
+
+            margin-bottom: 6px;
+
+            color: #64748b;
+
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
 
         .room-detail span {
-            color: #f9fafb;
+            color: #e2e8f0;
+
+            font-size: 13px;
         }
 
         .editor-input {
             width: 100%;
-            padding: 8px;
-            background: #1f2937;
-            color: #f9fafb;
-            border: 1px solid #374151;
-            border-radius: 8px;
+
+            padding: 10px 11px;
+
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+
+            outline: none;
+
+            background: #020617;
+
+            color: #f8fafc;
+
+            font-size: 13px;
+
+            transition:
+                border-color 0.15s ease,
+                box-shadow 0.15s ease;
+        }
+
+        .editor-input:focus {
+            border-color: rgba(16, 185, 129, 0.55);
+
+            box-shadow:
+                0 0 0 2px rgba(16, 185, 129, 0.08);
         }
 
         textarea.editor-input {
             resize: vertical;
-        }
 
-        .empty-state {
-            color: #9ca3af;
             line-height: 1.5;
         }
 
-        .section-divider {
-            border-top: 1px solid #374151;
-            margin: 18px 0;
+        .empty-state {
+            padding: 18px;
+
+            border: 1px dashed #334155;
+            border-radius: 12px;
+
+            background: rgba(15, 23, 42, 0.45);
+
+            color: #64748b;
+
+            font-size: 12px;
+            line-height: 1.6;
+            text-align: center;
         }
 
+        .section-divider {
+            margin: 20px 0;
+
+            border-top: 1px solid #1e293b;
+        }
+
+
+        /* ================================================================
+           SAVE BUTTONS
+        ================================================================ */
+
         #save-dungeon {
-            background: #16a34a;
-            border: none;
             width: 100%;
-            margin-top: 10px;
+            height: 42px;
+
+            margin-top: 8px;
+
+            border-color: rgba(16, 185, 129, 0.4);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #10b981,
+                    #059669
+                );
+
+            color: #022c22;
+        }
+
+        #save-dungeon:hover {
+            border-color: #34d399;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #34d399,
+                    #10b981
+                );
         }
 
         #save-room {
-            background: #2563eb;
-            border: none;
             width: 100%;
+
             margin-top: 12px;
+
+            border-color: rgba(59, 130, 246, 0.45);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #3b82f6,
+                    #2563eb
+                );
+
+            color: white;
+        }
+
+
+        /* ================================================================
+           RESPONSIVE
+        ================================================================ */
+
+        @media (max-width: 1180px) {
+            .dungeon-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .sidebar {
+                position: static;
+            }
         }
     </style>
 
