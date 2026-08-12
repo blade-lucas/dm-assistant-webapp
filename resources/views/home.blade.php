@@ -25,7 +25,7 @@
 
                 {{-- Dark overlay keeps the content readable --}}
                 <div class="pointer-events-none absolute inset-0
-                    bg-gradient-to-r from-slate-950/80 via-slate-950/45 to-slate-950/20">
+                    bg-gradient-to-r from-slate-950/60 via-slate-950/30 to-slate-950/10">
                 </div>
 
                 <div class="relative grid gap-10 lg:grid-cols-[1.45fr_0.75fr] lg:items-center">
