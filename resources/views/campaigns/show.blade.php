@@ -153,16 +153,22 @@
                     </div>
                 </div>
 
-                <div class="rounded-2xl border border-slate-800 p-5 md:col-span-2">
+                <div class="rounded-2xl border border-emerald-900/60 bg-emerald-950/20 p-5 md:col-span-2">
                     <div class="flex items-start justify-between gap-4">
                         <div>
-                            <h3 class="font-semibold">Future AI Context</h3>
+                            <h3 class="font-semibold text-emerald-300">
+                                Campaign AI Context
+                            </h3>
+
                             <p class="mt-2 text-sm leading-6 text-slate-400">
-                                Campaign details will eventually power smarter AI generation using notes, characters, maps, encounters, and unresolved hooks.
+                                AI generation can use this campaign's characters, recent sessions,
+                                player decisions, unresolved hooks, encounters, and dungeons to
+                                maintain continuity across generated content.
                             </p>
                         </div>
-                        <span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400">
-                            Planned
+
+                        <span class="rounded-full border border-emerald-800 px-3 py-1 text-xs text-emerald-300">
+                            Active
                         </span>
                     </div>
                 </div>

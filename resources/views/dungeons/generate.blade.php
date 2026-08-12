@@ -39,6 +39,28 @@
             </div>
         @endif
 
+        @if($campaignId)
+            <div class="mb-6 rounded-xl border border-emerald-800/60 bg-emerald-950/30 px-4 py-3">
+                <div class="flex items-start gap-3">
+                    <div class="mt-0.5 text-emerald-400">
+                        ✦
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-emerald-300">
+                            Campaign Context Active
+                        </p>
+
+                        <p class="mt-1 text-sm text-slate-400">
+                            AI-generated dungeon stories will use this campaign's
+                            characters, recent sessions, player decisions, unresolved
+                            hooks, and existing content to maintain continuity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        @endif
+
         <div class="mt-6 grid gap-6">
             {{-- PARAMETERS PANEL --}}
             <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
@@ -354,14 +376,56 @@
                     method: 'POST',
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
+                        'Accept': 'application/json',
                     },
                     body: formData,
                 });
 
-                const data = await response.json();
+                const contentType = response.headers.get('content-type') || '';
 
-                if (!response.ok || !data.image) {
-                    throw new Error(data.error || 'Map generation failed.');
+                let data = null;
+
+                if (contentType.includes('application/json')) {
+                    data = await response.json();
+                } else {
+                    const rawText = await response.text();
+
+                    console.error('Map generation returned a non-JSON response:', {
+                        status: response.status,
+                        statusText: response.statusText,
+                        body: rawText,
+                    });
+
+                    if (response.status === 504) {
+                        throw new Error(
+                            'Map generation took too long to respond. Please try again.'
+                        );
+                    }
+
+                    if (response.status === 502 || response.status === 503) {
+                        throw new Error(
+                            'The generation service is temporarily unavailable. Please try again shortly.'
+                        );
+                    }
+
+                    throw new Error(
+                        'The server returned an unexpected response. Please try again.'
+                    );
+                }
+
+                if (!response.ok) {
+                    throw new Error(
+                        data?.error ||
+                        data?.message ||
+                        'Map generation failed. Please try again.'
+                    );
+                }
+
+                if (!data?.image) {
+                    throw new Error(
+                        data?.error ||
+                        'The map service completed without returning an image.'
+                    );
                 }
 
                 const imageSrc = data.image.startsWith('data:image')
