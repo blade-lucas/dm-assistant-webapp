@@ -15,6 +15,8 @@ class EncounterController extends Controller
 
     public function index(Request $request, EncounterRepository $repo)
     {
+        $campaignId = $request->query('campaign');
+
         $locationType = $this->normalizeAny($request->query('location_type'));
         $locationSubtype = $this->normalizeAny($request->query('location_subtype'));
 
@@ -35,6 +37,7 @@ class EncounterController extends Controller
         $generated = $show ? session('encounter_generated_table', null) : null;
 
         return view('encounters.index', [
+            'campaignId' => $campaignId,
             'locationTypes' => $locationTypes,
             'subtypes' => $subtypes,
             'encounterTypes' => self::ENCOUNTER_TYPES,
@@ -56,12 +59,20 @@ class EncounterController extends Controller
     public function roll(Request $request, EncounterRepository $repo)
     {
         $validated = $request->validate([
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
             'location_type' => ['nullable', 'string', 'max:60'],
             'location_subtype' => ['nullable', 'string', 'max:60'],
             'types' => ['nullable', 'array'],
             'types.*' => ['string', 'in:Combat,Friendly,Interaction,Puzzle'],
             'dice' => ['required', 'in:1d20,1d12,2d6,1d12+1d6'],
         ]);
+
+        $campaignId = $validated['campaign_id'] ?? null;
+
+        if ($campaignId) {
+            \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($campaignId);
+        }
 
         $locationType = $this->normalizeAny($validated['location_type'] ?? null);
         $locationSubtype = $this->normalizeAny($validated['location_subtype'] ?? null);
@@ -81,6 +92,7 @@ class EncounterController extends Controller
 
         session()->put('encounter_generated_table', [
             'params' => [
+                'campaign_id' => $campaignId,
                 'location_type' => $locationType,
                 'location_subtype' => $locationSubtype,
                 'types' => $types,
@@ -93,6 +105,7 @@ class EncounterController extends Controller
         ]);
 
         return redirect()->route('encounters.index', [
+            'campaign' => $campaignId,
             'show' => 1,
             'mode' => 'manual',
             'location_type' => $locationType,
@@ -105,6 +118,7 @@ class EncounterController extends Controller
     public function aiGenerate(Request $request)
     {
         $validated = $request->validate([
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
             'location_type' => ['nullable', 'string', 'max:60'],
             'location_subtype' => ['nullable', 'string', 'max:60'],
             'types' => ['nullable', 'array'],
@@ -114,6 +128,13 @@ class EncounterController extends Controller
             'party_level' => ['nullable', 'integer', 'min:1', 'max:20'],
             'tone' => ['nullable', 'string', 'max:40'],
         ]);
+
+        $campaignId = $validated['campaign_id'] ?? null;
+
+        if ($campaignId) {
+            \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($campaignId);
+        }
 
         $locationType = $this->normalizeAny($validated['location_type'] ?? null);
         $locationSubtype = $this->normalizeAny($validated['location_subtype'] ?? null);
@@ -138,6 +159,7 @@ class EncounterController extends Controller
 
         session()->put('encounter_generated_table', [
             'params' => [
+                'campaign_id' => $campaignId,
                 'location_type' => $locationType,
                 'location_subtype' => $locationSubtype,
                 'types' => $types,
@@ -154,6 +176,7 @@ class EncounterController extends Controller
         ]);
 
         return redirect()->route('encounters.index', [
+            'campaign' => $campaignId,
             'show' => 1,
             'mode' => 'ai',
             'location_type' => $locationType,
@@ -255,6 +278,7 @@ class EncounterController extends Controller
         $results = $monsters->search($q, $type, $maxCr, 200);
 
         return view('encounters.pick_monster', [
+            'campaignId' => $request->query('campaign'),
             'row' => $row,
             'slot' => $slot,
             'q' => $q,
@@ -270,6 +294,7 @@ class EncounterController extends Controller
     {
         $validated = $request->validate([
             'monster_slug' => ['required', 'string', 'max:120'],
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
         ]);
 
         $generated = session('encounter_generated_table');
@@ -292,7 +317,10 @@ class EncounterController extends Controller
 
         session()->put('encounter_generated_table', $generated);
 
-        return redirect()->route('encounters.index', ['show' => 1])->with('status', "Monster #{$slot} assigned.");
+        return redirect()->route('encounters.index', [
+            'show' => 1,
+            'campaign' => $validated['campaign_id'] ?? null,
+        ])->with('status', "Monster #{$slot} assigned.");
     }
 
     private function generateAiEncounterRows(

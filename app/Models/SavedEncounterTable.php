@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class SavedEncounterTable extends Model
 {
-    protected $fillable = ['user_id', 'name', 'payload'];
+    protected $fillable = [
+        'user_id',
+        'campaign_id',
+        'name',
+        'payload',
+    ];
 
     protected $casts = [
         'payload' => 'array',
@@ -15,5 +20,10 @@ class SavedEncounterTable extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function campaign()
+    {
+        return $this->belongsTo(Campaign::class);
     }
 }

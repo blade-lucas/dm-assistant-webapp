@@ -43,4 +43,9 @@ class Campaign extends Model
     {
         return $this->hasMany(Dungeon::class);
     }
+
+    public function encounterTables()
+    {
+        return $this->hasMany(SavedEncounterTable::class);
+    }
 }

@@ -14,13 +14,16 @@
                     @endif
                 </div>
 
-                <a href="{{ route('encounters.index', ['show' => 1]) }}"
+                <a href="{{ route('encounters.index', ['show' => 1, 'campaign' => $campaignId,]) }}"
                    class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
                     Back to Encounter
                 </a>
             </div>
 
             <form method="GET" action="{{ route('encounters.pickMonster', ['row'=>$row, 'slot'=>$slot, 'show'=>1]) }}">
+                @if($campaignId)
+                    <input type="hidden" name="campaign" value="{{ $campaignId }}">
+                @endif
                 <div class="md:col-span-2">
                     <label class="text-xs text-slate-400">Search</label>
                     <input name="q" value="{{ $q }}"
@@ -51,7 +54,7 @@
                         Apply
                     </button>
 
-                    <a href="{{ route('encounters.pickMonster', ['row'=>$row, 'slot'=>$slot]) }}"
+                    <a href="{{ route('encounters.pickMonster', ['row' => $row, 'slot' => $slot, 'campaign' => $campaignId,]) }}"
                        class="rounded-xl border border-slate-700 px-4 py-2 text-sm hover:bg-slate-900">
                         Reset
                     </a>
@@ -79,9 +82,14 @@
                                 </div>
                             </div>
 
-                            <form method="POST" action="{{ route('encounters.setMonster', ['row'=>$row, 'slot'=>$slot, 'show'=>1]) }}">
+                            <form method="POST" action="{{ route('encounters.setMonster', ['row' => $row, 'slot' => $slot, 'show' => 1,]) }}">
                                 @csrf
+
                                 <input type="hidden" name="monster_slug" value="{{ $slug }}">
+
+                                @if($campaignId)
+                                    <input type="hidden" name="campaign_id" value="{{ $campaignId }}">
+                                @endif
                                 <button type="submit"
                                         class="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500">
                                     Select

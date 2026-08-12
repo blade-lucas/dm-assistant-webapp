@@ -24,6 +24,7 @@ class SavedEncounterTableController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required','string','max:120'],
+            'campaign_id' => ['nullable', 'integer', 'exists:campaigns,id'],
         ]);
 
         $generated = session('encounter_generated_table');
@@ -32,13 +33,29 @@ class SavedEncounterTableController extends Controller
             return back()->with('status', 'Nothing to save — generate an encounter table first.');
         }
 
+        $campaignId = $validated['campaign_id'] ?? null;
+
+        if ($campaignId) {
+            \App\Models\Campaign::where('user_id', auth()->id())
+                ->findOrFail($campaignId);
+        }
+
         SavedEncounterTable::create([
             'user_id' => auth()->id(),
+            'campaign_id' => $campaignId,
             'name' => $validated['name'],
             'payload' => $generated,
         ]);
 
-        return redirect()->route('encounters.saved')->with('status', 'Encounter table saved.');
+        if ($campaignId) {
+            return redirect()
+                ->route('campaigns.encounters.index', $campaignId)
+                ->with('success', 'Encounter table saved and attached to campaign.');
+        }
+
+        return redirect()
+            ->route('encounters.saved')
+            ->with('status', 'Encounter table saved.');
     }
 
     public function load(SavedEncounterTable $table)

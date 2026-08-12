@@ -4,6 +4,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CampaignCharacterController;
 use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\CampaignDungeonController;
+use App\Http\Controllers\CampaignEncounterController;
 use App\Http\Controllers\CharacterController;
 use App\Http\Controllers\DungeonController;
 use App\Http\Controllers\DungeonGeneratorController;
@@ -171,6 +172,16 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/campaigns/{campaign}/dungeons/{dungeon}/detach', [CampaignDungeonController::class, 'detachDungeon'])
         ->name('campaigns.dungeons.detach');
+
+    ////
+    Route::get('/campaigns/{campaign}/encounters', [CampaignEncounterController::class, 'index'])
+        ->name('campaigns.encounters.index');
+
+    Route::post('/campaigns/{campaign}/encounters/{table}/attach', [CampaignEncounterController::class, 'attach'])
+        ->name('campaigns.encounters.attach');
+
+    Route::post('/campaigns/{campaign}/encounters/{table}/detach', [CampaignEncounterController::class, 'detach'])
+        ->name('campaigns.encounters.detach');
 });
 
 Route::middleware('auth')->prefix('dungeon-new')->group(function () {

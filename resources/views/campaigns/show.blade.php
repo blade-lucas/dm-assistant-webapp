@@ -116,9 +116,10 @@
                                 Attach or generate encounter tables for this campaign.
                             </p>
                         </div>
-                        <span class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400">
-                            Soon
-                        </span>
+                        <a href="{{ route('campaigns.encounters.index', $campaign) }}"
+                           class="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 hover:bg-slate-900">
+                            Open
+                        </a>
                     </div>
                 </div>
 

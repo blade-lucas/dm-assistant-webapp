@@ -49,7 +49,11 @@
 
                 <form method="POST" action="{{ route('encounters.roll') }}" class="mt-4 grid gap-4">
                     @csrf
-
+                    @if($campaignId)
+                        <input type="hidden"
+                               name="campaign_id"
+                               value="{{ $campaignId }}">
+                    @endif
                     {{-- Location Type --}}
                     <div>
                         <label class="text-xs text-slate-400">Location Type</label>
@@ -197,6 +201,11 @@
                     <div class="mt-3 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                         <form method="POST" action="{{ route('encounters.save') }}" class="flex w-full gap-2 md:w-auto">
                             @csrf
+                            @if($campaignId)
+                                <input type="hidden"
+                                       name="campaign_id"
+                                       value="{{ $campaignId }}">
+                            @endif
                             <input name="name"
                                    placeholder="Name this table (e.g., Forest Travel - Friendly)"
                                    class="w-full md:w-96 rounded-xl border border-slate-800 bg-slate-950 px-3 py-2 text-sm" />
@@ -256,7 +265,7 @@
                                         @if($slotsNeeded > 0)
                                             <div class="flex flex-wrap gap-2">
                                                 @for($slot = 1; $slot <= $slotsNeeded; $slot++)
-                                                    <a href="{{ route('encounters.pickMonster', ['row' => $rowIndex, 'slot' => $slot, 'show' => 1]) }}"
+                                                    <a href="{{ route('encounters.pickMonster', ['row' => $rowIndex, 'slot' => $slot, 'show' => 1, 'campaign' => $campaignId,]) }}"
                                                        class="rounded-lg border border-slate-700 px-2 py-1 text-xs hover:bg-slate-900">
                                                         {{ isset($selected[$slot]) ? "Change #{$slot}" : "Choose #{$slot}" }}
                                                     </a>
