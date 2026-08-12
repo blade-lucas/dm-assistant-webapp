@@ -313,6 +313,7 @@
             formData.append('theme', document.getElementById('theme').value);
             formData.append('room_count', document.getElementById('room_count').value);
             formData.append('tone', document.getElementById('tone').value);
+            formData.append('difficulty', document.getElementById('difficulty')?.value ?? 'medium');
 
             // Reset UI state
             placeholder.classList.add('hidden');

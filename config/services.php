@@ -49,4 +49,7 @@ return [
         'base_url' => env('STORY_GENERATOR_URL'),
     ],
 
+    'rag_story' => [
+        'base_url' => env('RAG_STORY_URL'),
+    ],
 ];

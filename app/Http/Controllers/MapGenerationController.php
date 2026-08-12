@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Throwable;
 
+use App\Services\RagStoryService;
+
 class MapGenerationController extends Controller
 {
     public function index()
@@ -20,12 +22,17 @@ class MapGenerationController extends Controller
         return view('maps.index');
     }
 
-    public function generate(Request $request, StoryGeneratorService $storyService)
+    public function generate(
+        Request $request,
+        StoryGeneratorService $storyService,
+        RagStoryService $ragStoryService
+    )
     {
         $validated = $request->validate([
             'theme' => ['required', 'string', 'max:60'],
             'room_count' => ['required', 'integer', 'min:3', 'max:50'],
             'tone' => ['nullable', 'string', 'max:60'],
+            'difficulty' => ['nullable', 'string', 'max:30'],
         ]);
 
         set_time_limit(180);
@@ -34,6 +41,7 @@ class MapGenerationController extends Controller
         $theme = $validated['theme'];
         $roomCount = (int) $validated['room_count'];
         $tone = $validated['tone'] ?? null;
+        $difficulty = $validated['difficulty'] ?? 'medium';
 
         try {
             $mapResponse = Http::connectTimeout(15)
@@ -75,24 +83,56 @@ class MapGenerationController extends Controller
         $storyMeta = null;
 
         try {
-            $tempPath = $this->writePreviewImageToTempFile($imageBase64);
-
-            $storyResponse = $storyService->generateFromImage(
-                absolutePath: $tempPath,
-                filename: basename($tempPath),
-                mimeType: 'image/png',
+            $ragResponse = $ragStoryService->generate(
+                theme: $theme,
+                roomCount: $roomCount,
                 tone: $tone,
+                difficulty: $difficulty,
+                campaignId: null,
+                campaignNotes: null,
+                userPrompt: null,
+                partyLevel: 1,
+                partySize: 4,
+                rooms: [],
             );
 
-            $storyText = $storyResponse['story_text'] ?? null;
-            $storyMeta = $storyResponse;
-        } catch (Throwable $e) {
-            Log::error('Preview story generation failed', [
-                'message' => $e->getMessage(),
+            $storyText = $ragStoryService->storyToText($ragResponse);
+
+            $storyMeta = [
+                'source' => 'rag',
+                'story' => $ragResponse['story'] ?? [],
+                'retrieved_context' => $ragResponse['retrieved_context'] ?? [],
+            ];
+        } catch (Throwable $ragException) {
+            Log::warning('RAG story generation failed; attempting image story fallback', [
+                'message' => $ragException->getMessage(),
             ]);
-        } finally {
-            if (isset($tempPath) && is_string($tempPath) && is_file($tempPath)) {
-                @unlink($tempPath);
+
+            try {
+                $tempPath = $this->writePreviewImageToTempFile($imageBase64);
+
+                $storyResponse = $storyService->generateFromImage(
+                    absolutePath: $tempPath,
+                    filename: basename($tempPath),
+                    mimeType: 'image/png',
+                    tone: $tone,
+                );
+
+                $storyText = $storyResponse['story_text'] ?? null;
+
+                $storyMeta = [
+                    'source' => 'image_generator_fallback',
+                    'response' => $storyResponse,
+                ];
+            } catch (Throwable $fallbackException) {
+                Log::error('Both story generation services failed', [
+                    'rag_error' => $ragException->getMessage(),
+                    'fallback_error' => $fallbackException->getMessage(),
+                ]);
+            } finally {
+                if (isset($tempPath) && is_string($tempPath) && is_file($tempPath)) {
+                    @unlink($tempPath);
+                }
             }
         }
 
