@@ -10,8 +10,18 @@ class AccountController extends Controller
 {
     public function index(Request $request)
     {
+        $user = $request->user();
+
         return view('account.index', [
-            'user' => $request->user(),
+            'user' => $user,
+            'twoFactorEnabled' => ! is_null($user->two_factor_secret),
+            'twoFactorConfirmed' => ! is_null($user->two_factor_confirmed_at),
+            'twoFactorQrCode' => $user->two_factor_secret
+                ? $user->twoFactorQrCodeSvg()
+                : null,
+            'recoveryCodes' => $user->two_factor_secret
+                ? $user->recoveryCodes()
+                : [],
         ]);
     }
 
