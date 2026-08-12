@@ -18,6 +18,7 @@ class RagStoryService
         int $partyLevel = 1,
         int $partySize = 4,
         array $rooms = [],
+        ?array $campaignContext = null,
     ): array {
         $response = Http::baseUrl(
             rtrim(config('services.rag_story.base_url'), '/')
@@ -37,6 +38,7 @@ class RagStoryService
                 'tone' => $tone ?: 'heroic fantasy',
                 'difficulty' => $this->normalizeDifficulty($difficulty),
                 'campaign_notes' => $campaignNotes,
+                'campaign_context' => $campaignContext,
             ]);
 
         if ($response->failed()) {

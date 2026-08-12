@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CampaignContextService;
 use App\Models\Map;
 use App\Models\MapStory;
 use App\Services\StoryGeneratorService;
@@ -25,7 +26,8 @@ class MapGenerationController extends Controller
     public function generate(
         Request $request,
         StoryGeneratorService $storyService,
-        RagStoryService $ragStoryService
+        RagStoryService $ragStoryService,
+        CampaignContextService $campaignContextService
     )
     {
         $validated = $request->validate([
@@ -87,6 +89,10 @@ class MapGenerationController extends Controller
                 ->findOrFail($validated['campaign_id']);
         }
 
+        $campaignContext = $campaign
+            ? $campaignContextService->build($campaign)
+            : null;
+
         $storyText = null;
         $storyMeta = null;
 
@@ -102,6 +108,7 @@ class MapGenerationController extends Controller
                 partyLevel: 1,
                 partySize: 4,
                 rooms: [],
+                campaignContext: $campaignContext,
             );
 
             $storyText = $ragStoryService->storyToText($ragResponse);
